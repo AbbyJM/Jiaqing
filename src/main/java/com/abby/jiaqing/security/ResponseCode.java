@@ -12,10 +12,15 @@ public class ResponseCode {
     public static final int USER_IS_OFFLINE=20002;
 
     //
+    public static final int UPLOAD_IMAGE_SUCCESS=30000;
+
     public static final int IMAGE_NULL=30001;
 
     public static final int IMAGE_NAME_NULL=30002;
 
     public static final int IMAGE_DAMAGED=30003;
 
+    public static final int UPLOAD_RESULT_WRITE_FAILED=30004;
+
+    public static final int UPLOAD_IMAGE_FAILED=30005;
 }
