@@ -10,12 +10,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(value = "/wechat")
 public class TokenController {
     @Resource
     private TokenService tokenService;
 
-    @RequestMapping(value = "/")
+    @RequestMapping(value = "/wechat")
     public void validate(HttpServletRequest request, HttpServletResponse response){
         String echoStr=request.getParameter("echostr");
         if(tokenService.validate(request)){

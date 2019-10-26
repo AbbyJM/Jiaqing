@@ -1,7 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="48b5f0df-3167-4992-adfd-2348ffb52ea9" name="Default Changelist" comment="" />
+    <list default="true" id="48b5f0df-3167-4992-adfd-2348ffb52ea9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/spring-configuration-metadata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application-dev.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/abby/jiaqing/JiaQingApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/abby/jiaqing/config/ObjectMapperConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/abby/jiaqing/config/QiniuProperties.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/abby/jiaqing/config/QiniuUploadConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/abby/jiaqing/config/WechatProperties.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/abby/jiaqing/config/YamlPropertyLoaderFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/abby/jiaqing/generators/MybatisGenerator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/abby/jiaqing/mapper/ImageMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/abby/jiaqing/mapper/UserMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/abby/jiaqing/model/domain/Image.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/abby/jiaqing/model/domain/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/abby/jiaqing/response/ResponseObject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/abby/jiaqing/response/ResponseWrapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/abby/jiaqing/security/AuthenticationAccessDeniedHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/abby/jiaqing/security/CorConf.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/abby/jiaqing/security/CustomUserDetails.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/abby/jiaqing/security/DefaultLoginUrlAuthEntryPoint.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/abby/jiaqing/security/JdbcUserDetails.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/abby/jiaqing/security/LoginFailedHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/abby/jiaqing/security/LoginFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/abby/jiaqing/security/LoginSuccessHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/abby/jiaqing/security/LogoutHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/abby/jiaqing/security/PasswordEncode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/abby/jiaqing/security/ResponseCode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/abby/jiaqing/security/WebSecurityConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/abby/jiaqing/service/QiniuCloudService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/abby/jiaqing/service/TokenService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/abby/jiaqing/service/UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/abby/jiaqing/service/impl/QiniuCloudServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/abby/jiaqing/service/impl/TokenServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/abby/jiaqing/service/impl/UserServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/abby/jiaqing/utils/ImageUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/abby/jiaqing/utils/SHAUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/abby/jiaqing/web/ImageController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/abby/jiaqing/web/TestController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/abby/jiaqing/web/TokenController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/abby/jiaqing/web/UserController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/generatorConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/logback-spring.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/ImageMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/UserMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/qiniu-dev.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/wechat-dev.yml" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +141,7 @@
       <option name="presentableId" value="Default" />
       <updated>1571836425673</updated>
       <workItem from="1571836433618" duration="76448000" />
-      <workItem from="1572076682688" duration="1290000" />
+      <workItem from="1572076682688" duration="1530000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1572077656484</created>
