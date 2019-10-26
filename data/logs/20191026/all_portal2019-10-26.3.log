@@ -1,0 +1,2 @@
+11:30:33.805 [main] DEBUG o.s.c.a.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [E:\java\jiaqing-master\target\classes\com\abby\jiaqing\config\QiniuProperties.class]
+11:30:33.993 [main] DEBUG o.s.c.e.PropertySourcesPropertyResolver - Found key 'spring.jmx.enabled' in PropertySource 'configurationProperties' with value of type String
