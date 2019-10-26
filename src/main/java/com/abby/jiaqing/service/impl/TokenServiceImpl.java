@@ -13,6 +13,7 @@ public class TokenServiceImpl implements TokenService {
 
     @Resource
     private WechatProperties wechatProperties;
+
     public boolean validate(HttpServletRequest request) {
         String signature=request.getParameter("signature");
         String nonce=request.getParameter("nonce");
