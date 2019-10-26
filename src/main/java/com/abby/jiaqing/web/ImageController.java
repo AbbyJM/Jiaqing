@@ -51,13 +51,6 @@ public class ImageController {
 
     @Resource
     private ObjectMapper objectMapper;
-
-    private CountDownLatch uploadLock;
-
-    private boolean uploadToQiniuSuccess;
-
-    private boolean uploadToWechatSuccess;
-
     private String mediaId;
 
     @GetMapping(value = "/download")
@@ -109,19 +102,18 @@ public class ImageController {
                 return;
             }
             //需要同时上传到七牛云以及微信公众号，初始化状态
-            uploadLock=new CountDownLatch(2);
-            uploadToQiniuSuccess=false;
-            uploadToWechatSuccess=false;
+            CountDownLatch uploadLock=new CountDownLatch(2);
+            UploadResult uploadResult=new UploadResult();
 
-            uploadToQiniu(fileName);
-            uploadToWechat(f,fileName);
+            uploadToQiniu(fileName,uploadLock,uploadResult);
+            uploadToWechat(f,fileName,uploadLock,uploadResult);
             try {
                 uploadLock.await(20, TimeUnit.SECONDS);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
 
-            if(uploadToWechatSuccess&&uploadToQiniuSuccess){
+            if(uploadResult.uploadToWechat&&uploadResult.uploadToQiniu){
                Image imageObj=new Image();
                imageObj.setMediaId(mediaId);
                imageObj.setName(fileName);
@@ -137,13 +129,13 @@ public class ImageController {
                    logger.error("failed to write record to database");
                }
             }else {
-                if(!uploadToQiniuSuccess&&!uploadToWechatSuccess){
+                if(!uploadResult.uploadToQiniu&&!uploadResult.uploadToWechat){
                     responseStr=ResponseWrapper.wrap(ResponseCode.UPLOAD_IMAGE_FAILED,"failed to upload image to qiniu cloud and wechat");
                     logger.error("failed to upload image to qiniu cloud and wechat");
                 }else {
-                    responseStr=ResponseWrapper.wrap(ResponseCode.UPLOAD_IMAGE_FAILED,!uploadToWechatSuccess?"" +
+                    responseStr=ResponseWrapper.wrap(ResponseCode.UPLOAD_IMAGE_FAILED,!uploadResult.uploadToWechat?"" +
                         "failed to upload image to wechat":"failed to upload image to qiniu");
-                    logger.error(!uploadToWechatSuccess?"" +
+                    logger.error(!uploadResult.uploadToWechat?"" +
                         "failed to upload image to wechat":"failed to upload image to qiniu");
                 }
             }
@@ -156,17 +148,17 @@ public class ImageController {
     }
 
     @Async(value ="taskExecutor")
-    void uploadToQiniu(String fileName){
+    void uploadToQiniu(String fileName,CountDownLatch uploadLock,UploadResult result){
         boolean success=qiniuCloudService.uploadImage(ImageUtil.getImageFilePath()+File.separator+fileName,fileName);
         if(success){
             logger.info("uploaded image "+fileName+" successfully");
-            uploadToQiniuSuccess=true;
+            result.uploadToQiniu=true;
         }
         uploadLock.countDown();
     }
 
     @Async(value = "taskExecutor")
-    void uploadToWechat(File f,String fileName){
+    void uploadToWechat(File f,String fileName,CountDownLatch uploadLock,UploadResult uploadResult){
         WxMpMaterial wxMpMaterial=new WxMpMaterial();
         wxMpMaterial.setFile(f);
         wxMpMaterial.setName(fileName);
@@ -175,12 +167,21 @@ public class ImageController {
                 .materialFileUpload(WxConsts.MaterialType.IMAGE,wxMpMaterial);
             mediaId=result.getMediaId();
             if(result.getErrCode()==null&&result.getErrMsg()==null){
-               uploadToWechatSuccess=true;
+               uploadResult.uploadToWechat=true;
             }
         } catch (WxErrorException e) {
             e.printStackTrace();
         } finally {
             uploadLock.countDown();
+        }
+    }
+
+    static class UploadResult{
+        public boolean uploadToQiniu;
+        public boolean uploadToWechat;
+        public UploadResult(){
+            uploadToQiniu=false;
+            uploadToWechat=false;
         }
     }
 }

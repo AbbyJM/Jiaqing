@@ -13,3 +13,5 @@ logging:
   level:
     com.abby.jiaqing: debug
   path: /data/logs
+pagehelper:
+  helper-dialect: mysql
