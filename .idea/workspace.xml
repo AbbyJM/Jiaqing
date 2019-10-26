@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="48b5f0df-3167-4992-adfd-2348ffb52ea9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/logs/all_portal.log" beforeDir="false" afterPath="$PROJECT_DIR$/data/logs/all_portal.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/logs/err_portal.log" beforeDir="false" afterPath="$PROJECT_DIR$/data/logs/err_portal.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jiaqing-master.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/abby/jiaqing/service/impl/TokenServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/abby/jiaqing/service/impl/TokenServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/abby/jiaqing/web/TokenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/abby/jiaqing/web/TokenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/wechat-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/wechat-dev.yml" afterDir="false" />
-    </list>
+    <list default="true" id="48b5f0df-3167-4992-adfd-2348ffb52ea9" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,8 +94,16 @@
       <option name="presentableId" value="Default" />
       <updated>1571836425673</updated>
       <workItem from="1571836433618" duration="76448000" />
-      <workItem from="1572076682688" duration="935000" />
+      <workItem from="1572076682688" duration="1290000" />
     </task>
+    <task id="LOCAL-00001" summary="test">
+      <created>1572077656484</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1572077656484</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -120,5 +119,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="test" />
+    <option name="LAST_COMMIT_MESSAGE" value="test" />
   </component>
 </project>
