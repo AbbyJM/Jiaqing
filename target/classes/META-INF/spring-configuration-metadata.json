@@ -1,0 +1,63 @@
+{
+  "groups": [
+    {
+      "name": "qiniu",
+      "type": "com.abby.jiaqing.config.QiniuProperties",
+      "sourceType": "com.abby.jiaqing.config.QiniuProperties"
+    },
+    {
+      "name": "wechat",
+      "type": "com.abby.jiaqing.config.WechatProperties",
+      "sourceType": "com.abby.jiaqing.config.WechatProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "qiniu.access-key",
+      "type": "java.lang.String",
+      "sourceType": "com.abby.jiaqing.config.QiniuProperties"
+    },
+    {
+      "name": "qiniu.default-bucket",
+      "type": "java.lang.String",
+      "sourceType": "com.abby.jiaqing.config.QiniuProperties"
+    },
+    {
+      "name": "qiniu.domain",
+      "type": "java.lang.String",
+      "sourceType": "com.abby.jiaqing.config.QiniuProperties"
+    },
+    {
+      "name": "qiniu.expire",
+      "type": "java.lang.Integer",
+      "sourceType": "com.abby.jiaqing.config.QiniuProperties",
+      "defaultValue": 0
+    },
+    {
+      "name": "qiniu.secret-key",
+      "type": "java.lang.String",
+      "sourceType": "com.abby.jiaqing.config.QiniuProperties"
+    },
+    {
+      "name": "wechat.app-id",
+      "type": "java.lang.String",
+      "sourceType": "com.abby.jiaqing.config.WechatProperties"
+    },
+    {
+      "name": "wechat.ase-key",
+      "type": "java.lang.String",
+      "sourceType": "com.abby.jiaqing.config.WechatProperties"
+    },
+    {
+      "name": "wechat.secret",
+      "type": "java.lang.String",
+      "sourceType": "com.abby.jiaqing.config.WechatProperties"
+    },
+    {
+      "name": "wechat.token",
+      "type": "java.lang.String",
+      "sourceType": "com.abby.jiaqing.config.WechatProperties"
+    }
+  ],
+  "hints": []
+}

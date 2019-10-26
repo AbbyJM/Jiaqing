@@ -1,0 +1,32 @@
+16:08:16.561 [http-nio-8080-exec-1] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/token/validate'; against '/static/**'
+16:08:16.566 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - /token/validate at position 1 of 11 in additional filter chain; firing Filter: 'WebAsyncManagerIntegrationFilter'
+16:08:16.568 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - /token/validate at position 2 of 11 in additional filter chain; firing Filter: 'SecurityContextPersistenceFilter'
+16:08:16.569 [http-nio-8080-exec-1] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - No HttpSession currently exists
+16:08:16.569 [http-nio-8080-exec-1] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - No SecurityContext was available from the HttpSession: null. A new one will be created.
+16:08:16.573 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - /token/validate at position 3 of 11 in additional filter chain; firing Filter: 'HeaderWriterFilter'
+16:08:16.574 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - /token/validate at position 4 of 11 in additional filter chain; firing Filter: 'LogoutFilter'
+16:08:16.574 [http-nio-8080-exec-1] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', GET]
+16:08:16.574 [http-nio-8080-exec-1] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'POST /token/validate' doesn't match 'GET /logout'
+16:08:16.574 [http-nio-8080-exec-1] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', POST]
+16:08:16.574 [http-nio-8080-exec-1] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/token/validate'; against '/logout'
+16:08:16.574 [http-nio-8080-exec-1] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', PUT]
+16:08:16.574 [http-nio-8080-exec-1] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'POST /token/validate' doesn't match 'PUT /logout'
+16:08:16.575 [http-nio-8080-exec-1] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', DELETE]
+16:08:16.575 [http-nio-8080-exec-1] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'POST /token/validate' doesn't match 'DELETE /logout'
+16:08:16.575 [http-nio-8080-exec-1] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - No matches found
+16:08:16.575 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - /token/validate at position 5 of 11 in additional filter chain; firing Filter: 'UsernamePasswordAuthenticationFilter'
+16:08:16.575 [http-nio-8080-exec-1] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/token/validate'; against '/login'
+16:08:16.575 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - /token/validate at position 6 of 11 in additional filter chain; firing Filter: 'RequestCacheAwareFilter'
+16:08:16.575 [http-nio-8080-exec-1] DEBUG o.s.s.w.s.HttpSessionRequestCache - saved request doesn't match
+16:08:16.575 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - /token/validate at position 7 of 11 in additional filter chain; firing Filter: 'SecurityContextHolderAwareRequestFilter'
+16:08:16.577 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - /token/validate at position 8 of 11 in additional filter chain; firing Filter: 'AnonymousAuthenticationFilter'
+16:08:16.578 [http-nio-8080-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Populated SecurityContextHolder with anonymous token: 'org.springframework.security.authentication.AnonymousAuthenticationToken@f1fcf027: Principal: anonymousUser; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@b364: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: null; Granted Authorities: ROLE_ANONYMOUS'
+16:08:16.578 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - /token/validate at position 9 of 11 in additional filter chain; firing Filter: 'SessionManagementFilter'
+16:08:16.578 [http-nio-8080-exec-1] DEBUG o.s.s.w.s.SessionManagementFilter - Requested session ID 8FC5E1EB84CCA4E94D14654588136C2B is invalid.
+16:08:16.578 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - /token/validate at position 10 of 11 in additional filter chain; firing Filter: 'ExceptionTranslationFilter'
+16:08:16.579 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - /token/validate at position 11 of 11 in additional filter chain; firing Filter: 'FilterSecurityInterceptor'
+16:08:16.579 [http-nio-8080-exec-1] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', GET]
+16:08:16.579 [http-nio-8080-exec-1] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'POST /token/validate' doesn't match 'GET /logout'
+16:08:16.579 [http-nio-8080-exec-1] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', POST]
+16:08:16.579 [http-nio-8080-exec-1] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/token/validate'; against '/logout'
+16:08:16.579 [http-nio-8080-exec-1] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', PUT]

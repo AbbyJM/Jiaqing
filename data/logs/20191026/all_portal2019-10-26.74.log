@@ -1,0 +1,8 @@
+16:09:01.556 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [E:\jiaqing\target\classes\com\abby\jiaqing\mapper\ImageMapper.class]
+16:09:01.569 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [E:\jiaqing\target\classes\com\abby\jiaqing\mapper\UserMapper.class]
+16:09:01.576 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'imageMapper' and 'com.abby.jiaqing.mapper.ImageMapper' mapperInterface
+16:09:01.578 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'imageMapper'.
+16:09:01.580 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userMapper' and 'com.abby.jiaqing.mapper.UserMapper' mapperInterface
+16:09:01.580 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'userMapper'.
+16:09:01.768 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.context.properties.ConfigurationPropertiesBeanDefinitionValidator'
+16:09:01.875 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.event.internalEventListenerProcessor'

@@ -1,0 +1,32 @@
+16:09:31.029 [http-nio-8080-exec-1] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', GET]
+16:09:31.035 [http-nio-8080-exec-1] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'POST /error' doesn't match 'GET /logout'
+16:09:31.035 [http-nio-8080-exec-1] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', POST]
+16:09:31.035 [http-nio-8080-exec-1] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/error'; against '/logout'
+16:09:31.035 [http-nio-8080-exec-1] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', PUT]
+16:09:31.035 [http-nio-8080-exec-1] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'POST /error' doesn't match 'PUT /logout'
+16:09:31.036 [http-nio-8080-exec-1] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', DELETE]
+16:09:31.036 [http-nio-8080-exec-1] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'POST /error' doesn't match 'DELETE /logout'
+16:09:31.036 [http-nio-8080-exec-1] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - No matches found
+16:09:31.036 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - /error at position 5 of 11 in additional filter chain; firing Filter: 'UsernamePasswordAuthenticationFilter'
+16:09:31.036 [http-nio-8080-exec-1] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/error'; against '/login'
+16:09:31.036 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - /error at position 6 of 11 in additional filter chain; firing Filter: 'RequestCacheAwareFilter'
+16:09:31.036 [http-nio-8080-exec-1] DEBUG o.s.s.w.s.HttpSessionRequestCache - saved request doesn't match
+16:09:31.036 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - /error at position 7 of 11 in additional filter chain; firing Filter: 'SecurityContextHolderAwareRequestFilter'
+16:09:31.036 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - /error at position 8 of 11 in additional filter chain; firing Filter: 'AnonymousAuthenticationFilter'
+16:09:31.036 [http-nio-8080-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Populated SecurityContextHolder with anonymous token: 'org.springframework.security.authentication.AnonymousAuthenticationToken@97b63118: Principal: anonymousUser; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@b364: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: null; Granted Authorities: ROLE_ANONYMOUS'
+16:09:31.037 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - /error at position 9 of 11 in additional filter chain; firing Filter: 'SessionManagementFilter'
+16:09:31.037 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - /error at position 10 of 11 in additional filter chain; firing Filter: 'ExceptionTranslationFilter'
+16:09:31.037 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - /error at position 11 of 11 in additional filter chain; firing Filter: 'FilterSecurityInterceptor'
+16:09:31.037 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - /error reached end of additional filter chain; proceeding with original chain
+16:09:31.037 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - "ERROR" dispatch for POST "/error", parameters={masked}
+16:09:31.040 [http-nio-8080-exec-1] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'basicErrorController'
+16:09:31.040 [http-nio-8080-exec-1] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration'
+16:09:31.044 [http-nio-8080-exec-1] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'server-org.springframework.boot.autoconfigure.web.ServerProperties'
+16:09:31.057 [http-nio-8080-exec-1] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'errorAttributes'
+16:09:31.062 [http-nio-8080-exec-1] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'conventionErrorViewResolver'
+16:09:31.062 [http-nio-8080-exec-1] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration$DefaultErrorViewResolverConfiguration'
+16:09:31.071 [http-nio-8080-exec-1] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'spring.resources-org.springframework.boot.autoconfigure.web.ResourceProperties'
+16:09:31.079 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+16:09:31.159 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+16:09:31.161 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{timestamp=Sat Oct 26 16:09:31 CST 2019, status=500, error=Internal Server Error, message=No message (truncated)...]
+16:09:31.454 [http-nio-8080-exec-1] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - SecurityContext is empty or contents are anonymous - context will not be stored in HttpSession.

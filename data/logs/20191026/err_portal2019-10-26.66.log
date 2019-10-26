@@ -1,0 +1,8 @@
+16:08:59.533 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [E:\jiaqing\target\classes\com\abby\jiaqing\security\LoginSuccessHandler.class]
+16:08:59.557 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [E:\jiaqing\target\classes\com\abby\jiaqing\security\LogoutHandler.class]
+16:08:59.558 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [E:\jiaqing\target\classes\com\abby\jiaqing\security\PasswordEncode.class]
+16:08:59.637 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [E:\jiaqing\target\classes\com\abby\jiaqing\security\WebSecurityConfig.class]
+16:08:59.643 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [E:\jiaqing\target\classes\com\abby\jiaqing\service\impl\QiniuCloudServiceImpl.class]
+16:08:59.645 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [E:\jiaqing\target\classes\com\abby\jiaqing\service\impl\TokenServiceImpl.class]
+16:08:59.646 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [E:\jiaqing\target\classes\com\abby\jiaqing\service\impl\UserServiceImpl.class]
+16:08:59.702 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [E:\jiaqing\target\classes\com\abby\jiaqing\web\ImageController.class]

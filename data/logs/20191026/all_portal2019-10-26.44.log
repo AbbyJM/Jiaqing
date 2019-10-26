@@ -1,0 +1,14 @@
+16:08:01.497 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [E:\jiaqing\target\classes\com\abby\jiaqing\web\TestController.class]
+16:08:01.510 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [E:\jiaqing\target\classes\com\abby\jiaqing\web\TokenController.class]
+16:08:01.513 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [E:\jiaqing\target\classes\com\abby\jiaqing\web\UserController.class]
+16:08:01.590 [main] DEBUG o.s.boot.env.OriginTrackedYamlLoader - Loading from YAML: class path resource [qiniu-dev.yml]
+16:08:01.592 [main] DEBUG o.s.boot.env.OriginTrackedYamlLoader - Merging document (no matchers set): {qiniu={accessKey=Yv5seDVS9I0Picy8yS6YF2hftqkh2_wRebdqTSCW, secretKey=cXQDMVHxlyU_5wo5TyCvApCUoTaKSPpySkEx6FJY, defaultBucket=jiaqing-master, expire=3600, domain=http://pztxvdloz.bkt.clouddn.com/}}
+16:08:01.599 [main] DEBUG o.s.boot.env.OriginTrackedYamlLoader - Loaded 1 document from YAML resource: class path resource [qiniu-dev.yml]
+16:08:01.604 [main] DEBUG o.s.boot.env.OriginTrackedYamlLoader - Loading from YAML: class path resource [wechat-dev.yml]
+16:08:01.606 [main] DEBUG o.s.boot.env.OriginTrackedYamlLoader - Merging document (no matchers set): {wechat={appId=, secret=, token=jiaqing, aseKey=LMuiR8cmCZjPtSgmfrHDnTrslRClK2vhC23we6KyOAs}}
+16:08:01.606 [main] DEBUG o.s.boot.env.OriginTrackedYamlLoader - Loaded 1 document from YAML resource: class path resource [wechat-dev.yml]
+16:08:02.001 [main] DEBUG o.s.c.e.PropertySourcesPropertyResolver - Found key 'spring.jmx.enabled' in PropertySource 'configurationProperties' with value of type String
+16:08:02.035 [main] DEBUG o.s.c.e.PropertySourcesPropertyResolver - Found key 'spring.jmx.enabled' in PropertySource 'configurationProperties' with value of type String
+16:08:02.037 [main] DEBUG o.s.c.e.PropertySourcesPropertyResolver - Found key 'spring.application.admin.enabled' in PropertySource 'configurationProperties' with value of type String
+16:08:02.222 [main] DEBUG o.s.c.a.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [E:\jiaqing\target\classes\com\abby\jiaqing\config\QiniuProperties.class]
+16:08:02.223 [main] DEBUG o.s.c.a.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [E:\jiaqing\target\classes\com\abby\jiaqing\config\WechatProperties.class]

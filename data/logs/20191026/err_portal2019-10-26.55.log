@@ -1,0 +1,32 @@
+16:08:05.287 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'authenticationEventPublisher' via factory method to bean named 'org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@158a8276'
+16:08:05.301 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration'
+16:08:05.318 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'autowiredWebSecurityConfigurersIgnoreParents'
+16:08:05.320 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'autowiredWebSecurityConfigurersIgnoreParents' via factory method to bean named 'org.springframework.beans.factory.support.DefaultListableBeanFactory@53fb3dab'
+16:08:05.338 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'delegatingApplicationListener'
+16:08:05.339 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'springSecurityFilterChain'
+16:08:05.436 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/index.html'], []
+16:08:05.437 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: Ant [pattern='/static/**'], []
+16:08:05.480 [main] DEBUG o.s.s.w.a.e.ExpressionBasedFilterInvocationSecurityMetadataSource - Adding web access control expression 'permitAll', for ExactUrl [processUrl='/login']
+16:08:05.484 [main] DEBUG o.s.s.w.a.e.ExpressionBasedFilterInvocationSecurityMetadataSource - Adding web access control expression 'permitAll', for ExactUrl [processUrl='/login']
+16:08:05.485 [main] DEBUG o.s.s.w.a.e.ExpressionBasedFilterInvocationSecurityMetadataSource - Adding web access control expression 'permitAll', for OrRequestMatcher [requestMatchers=[Ant [pattern='/logout', GET], Ant [pattern='/logout', POST], Ant [pattern='/logout', PUT], Ant [pattern='/logout', DELETE]]]
+16:08:05.485 [main] DEBUG o.s.s.w.a.e.ExpressionBasedFilterInvocationSecurityMetadataSource - Adding web access control expression 'permitAll', for Ant [pattern='/test/**']
+16:08:05.485 [main] DEBUG o.s.s.w.a.e.ExpressionBasedFilterInvocationSecurityMetadataSource - Adding web access control expression 'permitAll', for Ant [pattern='/user/isonline**']
+16:08:05.485 [main] DEBUG o.s.s.w.a.e.ExpressionBasedFilterInvocationSecurityMetadataSource - Adding web access control expression 'permitAll', for Ant [pattern='/token/**']
+16:08:05.485 [main] DEBUG o.s.s.w.a.e.ExpressionBasedFilterInvocationSecurityMetadataSource - Adding web access control expression 'authenticated', for any request
+16:08:05.492 [main] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Validated configuration attributes
+16:08:05.493 [main] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Validated configuration attributes
+16:08:05.497 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7397c6, org.springframework.security.web.context.SecurityContextPersistenceFilter@4f3e7344, org.springframework.security.web.header.HeaderWriterFilter@1dc76fa1, org.springframework.security.web.authentication.logout.LogoutFilter@497aec8c, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@715d6168, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@62d73ead, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@ad9e63e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1abfe081, org.springframework.security.web.session.SessionManagementFilter@33d53216, org.springframework.security.web.access.ExceptionTranslationFilter@2459319c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@57c47a9e]
+16:08:05.503 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'webSecurityExpressionHandler'
+16:08:05.503 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'privilegeEvaluator'
+16:08:05.505 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'requestDataValueProcessor'
+16:08:05.507 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.context.properties.ConfigurationBeanFactoryMetadata'
+16:08:05.508 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration'
+16:08:05.508 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.websocket.servlet.WebSocketServletAutoConfiguration'
+16:08:05.508 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.web.servlet.DispatcherServletAutoConfiguration'
+16:08:05.509 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.task.TaskExecutionAutoConfiguration'
+16:08:05.510 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'taskExecutorBuilder'
+16:08:05.512 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'spring.task.execution-org.springframework.boot.autoconfigure.task.TaskExecutionProperties'
+16:08:05.514 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'taskExecutorBuilder' via factory method to bean named 'spring.task.execution-org.springframework.boot.autoconfigure.task.TaskExecutionProperties'
+16:08:05.518 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.validation.ValidationAutoConfiguration'
+16:08:05.518 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'defaultValidator'
+16:08:05.520 [main] DEBUG o.h.v.i.e.r.TraversableResolvers - Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.

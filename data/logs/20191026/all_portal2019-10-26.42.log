@@ -1,0 +1,8 @@
+16:08:01.423 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Ignored because not a concrete top-level class: file [E:\jiaqing\target\classes\com\abby\jiaqing\mapper\ImageMapper.class]
+16:08:01.430 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Ignored because not a concrete top-level class: file [E:\jiaqing\target\classes\com\abby\jiaqing\mapper\UserMapper.class]
+16:08:01.434 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [E:\jiaqing\target\classes\com\abby\jiaqing\response\ResponseWrapper.class]
+16:08:01.435 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [E:\jiaqing\target\classes\com\abby\jiaqing\security\AuthenticationAccessDeniedHandler.class]
+16:08:01.437 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [E:\jiaqing\target\classes\com\abby\jiaqing\security\CorConf.class]
+16:08:01.438 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [E:\jiaqing\target\classes\com\abby\jiaqing\security\DefaultLoginUrlAuthEntryPoint.class]
+16:08:01.439 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [E:\jiaqing\target\classes\com\abby\jiaqing\security\JdbcUserDetails.class]
+16:08:01.440 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [E:\jiaqing\target\classes\com\abby\jiaqing\security\LoginFailedHandler.class]

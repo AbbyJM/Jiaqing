@@ -1,0 +1,4 @@
+16:09:01.056 [main] DEBUG o.s.c.a.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [E:\jiaqing\target\classes\com\abby\jiaqing\config\QiniuProperties.class]
+16:09:01.062 [main] DEBUG o.s.c.a.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [E:\jiaqing\target\classes\com\abby\jiaqing\config\WechatProperties.class]
+16:09:01.254 [main] DEBUG o.s.c.e.PropertySourcesPropertyResolver - Found key 'spring.jmx.enabled' in PropertySource 'configurationProperties' with value of type String
+16:09:01.277 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.AutoConfigurationPackages'

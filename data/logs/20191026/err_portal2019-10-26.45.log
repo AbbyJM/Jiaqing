@@ -1,0 +1,16 @@
+16:08:02.414 [main] DEBUG o.s.b.a.AutoConfigurationPackages - @EnableAutoConfiguration was declared on a class in the package 'com.abby.jiaqing'. Automatic @Repository and @Entity scanning is enabled.
+16:08:02.528 [main] DEBUG o.m.s.b.a.MybatisAutoConfiguration - Searching for mappers annotated with @Mapper
+16:08:02.529 [main] DEBUG o.m.s.b.a.MybatisAutoConfiguration - Using auto-configuration base package 'com.abby.jiaqing'
+16:08:02.547 [main] DEBUG o.s.c.e.PropertySourcesPropertyResolver - Found key 'spring.jmx.enabled' in PropertySource 'configurationProperties' with value of type String
+16:08:02.554 [main] DEBUG o.s.c.e.PropertySourcesPropertyResolver - Found key 'spring.application.admin.enabled' in PropertySource 'configurationProperties' with value of type String
+16:08:02.714 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.mybatis.spring.mapper.MapperScannerConfigurer'
+16:08:02.717 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'propertySourcesPlaceholderConfigurer'
+16:08:02.737 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+16:08:02.749 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [E:\jiaqing\target\classes\com\abby\jiaqing\mapper\ImageMapper.class]
+16:08:02.749 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [E:\jiaqing\target\classes\com\abby\jiaqing\mapper\UserMapper.class]
+16:08:02.755 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'imageMapper' and 'com.abby.jiaqing.mapper.ImageMapper' mapperInterface
+16:08:02.756 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'imageMapper'.
+16:08:02.756 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userMapper' and 'com.abby.jiaqing.mapper.UserMapper' mapperInterface
+16:08:02.756 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'userMapper'.
+16:08:02.902 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.context.properties.ConfigurationPropertiesBeanDefinitionValidator'
+16:08:02.959 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.context.event.internalEventListenerProcessor'

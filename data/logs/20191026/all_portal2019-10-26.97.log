@@ -1,0 +1,16 @@
+16:09:30.908 [http-nio-8080-exec-1] DEBUG o.s.s.w.h.writers.HstsHeaderWriter - Not injecting HSTS header since it did not match the requestMatcher org.springframework.security.web.header.writers.HstsHeaderWriter$SecureRequestMatcher@6b0d1fb3
+16:09:30.950 [SpringContextShutdownHook] DEBUG o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@35229f85, started on Sat Oct 26 16:08:59 CST 2019
+16:09:31.018 [SpringContextShutdownHook] DEBUG o.s.c.e.PropertySourcesPropertyResolver - Found key 'spring.liveBeansView.mbeanDomain' in PropertySource 'systemProperties' with value of type String
+16:09:31.018 [http-nio-8080-exec-1] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - SecurityContext is empty or contents are anonymous - context will not be stored in HttpSession.
+16:09:31.019 [http-nio-8080-exec-1] DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - SecurityContextHolder now cleared, as request processing completed
+16:09:31.021 [SpringContextShutdownHook] DEBUG o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+16:09:31.022 [SpringContextShutdownHook] DEBUG o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+16:09:31.022 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+16:09:31.028 [http-nio-8080-exec-1] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/error'; against '/index.html'
+16:09:31.028 [http-nio-8080-exec-1] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/error'; against '/static/**'
+16:09:31.028 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - /error at position 1 of 11 in additional filter chain; firing Filter: 'WebAsyncManagerIntegrationFilter'
+16:09:31.029 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - /error at position 2 of 11 in additional filter chain; firing Filter: 'SecurityContextPersistenceFilter'
+16:09:31.029 [http-nio-8080-exec-1] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - No HttpSession currently exists
+16:09:31.029 [http-nio-8080-exec-1] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - No SecurityContext was available from the HttpSession: null. A new one will be created.
+16:09:31.029 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - /error at position 3 of 11 in additional filter chain; firing Filter: 'HeaderWriterFilter'
+16:09:31.029 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - /error at position 4 of 11 in additional filter chain; firing Filter: 'LogoutFilter'

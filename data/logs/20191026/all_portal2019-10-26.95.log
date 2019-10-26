@@ -1,0 +1,15 @@
+16:09:10.470 [http-nio-8080-exec-1] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'POST /token/validate' doesn't match 'PUT /logout'
+16:09:10.475 [http-nio-8080-exec-1] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', DELETE]
+16:09:10.475 [http-nio-8080-exec-1] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'POST /token/validate' doesn't match 'DELETE /logout'
+16:09:10.475 [http-nio-8080-exec-1] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - No matches found
+16:09:10.475 [http-nio-8080-exec-1] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/token/validate'; against '/test/**'
+16:09:10.476 [http-nio-8080-exec-1] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/token/validate'; against '/user/isonline**'
+16:09:10.476 [http-nio-8080-exec-1] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/token/validate'; against '/token/**'
+16:09:10.476 [http-nio-8080-exec-1] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Secure object: FilterInvocation: URL: /token/validate; Attributes: [permitAll]
+16:09:10.477 [http-nio-8080-exec-1] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Previously Authenticated: org.springframework.security.authentication.AnonymousAuthenticationToken@97b63118: Principal: anonymousUser; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@b364: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: null; Granted Authorities: ROLE_ANONYMOUS
+16:09:10.487 [http-nio-8080-exec-1] DEBUG o.s.s.access.vote.AffirmativeBased - Voter: org.springframework.security.web.access.expression.WebExpressionVoter@65b1ae54, returned: 1
+16:09:10.487 [http-nio-8080-exec-1] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Authorization successful
+16:09:10.487 [http-nio-8080-exec-1] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - RunAsManager did not change Authentication object
+16:09:10.487 [http-nio-8080-exec-1] DEBUG o.s.security.web.FilterChainProxy - /token/validate reached end of additional filter chain; proceeding with original chain
+16:09:10.525 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - POST "/token/validate", parameters={masked}
+16:09:10.535 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.abby.jiaqing.web.TokenController#validate(HttpServletRequest, HttpServletResponse)

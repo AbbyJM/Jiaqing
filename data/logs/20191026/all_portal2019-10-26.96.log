@@ -1,0 +1,1 @@
+16:09:30.890 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Failed to complete request: java.lang.NullPointerException
