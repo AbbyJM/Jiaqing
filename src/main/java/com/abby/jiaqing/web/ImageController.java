@@ -67,7 +67,7 @@ public class ImageController {
         if(pageNum<=0){
             pageNum=1;
         }
-        int pageCount=request.getParameter("pageCount") !=null?Integer.parseInt(request.getParameter("pageCount")):1;
+        int pageCount=request.getParameter("pageSize") !=null?Integer.parseInt(request.getParameter("pageCount")):1;
         if(pageCount<=0){
             pageCount=1;
         }
