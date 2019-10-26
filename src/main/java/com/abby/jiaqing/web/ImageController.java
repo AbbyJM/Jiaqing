@@ -142,9 +142,7 @@ public class ImageController {
             WxMpMaterialUploadResult result=wxMpService.getMaterialService()
                 .materialFileUpload(WxConsts.MaterialType.IMAGE,wxMpMaterial);
             mediaId=result.getMediaId();
-            logger.info("error message "+result.getErrMsg());
-            logger.info("error code "+result.getErrCode());
-            if(mediaId==null&&result.getUrl()!=null){
+            if(result.getErrCode()==null&&result.getErrMsg()==null){
                uploadToWechatSuccess=true;
             }
         } catch (WxErrorException e) {
