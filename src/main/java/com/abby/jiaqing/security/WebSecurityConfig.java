@@ -49,7 +49,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
             .authorizeRequests()
             .antMatchers("/test/**").permitAll()
             .antMatchers("/user/isonline**").permitAll()
-            .antMatchers("/token/**").permitAll()
+            .antMatchers("/wechat/**").permitAll()
             .anyRequest().authenticated()
             .and()
             .formLogin()
