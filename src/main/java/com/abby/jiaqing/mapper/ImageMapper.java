@@ -1,6 +1,7 @@
 package com.abby.jiaqing.mapper;
 
 import com.abby.jiaqing.model.domain.Image;
+import java.util.List;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Component;
 
@@ -14,6 +15,8 @@ public interface ImageMapper {
     int insertSelective(Image record);
 
     Image selectByPrimaryKey(Integer id);
+
+    List<Image> getAllImages();
 
     int updateByPrimaryKeySelective(Image record);
 

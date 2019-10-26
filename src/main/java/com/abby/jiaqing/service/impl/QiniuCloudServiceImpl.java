@@ -6,8 +6,6 @@ import com.qiniu.common.QiniuException;
 import com.qiniu.http.Response;
 import com.qiniu.storage.UploadManager;
 import com.qiniu.util.Auth;
-import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
 import javax.annotation.Resource;
 import org.springframework.stereotype.Service;
 

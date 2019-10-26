@@ -22,4 +22,11 @@ public class ResponseWrapper {
         result.put("message",message);
         return objectMapper.writeValueAsString(result);
     }
+
+    public static Map<String,Object> wrapNeedAdditionalOps(int code,String message){
+        Map<String,Object> result=new HashMap<String, Object>(2);
+        result.put("status",code);
+        result.put("message",message);
+        return result;
+    }
 }

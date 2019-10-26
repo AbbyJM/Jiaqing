@@ -8,9 +8,13 @@ import com.abby.jiaqing.security.ResponseCode;
 import com.abby.jiaqing.service.QiniuCloudService;
 import com.abby.jiaqing.utils.ImageUtil;
 import com.abby.jiaqing.utils.TimeUtil;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.github.pagehelper.PageHelper;
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
+import java.util.Map;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Resource;
@@ -34,7 +38,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping(value = "/image")
 public class ImageController {
-    Logger logger= LoggerFactory.getLogger(ImageController.class);
+    private Logger logger= LoggerFactory.getLogger(ImageController.class);
 
     @Resource
     private QiniuCloudService qiniuCloudService;
@@ -44,6 +48,9 @@ public class ImageController {
 
     @Resource
     private ImageMapper imageMapper;
+
+    @Resource
+    private ObjectMapper objectMapper;
 
     private CountDownLatch uploadLock;
 
@@ -59,6 +66,32 @@ public class ImageController {
         String s=session.getId();
         System.out.println("session"+s);
         return "test";
+    }
+
+    @GetMapping(value = "/list")
+    public void getImageList(HttpServletRequest request,HttpServletResponse response){
+        int pageNum=request.getParameter("pageNum")!=null?Integer.parseInt(request.getParameter("pageNum")):1;
+        if(pageNum<=0){
+            pageNum=1;
+        }
+        int pageCount=request.getParameter("pageCount") !=null?Integer.parseInt(request.getParameter("pageCount")):1;
+        if(pageCount<=0){
+            pageCount=1;
+        }
+        PageHelper.startPage(pageNum,pageCount);
+        List<Image> images=imageMapper.getAllImages();
+        response.setContentType("application/json;utf-8");
+        Map<String,Object> map=ResponseWrapper.wrapNeedAdditionalOps(ResponseCode.SUCCESS,"get image list successfully");
+        map.put("data",images);
+        PrintWriter writer;
+        try {
+            writer = response.getWriter();
+            writer.write(objectMapper.writeValueAsString(map));
+            writer.flush();
+            writer.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @PostMapping(value = "/upload")
@@ -124,7 +157,6 @@ public class ImageController {
 
     @Async(value ="taskExecutor")
     void uploadToQiniu(String fileName){
-        //把文件上传至七牛云空间
         boolean success=qiniuCloudService.uploadImage(ImageUtil.getImageFilePath()+File.separator+fileName,fileName);
         if(success){
             logger.info("uploaded image "+fileName+" successfully");
