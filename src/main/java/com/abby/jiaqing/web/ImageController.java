@@ -121,7 +121,9 @@ public class ImageController {
                imageObj.setTime(TimeUtil.getCurrentTime());
                //插入记录到数据库
                if(imageMapper.insert(imageObj)>0){
-                   responseStr=ResponseWrapper.wrap(ResponseCode.UPLOAD_IMAGE_SUCCESS,"uploaded image successfully");
+                   Map<String,Object> ret=ResponseWrapper.wrapNeedAdditionalOps(ResponseCode.UPLOAD_IMAGE_SUCCESS,"uploaded image successfully");
+                   ret.put("image",imageObj);
+                   responseStr=objectMapper.writeValueAsString(ret);
                    logger.info("upload image "+fileName+" successfully");
                }else{
                    //插入数据库失败
