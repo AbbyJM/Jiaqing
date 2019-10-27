@@ -33,6 +33,7 @@ import org.springframework.scheduling.annotation.Async;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -144,8 +145,7 @@ public class ImageController {
 
 
     @DeleteMapping(value = "/delete")
-    public void deleteImage(HttpServletRequest request,HttpServletResponse response) throws IOException {
-        int imageId=request.getParameter("imageId")!=null?Integer.parseInt(request.getParameter("imageId")):-1;
+    public void deleteImage(HttpServletRequest request,HttpServletResponse response,@RequestBody int imageId) throws IOException {
         logger.info("image id is "+imageId);
         String responseStr="";
         if(imageId<0){
