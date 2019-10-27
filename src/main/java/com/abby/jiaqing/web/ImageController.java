@@ -145,7 +145,8 @@ public class ImageController {
 
 
     @DeleteMapping(value = "/delete")
-    public void deleteImage(HttpServletRequest request,HttpServletResponse response,@RequestBody int imageId) throws IOException {
+    public void deleteImage(HttpServletRequest request,HttpServletResponse response) throws IOException {
+        int imageId=request.getParameter("imageId")!=null?Integer.parseInt(request.getParameter("imageId")):-1;
         logger.info("image id is "+imageId);
         String responseStr="";
         if(imageId<0){
