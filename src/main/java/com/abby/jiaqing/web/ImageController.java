@@ -30,6 +30,7 @@ import me.chanjar.weixin.mp.bean.material.WxMpMaterialUploadResult;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.scheduling.annotation.Async;
+import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -54,6 +55,9 @@ public class ImageController {
     @Resource
     private ObjectMapper objectMapper;
     private String mediaId;
+
+    @Resource(name = "taskExecutor")
+    private ThreadPoolTaskExecutor taskExecutor;
 
     @GetMapping(value = "/download")
     public String downloadImage(HttpServletRequest request, HttpServletResponse response){
@@ -101,7 +105,7 @@ public class ImageController {
             }
             //需要同时上传到七牛云以及微信公众号，初始化状态
             CountDownLatch Lock=new CountDownLatch(2);
-            UploadResult uploadResult=new UploadResult();
+            OpResult uploadResult=new OpResult();
 
             uploadToQiniu(fileName,Lock,uploadResult);
             uploadToWechat(f,fileName,Lock,uploadResult);
@@ -111,7 +115,7 @@ public class ImageController {
                 e.printStackTrace();
             }
 
-            if(uploadResult.uploadToWechat&&uploadResult.uploadToQiniu){
+            if(uploadResult.getQiniu()&&uploadResult.getWechat()){
                Image imageObj=new Image();
                imageObj.setMediaId(mediaId);
                imageObj.setName(fileName);
@@ -129,13 +133,13 @@ public class ImageController {
                    logger.error("failed to write record to database");
                }
             }else {
-                if(!uploadResult.uploadToQiniu&&!uploadResult.uploadToWechat){
+                if(!uploadResult.getQiniu()&&!uploadResult.getWechat()){
                     responseStr=ResponseWrapper.wrap(ResponseCode.UPLOAD_IMAGE_FAILED,"failed to upload image to qiniu cloud and wechat");
                     logger.error("failed to upload image to qiniu cloud and wechat");
                 }else {
-                    responseStr=ResponseWrapper.wrap(ResponseCode.UPLOAD_IMAGE_FAILED,!uploadResult.uploadToWechat?"" +
+                    responseStr=ResponseWrapper.wrap(ResponseCode.UPLOAD_IMAGE_FAILED,!uploadResult.getWechat()?"" +
                         "failed to upload image to wechat":"failed to upload image to qiniu");
-                    logger.error(!uploadResult.uploadToWechat?"" +
+                    logger.error(!uploadResult.getWechat()?"" +
                         "failed to upload image to wechat":"failed to upload image to qiniu");
                 }
             }
@@ -149,7 +153,7 @@ public class ImageController {
         int imageId=request.getParameter("imageId")!=null?Integer.parseInt(request.getParameter("imageId")):-1;
         String responseStr="";
         CountDownLatch deleteLock=new CountDownLatch(2);
-        DeleteResult deleteResult=new DeleteResult();
+        OpResult deleteResult=new OpResult();
         if(imageId<0){
            responseStr=ResponseWrapper.wrap(ResponseCode.IMAGE_NOT_FOUND,"image not found");
         }else{
@@ -157,86 +161,144 @@ public class ImageController {
            deleteFromQiniu(image.getName(),deleteLock,deleteResult);
            deleteFromWechat(image.getMediaId(),deleteLock,deleteResult);
            deleteLock.await(10,TimeUnit.SECONDS);
-
-           if(imageMapper.deleteByPrimaryKey(imageId)>0) {
-               responseStr=ResponseWrapper.wrap(ResponseCode.SUCCESS,"deleted image successfully");
-           }else{
+           if(deleteResult.getWechat()&&deleteResult.getQiniu()){
+               if(imageMapper.deleteByPrimaryKey(imageId)>0) {
+                   responseStr=ResponseWrapper.wrap(ResponseCode.SUCCESS,"deleted image successfully");
+               }else{
+                   responseStr=ResponseWrapper.wrap(ResponseCode.IMAGE_DELETE_FAILED,"failed to delete iamge from database");
+               }
+           }else {
                responseStr=ResponseWrapper.wrap(ResponseCode.IMAGE_DELETE_FAILED,"failed to delete iamge");
            }
         }
        ResponseWriter.writeToResponseThenClose(response,responseStr);
     }
 
-    @Async(value ="taskExecutor")
-    void uploadToQiniu(String fileName,CountDownLatch uploadLock,UploadResult result){
-        logger.info("uploaing to qiniu in thread "+Thread.currentThread().getName());
-        boolean success=qiniuCloudService.uploadImage(ImageUtil.getImageFilePath()+File.separator+fileName,fileName);
-        if(success){
-            logger.info("uploaded image "+fileName+" successfully");
-            result.uploadToQiniu=true;
+    private void uploadToQiniu(String fileName,CountDownLatch uploadLock,OpResult result){
+        taskExecutor.execute(new UploadToQiniuRunnable(uploadLock,result,fileName));
+    }
+
+    private void deleteFromQiniu(String fileName,CountDownLatch deleteLock,OpResult deleteResult){
+        taskExecutor.execute(new DeleteFromQiniuRunnable(fileName,deleteLock,deleteResult));
+    }
+
+    private void deleteFromWechat(String mediaId,CountDownLatch deleteLock,OpResult deleteResult){
+        taskExecutor.execute(new DeleteFromWechatRunnable(mediaId,deleteLock,deleteResult));
+    }
+
+    private void uploadToWechat(File f,String fileName,CountDownLatch uploadLock,OpResult uploadResult){
+        taskExecutor.execute(new UploadToWechatRunnable(f,fileName,uploadResult,uploadLock));
+    }
+
+    static class OpResult{
+        public  boolean qiniuDone=false;
+        public  boolean wechatDone=false;
+        public OpResult(){
+
         }
-        uploadLock.countDown();
+        public void setQiniuDone(boolean done){
+            qiniuDone=done;
+        }
+        public boolean getQiniu(){
+            return qiniuDone;
+        }
+        public void setWechatDone(boolean done){
+            wechatDone=done;
+        }
+        public boolean getWechat(){
+            return wechatDone;
+        }
     }
 
-    @Async(value = "taskExecutor")
-    void deleteFromQiniu(String fileName,CountDownLatch deleteLock,DeleteResult deleteResult){
-       if(qiniuCloudService.deleteImage(fileName)){
-           deleteResult.deleteFromQiniu=true;
-       }
-       deleteLock.countDown();
-    }
-
-    @Async(value = "taskExecutor")
-    void deleteFromWechat(String mediaId,CountDownLatch deleteLock,DeleteResult deleteResult){
-        try {
-            boolean success=wxMpService.getMaterialService()
-                .materialDelete(mediaId);
+     class UploadToQiniuRunnable implements Runnable{
+        private CountDownLatch lock;
+        private OpResult result;
+        private String fileName;
+        public UploadToQiniuRunnable(CountDownLatch lock,OpResult result,String fileName){
+            this.lock=lock;
+            this.result=result;
+            this.fileName=fileName;
+        }
+        public void run() {
+            logger.info("uploaing to qiniu in thread "+Thread.currentThread().getName());
+            boolean success=qiniuCloudService.uploadImage(ImageUtil.getImageFilePath()+File.separator+fileName,fileName);
             if(success){
-                deleteResult.deleteFromWechat=true;
+                logger.info("uploaded image "+fileName+" successfully");
+                result.setQiniuDone(true);
             }
-        } catch (WxErrorException e) {
-            e.printStackTrace();
-        }finally {
-            deleteLock.countDown();
+            lock.countDown();
         }
     }
 
-    @Async(value = "taskExecutor")
-    void uploadToWechat(File f,String fileName,CountDownLatch uploadLock,UploadResult uploadResult){
-        logger.info("uoloading image in thread "+Thread.currentThread().getName());
-        WxMpMaterial wxMpMaterial=new WxMpMaterial();
-        wxMpMaterial.setFile(f);
-        wxMpMaterial.setName(fileName);
-        try {
-            WxMpMaterialUploadResult result=wxMpService.getMaterialService()
-                .materialFileUpload(WxConsts.MaterialType.IMAGE,wxMpMaterial);
-            mediaId=result.getMediaId();
-            logger.info("get url "+result.getUrl());
-            if(result.getErrCode()==null&&result.getErrMsg()==null){
-               uploadResult.uploadToWechat=true;
+    class UploadToWechatRunnable implements Runnable{
+        private File f;
+        private String fileName;
+        private OpResult uploadResult;
+        private CountDownLatch lock;
+        public UploadToWechatRunnable(File f,String name,OpResult result,CountDownLatch lock){
+            this.f=f;
+            fileName=name;
+            uploadResult=result;
+            this.lock=lock;
+        }
+        public void run() {
+            logger.info("uoloading image to wechat in thread "+Thread.currentThread().getName());
+            WxMpMaterial wxMpMaterial=new WxMpMaterial();
+            wxMpMaterial.setFile(f);
+            wxMpMaterial.setName(fileName);
+            try {
+                WxMpMaterialUploadResult result=wxMpService.getMaterialService()
+                    .materialFileUpload(WxConsts.MaterialType.IMAGE,wxMpMaterial);
+                mediaId=result.getMediaId();
+                logger.info("get url "+result.getUrl());
+                if(result.getErrCode()==null&&result.getErrMsg()==null){
+                    uploadResult.setWechatDone(true);
+                }
+            } catch (WxErrorException e) {
+                e.printStackTrace();
+            } finally {
+                lock.countDown();
             }
-        } catch (WxErrorException e) {
-            e.printStackTrace();
-        } finally {
-            uploadLock.countDown();
         }
     }
 
-    static class UploadResult{
-        public boolean uploadToQiniu;
-        public boolean uploadToWechat;
-        public UploadResult(){
-            uploadToQiniu=false;
-            uploadToWechat=false;
+    class DeleteFromQiniuRunnable implements Runnable{
+        private String fileName;
+        private CountDownLatch lock;
+        private OpResult result;
+        public DeleteFromQiniuRunnable(String fileName,CountDownLatch lock,OpResult result){
+            this.fileName=fileName;
+            this.lock=lock;
+            this.result=result;
+        }
+        public void run() {
+            if(qiniuCloudService.deleteImage(fileName)){
+               result.setQiniuDone(true);
+            }
+            lock.countDown();
         }
     }
 
-    static class DeleteResult{
-        public boolean deleteFromQiniu;
-        public boolean deleteFromWechat;
-        public DeleteResult(){
-            deleteFromQiniu=false;
-            deleteFromWechat=false;
+    class DeleteFromWechatRunnable implements Runnable{
+        private String mediaId;
+        private CountDownLatch lock;
+        private OpResult result;
+        public DeleteFromWechatRunnable(String mediaId,CountDownLatch lock,OpResult result){
+            this.mediaId=mediaId;
+            this.lock=lock;
+            this.result=result;
+        }
+        public void run() {
+            try {
+                if(wxMpService.getMaterialService()
+                    .materialDelete(mediaId)){
+                    result.setWechatDone(true);
+                }
+            } catch (WxErrorException e) {
+                e.printStackTrace();
+            }finally {
+                lock.countDown();
+            }
         }
     }
 }
