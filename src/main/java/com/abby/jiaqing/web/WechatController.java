@@ -8,6 +8,7 @@ import me.chanjar.weixin.mp.api.WxMpMessageRouter;
 import me.chanjar.weixin.mp.api.WxMpService;
 import me.chanjar.weixin.mp.bean.message.WxMpXmlMessage;
 import me.chanjar.weixin.mp.bean.message.WxMpXmlOutMessage;
+import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -33,12 +34,29 @@ public class WechatController {
            return;
         }
         try {
-            WxMpXmlMessage message=WxMpXmlMessage.fromXml(request.getInputStream());
-            logger.info("got message "+message.toString());
+            WxMpXmlMessage message=getMessage(request,timestamp,nonce);
+            logger.info("got message "+message);
             WxMpXmlOutMessage outMessage=wxMpMessageRouter.route(message);
 
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    private WxMpXmlMessage getMessage(HttpServletRequest request,String timestamp,String nonce) throws IOException {
+        String encryptType = StringUtils.isBlank(request.getParameter("encrypt_type")) ?
+            "raw" :
+            request.getParameter("encrypt_type");
+
+        WxMpXmlMessage inMessage = null;
+        if ("raw".equals(encryptType)) {
+            // 明文传输的消息
+            inMessage = WxMpXmlMessage.fromXml(request.getInputStream());
+        } else if ("aes".equals(encryptType)) {
+            // 是aes加密的消息
+            String msgSignature = request.getParameter("msg_signature");
+            inMessage = WxMpXmlMessage.fromEncryptedXml(request.getInputStream(), wxMpService.getWxMpConfigStorage(), timestamp, nonce, msgSignature);
+        }
+        return inMessage;
     }
 }
