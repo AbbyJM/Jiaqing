@@ -1,0 +1,7 @@
+17:48:37.656 [http-nio-80-exec-8] DEBUG o.s.security.web.FilterChainProxy - /user/isonline reached end of additional filter chain; proceeding with original chain
+17:48:37.661 [http-nio-80-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - GET "/user/isonline", parameters={}
+17:48:37.661 [http-nio-80-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.abby.jiaqing.web.UserController#isUserOnline(HttpServletRequest, HttpServletResponse)
+17:48:37.661 [http-nio-80-exec-8] DEBUG o.s.s.w.h.writers.HstsHeaderWriter - Not injecting HSTS header since it did not match the requestMatcher org.springframework.security.web.header.writers.HstsHeaderWriter$SecureRequestMatcher@1d12a271
+17:48:37.662 [http-nio-80-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+17:48:37.663 [http-nio-80-exec-8] DEBUG o.s.s.w.a.ExceptionTranslationFilter - Chain processed normally
+17:48:37.664 [http-nio-80-exec-8] DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - SecurityContextHolder now cleared, as request processing completed

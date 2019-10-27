@@ -1,5 +1,6 @@
 package com.abby.jiaqing.config;
 
+import com.qiniu.storage.BucketManager;
 import com.qiniu.storage.Region;
 import com.qiniu.storage.UploadManager;
 import com.qiniu.util.Auth;
@@ -18,8 +19,17 @@ public class QiniuUploadConfig {
     }
 
     @Bean
+    public com.qiniu.storage.Configuration configuration(){
+        return new com.qiniu.storage.Configuration(Region.region2());
+    }
+
+    @Bean
     public UploadManager uploadManager(){
-        com.qiniu.storage.Configuration configuration=new com.qiniu.storage.Configuration(Region.region2());
-        return new UploadManager(configuration);
+        return new UploadManager(configuration());
+    }
+
+    @Bean
+    public BucketManager bucketManager(){
+        return new BucketManager(auth(),configuration());
     }
 }

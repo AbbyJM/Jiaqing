@@ -1,0 +1,19 @@
+17:48:41.288 [http-nio-80-exec-10] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Previously Authenticated: org.springframework.security.authentication.UsernamePasswordAuthenticationToken@6218d8c: Principal: com.abby.jiaqing.security.CustomUserDetails@6eb2ea2b; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@957e: RemoteIpAddress: 127.0.0.1; SessionId: null; Granted Authorities: ROLE_SUPERUSER
+17:48:41.292 [http-nio-80-exec-10] DEBUG o.s.s.access.vote.AffirmativeBased - Voter: org.springframework.security.web.access.expression.WebExpressionVoter@58590e61, returned: 1
+17:48:41.293 [http-nio-80-exec-10] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Authorization successful
+17:48:41.293 [http-nio-80-exec-10] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - RunAsManager did not change Authentication object
+17:48:41.293 [http-nio-80-exec-10] DEBUG o.s.security.web.FilterChainProxy - /image/list?pageNum=1&pageSize=10 reached end of additional filter chain; proceeding with original chain
+17:48:41.293 [http-nio-80-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - GET "/image/list?pageNum=1&pageSize=10", parameters={masked}
+17:48:41.294 [http-nio-80-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.abby.jiaqing.web.ImageController#getImageList(HttpServletRequest, HttpServletResponse)
+17:48:41.294 [http-nio-80-exec-10] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+17:48:41.294 [http-nio-80-exec-10] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@549fb20f] was not registered for synchronization because synchronization is not active
+17:48:41.295 [http-nio-80-exec-10] DEBUG o.s.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+17:48:41.295 [http-nio-80-exec-10] DEBUG o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@1515738860 wrapping com.mysql.cj.jdbc.ConnectionImpl@3b4924ad] will not be managed by Spring
+17:48:41.296 [http-nio-80-exec-10] DEBUG c.a.j.m.I.getAllImages_COUNT - ==>  Preparing: SELECT count(0) FROM image 
+17:48:41.296 [http-nio-80-exec-10] DEBUG c.a.j.m.I.getAllImages_COUNT - ==> Parameters: 
+17:48:41.297 [http-nio-80-exec-10] DEBUG c.a.j.m.I.getAllImages_COUNT - <==      Total: 1
+17:48:41.298 [http-nio-80-exec-10] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@549fb20f]
+17:48:41.298 [http-nio-80-exec-10] DEBUG o.s.s.w.h.writers.HstsHeaderWriter - Not injecting HSTS header since it did not match the requestMatcher org.springframework.security.web.header.writers.HstsHeaderWriter$SecureRequestMatcher@1d12a271
+17:48:41.298 [http-nio-80-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+17:48:41.299 [http-nio-80-exec-10] DEBUG o.s.s.w.a.ExceptionTranslationFilter - Chain processed normally
+17:48:41.299 [http-nio-80-exec-10] DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - SecurityContextHolder now cleared, as request processing completed

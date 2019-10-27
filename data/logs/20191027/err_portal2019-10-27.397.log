@@ -1,0 +1,9 @@
+17:48:40.021 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+17:48:40.686 [http-nio-80-exec-9] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/user/isonline'; against '/index.html'
+17:48:40.687 [http-nio-80-exec-9] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/user/isonline'; against '/static/**'
+17:48:40.687 [http-nio-80-exec-9] DEBUG o.s.security.web.FilterChainProxy - /user/isonline at position 1 of 11 in additional filter chain; firing Filter: 'WebAsyncManagerIntegrationFilter'
+17:48:40.687 [http-nio-80-exec-9] DEBUG o.s.security.web.FilterChainProxy - /user/isonline at position 2 of 11 in additional filter chain; firing Filter: 'SecurityContextPersistenceFilter'
+17:48:40.688 [http-nio-80-exec-9] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Obtained a valid SecurityContext from SPRING_SECURITY_CONTEXT: 'org.springframework.security.core.context.SecurityContextImpl@6218d8c: Authentication: org.springframework.security.authentication.UsernamePasswordAuthenticationToken@6218d8c: Principal: com.abby.jiaqing.security.CustomUserDetails@6eb2ea2b; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@957e: RemoteIpAddress: 127.0.0.1; SessionId: null; Granted Authorities: ROLE_SUPERUSER'
+17:48:40.688 [http-nio-80-exec-9] DEBUG o.s.security.web.FilterChainProxy - /user/isonline at position 3 of 11 in additional filter chain; firing Filter: 'HeaderWriterFilter'
+17:48:40.688 [http-nio-80-exec-9] DEBUG o.s.security.web.FilterChainProxy - /user/isonline at position 4 of 11 in additional filter chain; firing Filter: 'LogoutFilter'
+17:48:40.688 [http-nio-80-exec-9] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', GET]

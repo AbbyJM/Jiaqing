@@ -1,0 +1,13 @@
+16:56:58.905 [http-nio-80-exec-4] DEBUG com.zaxxer.hikari.HikariConfig - username........................"root"
+16:56:58.910 [http-nio-80-exec-4] DEBUG com.zaxxer.hikari.HikariConfig - validationTimeout...............5000
+16:56:58.910 [http-nio-80-exec-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+16:56:59.532 [http-nio-80-exec-4] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4d978e76
+16:56:59.535 [http-nio-80-exec-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+16:56:59.541 [http-nio-80-exec-4] DEBUG o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@2020217056 wrapping com.mysql.cj.jdbc.ConnectionImpl@4d978e76] will not be managed by Spring
+16:56:59.554 [http-nio-80-exec-4] DEBUG c.a.j.m.UserMapper.selectByUserName - ==>  Preparing: select id, username, password, email, active, roles, avatar from user where username=? 
+16:56:59.609 [http-nio-80-exec-4] DEBUG c.a.j.m.UserMapper.selectByUserName - ==> Parameters: abby(String)
+16:56:59.648 [http-nio-80-exec-4] DEBUG c.a.j.m.UserMapper.selectByUserName - <==      Total: 1
+16:56:59.654 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=1, active=1, idle=0, waiting=0)
+16:56:59.658 [http-nio-80-exec-4] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@79b67341]
+16:56:59.680 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@571d8823
+16:56:59.694 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@16208218

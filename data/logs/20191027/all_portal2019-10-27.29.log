@@ -1,0 +1,32 @@
+16:56:50.509 [http-nio-80-exec-1] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'GET /user/isonline' doesn't match 'POST /logout'
+16:56:50.509 [http-nio-80-exec-2] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/user/isonline'; against '/logout'
+16:56:50.515 [http-nio-80-exec-1] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', PUT]
+16:56:50.515 [http-nio-80-exec-2] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', POST]
+16:56:50.515 [http-nio-80-exec-1] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'GET /user/isonline' doesn't match 'PUT /logout'
+16:56:50.515 [http-nio-80-exec-2] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'GET /user/isonline' doesn't match 'POST /logout'
+16:56:50.515 [http-nio-80-exec-1] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', DELETE]
+16:56:50.516 [http-nio-80-exec-2] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', PUT]
+16:56:50.516 [http-nio-80-exec-1] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'GET /user/isonline' doesn't match 'DELETE /logout'
+16:56:50.516 [http-nio-80-exec-2] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'GET /user/isonline' doesn't match 'PUT /logout'
+16:56:50.516 [http-nio-80-exec-1] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - No matches found
+16:56:50.516 [http-nio-80-exec-2] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', DELETE]
+16:56:50.516 [http-nio-80-exec-2] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'GET /user/isonline' doesn't match 'DELETE /logout'
+16:56:50.516 [http-nio-80-exec-1] DEBUG o.s.security.web.FilterChainProxy - /user/isonline at position 5 of 11 in additional filter chain; firing Filter: 'UsernamePasswordAuthenticationFilter'
+16:56:50.516 [http-nio-80-exec-2] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - No matches found
+16:56:50.516 [http-nio-80-exec-1] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'GET /user/isonline' doesn't match 'POST /login'
+16:56:50.516 [http-nio-80-exec-2] DEBUG o.s.security.web.FilterChainProxy - /user/isonline at position 5 of 11 in additional filter chain; firing Filter: 'UsernamePasswordAuthenticationFilter'
+16:56:50.516 [http-nio-80-exec-2] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'GET /user/isonline' doesn't match 'POST /login'
+16:56:50.516 [http-nio-80-exec-1] DEBUG o.s.security.web.FilterChainProxy - /user/isonline at position 6 of 11 in additional filter chain; firing Filter: 'RequestCacheAwareFilter'
+16:56:50.516 [http-nio-80-exec-2] DEBUG o.s.security.web.FilterChainProxy - /user/isonline at position 6 of 11 in additional filter chain; firing Filter: 'RequestCacheAwareFilter'
+16:56:50.516 [http-nio-80-exec-1] DEBUG o.s.s.w.s.HttpSessionRequestCache - saved request doesn't match
+16:56:50.516 [http-nio-80-exec-1] DEBUG o.s.security.web.FilterChainProxy - /user/isonline at position 7 of 11 in additional filter chain; firing Filter: 'SecurityContextHolderAwareRequestFilter'
+16:56:50.536 [http-nio-80-exec-2] DEBUG o.s.s.w.s.HttpSessionRequestCache - saved request doesn't match
+16:56:50.536 [http-nio-80-exec-2] DEBUG o.s.security.web.FilterChainProxy - /user/isonline at position 7 of 11 in additional filter chain; firing Filter: 'SecurityContextHolderAwareRequestFilter'
+16:56:50.538 [http-nio-80-exec-1] DEBUG o.s.security.web.FilterChainProxy - /user/isonline at position 8 of 11 in additional filter chain; firing Filter: 'AnonymousAuthenticationFilter'
+16:56:50.538 [http-nio-80-exec-2] DEBUG o.s.security.web.FilterChainProxy - /user/isonline at position 8 of 11 in additional filter chain; firing Filter: 'AnonymousAuthenticationFilter'
+16:56:50.540 [http-nio-80-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Populated SecurityContextHolder with anonymous token: 'org.springframework.security.authentication.AnonymousAuthenticationToken@19e0ff5c: Principal: anonymousUser; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@957e: RemoteIpAddress: 127.0.0.1; SessionId: null; Granted Authorities: ROLE_ANONYMOUS'
+16:56:50.540 [http-nio-80-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Populated SecurityContextHolder with anonymous token: 'org.springframework.security.authentication.AnonymousAuthenticationToken@19e0ff5c: Principal: anonymousUser; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@957e: RemoteIpAddress: 127.0.0.1; SessionId: null; Granted Authorities: ROLE_ANONYMOUS'
+16:56:50.540 [http-nio-80-exec-2] DEBUG o.s.security.web.FilterChainProxy - /user/isonline at position 9 of 11 in additional filter chain; firing Filter: 'SessionManagementFilter'
+16:56:50.540 [http-nio-80-exec-1] DEBUG o.s.security.web.FilterChainProxy - /user/isonline at position 9 of 11 in additional filter chain; firing Filter: 'SessionManagementFilter'
+16:56:50.541 [http-nio-80-exec-2] DEBUG o.s.s.w.s.SessionManagementFilter - Requested session ID DA731B356CA6FCC64680A5AF29B79D6C is invalid.
+16:56:50.541 [http-nio-80-exec-1] DEBUG o.s.s.w.s.SessionManagementFilter - Requested session ID DA731B356CA6FCC64680A5AF29B79D6C is invalid.

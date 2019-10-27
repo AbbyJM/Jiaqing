@@ -1,0 +1,2 @@
+17:48:29.672 [http-nio-80-exec-5] DEBUG o.s.security.web.FilterChainProxy - /user/isonline at position 2 of 11 in additional filter chain; firing Filter: 'SecurityContextPersistenceFilter'
+17:48:29.683 [http-nio-80-exec-5] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - No HttpSession currently exists

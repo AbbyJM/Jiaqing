@@ -1,0 +1,2 @@
+17:27:26.233 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@316324fd
+17:27:27.016 [IdleConnectionMonitorThread] DEBUG o.a.h.i.c.PoolingHttpClientConnectionManager - Closing expired connections

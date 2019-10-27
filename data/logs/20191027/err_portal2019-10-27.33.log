@@ -1,0 +1,16 @@
+16:56:58.664 [http-nio-80-exec-4] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', GET]
+16:56:58.668 [http-nio-80-exec-4] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'POST /login' doesn't match 'GET /logout'
+16:56:58.668 [http-nio-80-exec-4] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', POST]
+16:56:58.668 [http-nio-80-exec-4] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/login'; against '/logout'
+16:56:58.668 [http-nio-80-exec-4] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', PUT]
+16:56:58.668 [http-nio-80-exec-4] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'POST /login' doesn't match 'PUT /logout'
+16:56:58.671 [http-nio-80-exec-4] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', DELETE]
+16:56:58.671 [http-nio-80-exec-4] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'POST /login' doesn't match 'DELETE /logout'
+16:56:58.671 [http-nio-80-exec-4] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - No matches found
+16:56:58.671 [http-nio-80-exec-4] DEBUG o.s.security.web.FilterChainProxy - /login at position 5 of 11 in additional filter chain; firing Filter: 'UsernamePasswordAuthenticationFilter'
+16:56:58.671 [http-nio-80-exec-4] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/login'; against '/login'
+16:56:58.671 [http-nio-80-exec-4] DEBUG o.s.s.w.a.UsernamePasswordAuthenticationFilter - Request is to process authentication
+16:56:58.672 [http-nio-80-exec-4] DEBUG o.s.s.authentication.ProviderManager - Authentication attempt using org.springframework.security.authentication.dao.DaoAuthenticationProvider
+16:56:58.845 [http-nio-80-exec-4] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+16:56:58.860 [http-nio-80-exec-4] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@79b67341] was not registered for synchronization because synchronization is not active
+16:56:58.876 [http-nio-80-exec-4] DEBUG o.s.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource

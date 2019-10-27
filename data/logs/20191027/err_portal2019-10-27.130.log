@@ -1,0 +1,4 @@
+17:03:03.820 [http-nio-80-exec-5] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/user/isonline'; against '/index.html'
+17:03:03.849 [http-nio-80-exec-5] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/user/isonline'; against '/static/**'
+17:03:03.849 [http-nio-80-exec-5] DEBUG o.s.security.web.FilterChainProxy - /user/isonline at position 1 of 11 in additional filter chain; firing Filter: 'WebAsyncManagerIntegrationFilter'
+17:03:03.849 [http-nio-80-exec-5] DEBUG o.s.security.web.FilterChainProxy - /user/isonline at position 2 of 11 in additional filter chain; firing Filter: 'SecurityContextPersistenceFilter'

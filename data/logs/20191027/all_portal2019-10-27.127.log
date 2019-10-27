@@ -1,0 +1,49 @@
+17:02:24.975 [http-nio-80-exec-4] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', POST]
+17:02:24.979 [http-nio-80-exec-4] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'GET /image/list' doesn't match 'POST /logout'
+17:02:24.979 [http-nio-80-exec-4] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', PUT]
+17:02:24.979 [http-nio-80-exec-4] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'GET /image/list' doesn't match 'PUT /logout'
+17:02:24.979 [http-nio-80-exec-4] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', DELETE]
+17:02:24.979 [http-nio-80-exec-4] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'GET /image/list' doesn't match 'DELETE /logout'
+17:02:24.981 [http-nio-80-exec-4] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - No matches found
+17:02:24.981 [http-nio-80-exec-4] DEBUG o.s.security.web.FilterChainProxy - /image/list?pageNum=1&pageSize=10 at position 5 of 11 in additional filter chain; firing Filter: 'UsernamePasswordAuthenticationFilter'
+17:02:24.981 [http-nio-80-exec-4] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'GET /image/list' doesn't match 'POST /login'
+17:02:24.981 [http-nio-80-exec-4] DEBUG o.s.security.web.FilterChainProxy - /image/list?pageNum=1&pageSize=10 at position 6 of 11 in additional filter chain; firing Filter: 'RequestCacheAwareFilter'
+17:02:24.981 [http-nio-80-exec-4] DEBUG o.s.s.w.s.HttpSessionRequestCache - saved request doesn't match
+17:02:24.981 [http-nio-80-exec-4] DEBUG o.s.security.web.FilterChainProxy - /image/list?pageNum=1&pageSize=10 at position 7 of 11 in additional filter chain; firing Filter: 'SecurityContextHolderAwareRequestFilter'
+17:02:24.981 [http-nio-80-exec-4] DEBUG o.s.security.web.FilterChainProxy - /image/list?pageNum=1&pageSize=10 at position 8 of 11 in additional filter chain; firing Filter: 'AnonymousAuthenticationFilter'
+17:02:24.981 [http-nio-80-exec-4] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - SecurityContextHolder not populated with anonymous token, as it already contained: 'org.springframework.security.authentication.UsernamePasswordAuthenticationToken@5a2e062e: Principal: com.abby.jiaqing.security.CustomUserDetails@32bd6189; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@957e: RemoteIpAddress: 127.0.0.1; SessionId: null; Granted Authorities: ROLE_SUPERUSER'
+17:02:24.981 [http-nio-80-exec-4] DEBUG o.s.security.web.FilterChainProxy - /image/list?pageNum=1&pageSize=10 at position 9 of 11 in additional filter chain; firing Filter: 'SessionManagementFilter'
+17:02:24.981 [http-nio-80-exec-4] DEBUG o.s.security.web.FilterChainProxy - /image/list?pageNum=1&pageSize=10 at position 10 of 11 in additional filter chain; firing Filter: 'ExceptionTranslationFilter'
+17:02:24.981 [http-nio-80-exec-4] DEBUG o.s.security.web.FilterChainProxy - /image/list?pageNum=1&pageSize=10 at position 11 of 11 in additional filter chain; firing Filter: 'FilterSecurityInterceptor'
+17:02:24.982 [http-nio-80-exec-4] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', GET]
+17:02:24.982 [http-nio-80-exec-4] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/image/list'; against '/logout'
+17:02:24.982 [http-nio-80-exec-4] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', POST]
+17:02:24.982 [http-nio-80-exec-4] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'GET /image/list' doesn't match 'POST /logout'
+17:02:24.982 [http-nio-80-exec-4] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', PUT]
+17:02:24.982 [http-nio-80-exec-4] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'GET /image/list' doesn't match 'PUT /logout'
+17:02:24.982 [http-nio-80-exec-4] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', DELETE]
+17:02:24.982 [http-nio-80-exec-4] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'GET /image/list' doesn't match 'DELETE /logout'
+17:02:24.982 [http-nio-80-exec-4] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - No matches found
+17:02:24.982 [http-nio-80-exec-4] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/image/list'; against '/test/**'
+17:02:24.982 [http-nio-80-exec-4] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/image/list'; against '/user/isonline**'
+17:02:24.982 [http-nio-80-exec-4] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/image/list'; against '/wechat/**'
+17:02:24.982 [http-nio-80-exec-4] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Secure object: FilterInvocation: URL: /image/list?pageNum=1&pageSize=10; Attributes: [authenticated]
+17:02:24.982 [http-nio-80-exec-4] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Previously Authenticated: org.springframework.security.authentication.UsernamePasswordAuthenticationToken@5a2e062e: Principal: com.abby.jiaqing.security.CustomUserDetails@32bd6189; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@957e: RemoteIpAddress: 127.0.0.1; SessionId: null; Granted Authorities: ROLE_SUPERUSER
+17:02:24.983 [http-nio-80-exec-4] DEBUG o.s.s.access.vote.AffirmativeBased - Voter: org.springframework.security.web.access.expression.WebExpressionVoter@58590e61, returned: 1
+17:02:24.983 [http-nio-80-exec-4] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Authorization successful
+17:02:24.983 [http-nio-80-exec-4] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - RunAsManager did not change Authentication object
+17:02:24.983 [http-nio-80-exec-4] DEBUG o.s.security.web.FilterChainProxy - /image/list?pageNum=1&pageSize=10 reached end of additional filter chain; proceeding with original chain
+17:02:24.983 [http-nio-80-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/image/list?pageNum=1&pageSize=10", parameters={masked}
+17:02:24.984 [http-nio-80-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.abby.jiaqing.web.ImageController#getImageList(HttpServletRequest, HttpServletResponse)
+17:02:25.000 [http-nio-80-exec-4] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+17:02:25.000 [http-nio-80-exec-4] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5fd833ea] was not registered for synchronization because synchronization is not active
+17:02:25.045 [http-nio-80-exec-4] DEBUG o.s.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+17:02:25.045 [http-nio-80-exec-4] DEBUG o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@1941957445 wrapping com.mysql.cj.jdbc.ConnectionImpl@d298eb4] will not be managed by Spring
+17:02:25.046 [http-nio-80-exec-4] DEBUG c.a.j.m.I.getAllImages_COUNT - ==>  Preparing: SELECT count(0) FROM image 
+17:02:25.046 [http-nio-80-exec-4] DEBUG c.a.j.m.I.getAllImages_COUNT - ==> Parameters: 
+17:02:25.273 [http-nio-80-exec-4] DEBUG c.a.j.m.I.getAllImages_COUNT - <==      Total: 1
+17:02:25.274 [http-nio-80-exec-4] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5fd833ea]
+17:02:25.288 [http-nio-80-exec-4] DEBUG o.s.s.w.h.writers.HstsHeaderWriter - Not injecting HSTS header since it did not match the requestMatcher org.springframework.security.web.header.writers.HstsHeaderWriter$SecureRequestMatcher@1d12a271
+17:02:25.289 [http-nio-80-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+17:02:25.289 [http-nio-80-exec-4] DEBUG o.s.s.w.a.ExceptionTranslationFilter - Chain processed normally
+17:02:25.289 [http-nio-80-exec-4] DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - SecurityContextHolder now cleared, as request processing completed

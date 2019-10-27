@@ -1,0 +1,1 @@
+17:26:55.403 [HikariPool-1 connection closer] DEBUG com.zaxxer.hikari.pool.PoolBase - HikariPool-1 - Closing connection com.mysql.cj.jdbc.ConnectionImpl@2a660b1d: (connection has passed maxLifetime)

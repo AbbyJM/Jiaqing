@@ -1,0 +1,1 @@
+17:05:19.393 [http-nio-80-exec-8] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/irt'; against '/static/**'

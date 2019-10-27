@@ -1,0 +1,16 @@
+17:06:58.556 [http-nio-80-exec-4] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/user/isonline'; against '/static/**'
+17:06:58.559 [http-nio-80-exec-4] DEBUG o.s.security.web.FilterChainProxy - /user/isonline at position 1 of 11 in additional filter chain; firing Filter: 'WebAsyncManagerIntegrationFilter'
+17:06:58.559 [http-nio-80-exec-4] DEBUG o.s.security.web.FilterChainProxy - /user/isonline at position 2 of 11 in additional filter chain; firing Filter: 'SecurityContextPersistenceFilter'
+17:06:58.559 [http-nio-80-exec-4] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Obtained a valid SecurityContext from SPRING_SECURITY_CONTEXT: 'org.springframework.security.core.context.SecurityContextImpl@2d89c2ad: Authentication: org.springframework.security.authentication.UsernamePasswordAuthenticationToken@2d89c2ad: Principal: com.abby.jiaqing.security.CustomUserDetails@451aa50a; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@957e: RemoteIpAddress: 127.0.0.1; SessionId: null; Granted Authorities: ROLE_SUPERUSER'
+17:06:58.560 [http-nio-80-exec-4] DEBUG o.s.security.web.FilterChainProxy - /user/isonline at position 3 of 11 in additional filter chain; firing Filter: 'HeaderWriterFilter'
+17:06:58.560 [http-nio-80-exec-4] DEBUG o.s.security.web.FilterChainProxy - /user/isonline at position 4 of 11 in additional filter chain; firing Filter: 'LogoutFilter'
+17:06:58.560 [http-nio-80-exec-4] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', GET]
+17:06:58.560 [http-nio-80-exec-4] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/user/isonline'; against '/logout'
+17:06:58.560 [http-nio-80-exec-4] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', POST]
+17:06:58.560 [http-nio-80-exec-4] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'GET /user/isonline' doesn't match 'POST /logout'
+17:06:58.560 [http-nio-80-exec-4] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', PUT]
+17:06:58.560 [http-nio-80-exec-4] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'GET /user/isonline' doesn't match 'PUT /logout'
+17:06:58.560 [http-nio-80-exec-4] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', DELETE]
+17:06:58.560 [http-nio-80-exec-4] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'GET /user/isonline' doesn't match 'DELETE /logout'
+17:06:58.560 [http-nio-80-exec-4] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - No matches found
+17:06:58.560 [http-nio-80-exec-4] DEBUG o.s.security.web.FilterChainProxy - /user/isonline at position 5 of 11 in additional filter chain; firing Filter: 'UsernamePasswordAuthenticationFilter'

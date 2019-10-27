@@ -1,0 +1,32 @@
+16:57:38.807 [http-nio-80-exec-3] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'POST /login' doesn't match 'PUT /logout'
+16:57:38.810 [http-nio-80-exec-3] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', DELETE]
+16:57:38.811 [http-nio-80-exec-3] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'POST /login' doesn't match 'DELETE /logout'
+16:57:38.811 [http-nio-80-exec-3] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - No matches found
+16:57:38.811 [http-nio-80-exec-3] DEBUG o.s.security.web.FilterChainProxy - /login at position 5 of 11 in additional filter chain; firing Filter: 'UsernamePasswordAuthenticationFilter'
+16:57:38.811 [http-nio-80-exec-3] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/login'; against '/login'
+16:57:38.812 [http-nio-80-exec-3] DEBUG o.s.s.w.a.UsernamePasswordAuthenticationFilter - Request is to process authentication
+16:57:38.812 [http-nio-80-exec-3] DEBUG o.s.s.authentication.ProviderManager - Authentication attempt using org.springframework.security.authentication.dao.DaoAuthenticationProvider
+16:57:38.973 [http-nio-80-exec-3] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+16:57:38.983 [http-nio-80-exec-3] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4ec3b9c3] was not registered for synchronization because synchronization is not active
+16:57:38.994 [http-nio-80-exec-3] DEBUG o.s.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+16:57:38.995 [http-nio-80-exec-3] DEBUG com.zaxxer.hikari.HikariConfig - HikariPool-1 - configuration:
+16:57:38.997 [http-nio-80-exec-3] DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension.............false
+16:57:38.997 [http-nio-80-exec-3] DEBUG com.zaxxer.hikari.HikariConfig - autoCommit......................true
+16:57:38.997 [http-nio-80-exec-3] DEBUG com.zaxxer.hikari.HikariConfig - catalog.........................none
+16:57:38.997 [http-nio-80-exec-3] DEBUG com.zaxxer.hikari.HikariConfig - connectionInitSql...............none
+16:57:38.997 [http-nio-80-exec-3] DEBUG com.zaxxer.hikari.HikariConfig - connectionTestQuery.............none
+16:57:38.997 [http-nio-80-exec-3] DEBUG com.zaxxer.hikari.HikariConfig - connectionTimeout...............30000
+16:57:38.998 [http-nio-80-exec-3] DEBUG com.zaxxer.hikari.HikariConfig - dataSource......................none
+16:57:38.998 [http-nio-80-exec-3] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceClassName.............none
+16:57:38.998 [http-nio-80-exec-3] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceJNDI..................none
+16:57:38.998 [http-nio-80-exec-3] DEBUG com.zaxxer.hikari.HikariConfig - dataSourceProperties............{password=<masked>}
+16:57:38.999 [http-nio-80-exec-3] DEBUG com.zaxxer.hikari.HikariConfig - driverClassName................."com.mysql.cj.jdbc.Driver"
+16:57:38.999 [http-nio-80-exec-3] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckProperties...........{}
+16:57:38.999 [http-nio-80-exec-3] DEBUG com.zaxxer.hikari.HikariConfig - healthCheckRegistry.............none
+16:57:38.999 [http-nio-80-exec-3] DEBUG com.zaxxer.hikari.HikariConfig - idleTimeout.....................600000
+16:57:38.999 [http-nio-80-exec-3] DEBUG com.zaxxer.hikari.HikariConfig - initializationFailTimeout.......1
+16:57:38.999 [http-nio-80-exec-3] DEBUG com.zaxxer.hikari.HikariConfig - isolateInternalQueries..........false
+16:57:38.999 [http-nio-80-exec-3] DEBUG com.zaxxer.hikari.HikariConfig - jdbcUrl.........................jdbc:mysql://localhost:3306/jiaqing
+16:57:38.999 [http-nio-80-exec-3] DEBUG com.zaxxer.hikari.HikariConfig - leakDetectionThreshold..........0
+16:57:38.999 [http-nio-80-exec-3] DEBUG com.zaxxer.hikari.HikariConfig - maxLifetime.....................1800000
+16:57:38.999 [http-nio-80-exec-3] DEBUG com.zaxxer.hikari.HikariConfig - maximumPoolSize.................10

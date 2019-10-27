@@ -4,6 +4,7 @@ import com.abby.jiaqing.config.QiniuProperties;
 import com.abby.jiaqing.service.QiniuCloudService;
 import com.qiniu.common.QiniuException;
 import com.qiniu.http.Response;
+import com.qiniu.storage.BucketManager;
 import com.qiniu.storage.UploadManager;
 import com.qiniu.util.Auth;
 import javax.annotation.Resource;
@@ -20,6 +21,9 @@ public class QiniuCloudServiceImpl implements QiniuCloudService {
     @Resource
     private UploadManager uploadManager;
 
+    @Resource
+    private BucketManager bucketManager;
+
     public boolean uploadImage(String filePath,String fileName){
         String uploadToken=auth.uploadToken(qiniuProperties.getDefaultBucket(),fileName);
         try {
@@ -33,5 +37,15 @@ public class QiniuCloudServiceImpl implements QiniuCloudService {
 
     public String getImageURL(String fileName)  {
         return String.format("%s/%s",qiniuProperties.getDomain(),fileName);
+    }
+
+    public boolean deleteImage(String fileName){
+        try {
+            Response response=bucketManager.delete(qiniuProperties.getDefaultBucket(),fileName);
+            return response.error==null;
+        } catch (QiniuException e) {
+            e.printStackTrace();
+        }
+        return false;
     }
 }

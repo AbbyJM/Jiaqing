@@ -1,0 +1,2 @@
+16:57:23.345 [main] DEBUG o.s.c.a.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [E:\jiaqing\target\classes\com\abby\jiaqing\config\QiniuProperties.class]
+16:57:23.352 [main] DEBUG o.s.c.a.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [E:\jiaqing\target\classes\com\abby\jiaqing\config\WechatProperties.class]

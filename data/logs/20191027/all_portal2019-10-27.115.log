@@ -1,0 +1,8 @@
+17:02:18.847 [http-nio-80-exec-10] DEBUG o.s.security.web.FilterChainProxy - /user/isonline at position 3 of 11 in additional filter chain; firing Filter: 'HeaderWriterFilter'
+17:02:18.852 [http-nio-80-exec-10] DEBUG o.s.security.web.FilterChainProxy - /user/isonline at position 4 of 11 in additional filter chain; firing Filter: 'LogoutFilter'
+17:02:18.852 [http-nio-80-exec-10] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', GET]
+17:02:18.852 [http-nio-80-exec-10] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/user/isonline'; against '/logout'
+17:02:18.852 [http-nio-80-exec-10] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', POST]
+17:02:18.853 [http-nio-80-exec-10] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'GET /user/isonline' doesn't match 'POST /logout'
+17:02:18.853 [http-nio-80-exec-10] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', PUT]
+17:02:18.853 [http-nio-80-exec-10] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'GET /user/isonline' doesn't match 'PUT /logout'

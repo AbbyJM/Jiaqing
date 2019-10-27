@@ -1,0 +1,8 @@
+16:57:22.326 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [E:\jiaqing\target\classes\com\abby\jiaqing\config\WechatMPServiceConfig.class]
+16:57:22.332 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [E:\jiaqing\target\classes\com\abby\jiaqing\config\WechatProperties.class]
+16:57:22.337 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Ignored because not a concrete top-level class: file [E:\jiaqing\target\classes\com\abby\jiaqing\mapper\ImageMapper.class]
+16:57:22.339 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Ignored because not a concrete top-level class: file [E:\jiaqing\target\classes\com\abby\jiaqing\mapper\UserMapper.class]
+16:57:22.342 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [E:\jiaqing\target\classes\com\abby\jiaqing\response\ResponseWrapper.class]
+16:57:22.343 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [E:\jiaqing\target\classes\com\abby\jiaqing\security\AuthenticationAccessDeniedHandler.class]
+16:57:22.344 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [E:\jiaqing\target\classes\com\abby\jiaqing\security\CorConf.class]
+16:57:22.345 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [E:\jiaqing\target\classes\com\abby\jiaqing\security\DefaultLoginUrlAuthEntryPoint.class]

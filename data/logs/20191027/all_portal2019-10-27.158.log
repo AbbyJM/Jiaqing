@@ -1,0 +1,16 @@
+17:05:53.535 [http-nio-80-exec-1] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - No HttpSession currently exists
+17:05:53.539 [http-nio-80-exec-1] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - No SecurityContext was available from the HttpSession: null. A new one will be created.
+17:05:53.539 [http-nio-80-exec-1] DEBUG o.s.security.web.FilterChainProxy - /user/isonline at position 3 of 11 in additional filter chain; firing Filter: 'HeaderWriterFilter'
+17:05:53.539 [http-nio-80-exec-1] DEBUG o.s.security.web.FilterChainProxy - /user/isonline at position 4 of 11 in additional filter chain; firing Filter: 'LogoutFilter'
+17:05:53.539 [http-nio-80-exec-1] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', GET]
+17:05:53.539 [http-nio-80-exec-1] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/user/isonline'; against '/logout'
+17:05:53.540 [http-nio-80-exec-1] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', POST]
+17:05:53.540 [http-nio-80-exec-1] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'GET /user/isonline' doesn't match 'POST /logout'
+17:05:53.540 [http-nio-80-exec-1] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', PUT]
+17:05:53.540 [http-nio-80-exec-1] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'GET /user/isonline' doesn't match 'PUT /logout'
+17:05:53.540 [http-nio-80-exec-1] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', DELETE]
+17:05:53.540 [http-nio-80-exec-1] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'GET /user/isonline' doesn't match 'DELETE /logout'
+17:05:53.540 [http-nio-80-exec-1] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - No matches found
+17:05:53.540 [http-nio-80-exec-1] DEBUG o.s.security.web.FilterChainProxy - /user/isonline at position 5 of 11 in additional filter chain; firing Filter: 'UsernamePasswordAuthenticationFilter'
+17:05:53.540 [http-nio-80-exec-1] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'GET /user/isonline' doesn't match 'POST /login'
+17:05:53.540 [http-nio-80-exec-1] DEBUG o.s.security.web.FilterChainProxy - /user/isonline at position 6 of 11 in additional filter chain; firing Filter: 'RequestCacheAwareFilter'

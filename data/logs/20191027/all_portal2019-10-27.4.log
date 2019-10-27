@@ -1,0 +1,8 @@
+16:55:28.638 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+16:55:28.658 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [E:\jiaqing\target\classes\com\abby\jiaqing\mapper\ImageMapper.class]
+16:55:28.658 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [E:\jiaqing\target\classes\com\abby\jiaqing\mapper\UserMapper.class]
+16:55:28.666 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'imageMapper' and 'com.abby.jiaqing.mapper.ImageMapper' mapperInterface
+16:55:28.666 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'imageMapper'.
+16:55:28.667 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userMapper' and 'com.abby.jiaqing.mapper.UserMapper' mapperInterface
+16:55:28.667 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'userMapper'.
+16:55:28.775 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.context.properties.ConfigurationPropertiesBeanDefinitionValidator'

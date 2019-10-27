@@ -1,0 +1,3 @@
+16:09:31.479 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 500
+16:09:31.489 [http-nio-8080-exec-1] DEBUG o.s.s.w.a.ExceptionTranslationFilter - Chain processed normally
+16:09:31.489 [http-nio-8080-exec-1] DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - SecurityContextHolder now cleared, as request processing completed

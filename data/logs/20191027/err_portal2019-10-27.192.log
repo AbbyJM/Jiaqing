@@ -1,0 +1,8 @@
+17:06:50.905 [http-nio-80-exec-1] DEBUG o.s.security.web.FilterChainProxy - /user/isonline at position 1 of 11 in additional filter chain; firing Filter: 'WebAsyncManagerIntegrationFilter'
+17:06:50.915 [http-nio-80-exec-1] DEBUG o.s.security.web.FilterChainProxy - /user/isonline at position 2 of 11 in additional filter chain; firing Filter: 'SecurityContextPersistenceFilter'
+17:06:50.915 [http-nio-80-exec-1] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - No HttpSession currently exists
+17:06:50.915 [http-nio-80-exec-1] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - No SecurityContext was available from the HttpSession: null. A new one will be created.
+17:06:50.915 [http-nio-80-exec-1] DEBUG o.s.security.web.FilterChainProxy - /user/isonline at position 3 of 11 in additional filter chain; firing Filter: 'HeaderWriterFilter'
+17:06:50.917 [http-nio-80-exec-1] DEBUG o.s.security.web.FilterChainProxy - /user/isonline at position 4 of 11 in additional filter chain; firing Filter: 'LogoutFilter'
+17:06:50.917 [http-nio-80-exec-1] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', GET]
+17:06:50.917 [http-nio-80-exec-1] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/user/isonline'; against '/logout'

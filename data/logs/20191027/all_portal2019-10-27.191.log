@@ -1,0 +1,2 @@
+17:06:50.892 [http-nio-80-exec-1] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/user/isonline'; against '/index.html'
+17:06:50.905 [http-nio-80-exec-1] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/user/isonline'; against '/static/**'

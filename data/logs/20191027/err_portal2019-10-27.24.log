@@ -1,0 +1,5 @@
+16:55:32.597 [main] DEBUG o.s.c.e.PropertySourcesPropertyResolver - Found key 'spring.liveBeansView.mbeanDomain' in PropertySource 'systemProperties' with value of type String
+16:55:32.601 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-80"]
+16:55:32.627 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 80 (http) with context path ''
+16:55:32.630 [main] INFO  com.abby.jiaqing.JiaQingApplication - Started JiaQingApplication in 6.815 seconds (JVM running for 9.927)
+16:55:32.973 [RMI TCP Connection(1)-169.254.128.163] DEBUG o.s.c.e.PropertySourcesPropertyResolver - Found key 'local.server.port' in PropertySource 'server.ports' with value of type Integer

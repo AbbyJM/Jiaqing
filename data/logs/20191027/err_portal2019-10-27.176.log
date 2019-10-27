@@ -1,0 +1,25 @@
+17:06:19.834 [http-nio-80-exec-6] DEBUG o.s.security.web.FilterChainProxy - /user/isonline at position 10 of 11 in additional filter chain; firing Filter: 'ExceptionTranslationFilter'
+17:06:19.838 [http-nio-80-exec-6] DEBUG o.s.security.web.FilterChainProxy - /user/isonline at position 11 of 11 in additional filter chain; firing Filter: 'FilterSecurityInterceptor'
+17:06:19.838 [http-nio-80-exec-6] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', GET]
+17:06:19.838 [http-nio-80-exec-6] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/user/isonline'; against '/logout'
+17:06:19.838 [http-nio-80-exec-6] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', POST]
+17:06:19.838 [http-nio-80-exec-6] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'GET /user/isonline' doesn't match 'POST /logout'
+17:06:19.838 [http-nio-80-exec-6] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', PUT]
+17:06:19.838 [http-nio-80-exec-6] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'GET /user/isonline' doesn't match 'PUT /logout'
+17:06:19.838 [http-nio-80-exec-6] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', DELETE]
+17:06:19.838 [http-nio-80-exec-6] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'GET /user/isonline' doesn't match 'DELETE /logout'
+17:06:19.839 [http-nio-80-exec-6] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - No matches found
+17:06:19.839 [http-nio-80-exec-6] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/user/isonline'; against '/test/**'
+17:06:19.839 [http-nio-80-exec-6] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/user/isonline'; against '/user/isonline**'
+17:06:19.839 [http-nio-80-exec-6] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Secure object: FilterInvocation: URL: /user/isonline; Attributes: [permitAll]
+17:06:19.839 [http-nio-80-exec-6] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Previously Authenticated: org.springframework.security.authentication.UsernamePasswordAuthenticationToken@61096140: Principal: com.abby.jiaqing.security.CustomUserDetails@99a06e7; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@957e: RemoteIpAddress: 127.0.0.1; SessionId: null; Granted Authorities: ROLE_SUPERUSER
+17:06:19.839 [http-nio-80-exec-6] DEBUG o.s.s.access.vote.AffirmativeBased - Voter: org.springframework.security.web.access.expression.WebExpressionVoter@58590e61, returned: 1
+17:06:19.839 [http-nio-80-exec-6] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Authorization successful
+17:06:19.839 [http-nio-80-exec-6] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - RunAsManager did not change Authentication object
+17:06:19.839 [http-nio-80-exec-6] DEBUG o.s.security.web.FilterChainProxy - /user/isonline reached end of additional filter chain; proceeding with original chain
+17:06:19.839 [http-nio-80-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - GET "/user/isonline", parameters={}
+17:06:19.839 [http-nio-80-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.abby.jiaqing.web.UserController#isUserOnline(HttpServletRequest, HttpServletResponse)
+17:06:19.840 [http-nio-80-exec-6] DEBUG o.s.s.w.h.writers.HstsHeaderWriter - Not injecting HSTS header since it did not match the requestMatcher org.springframework.security.web.header.writers.HstsHeaderWriter$SecureRequestMatcher@1d12a271
+17:06:19.841 [http-nio-80-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+17:06:19.841 [http-nio-80-exec-6] DEBUG o.s.s.w.a.ExceptionTranslationFilter - Chain processed normally
+17:06:19.841 [http-nio-80-exec-6] DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - SecurityContextHolder now cleared, as request processing completed

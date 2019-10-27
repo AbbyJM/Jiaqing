@@ -1,0 +1,6 @@
+17:03:09.214 [http-nio-80-exec-7] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/login'; against '/index.html'
+17:03:09.218 [http-nio-80-exec-7] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/login'; against '/static/**'
+17:03:09.218 [http-nio-80-exec-7] DEBUG o.s.security.web.FilterChainProxy - /login at position 1 of 11 in additional filter chain; firing Filter: 'WebAsyncManagerIntegrationFilter'
+17:03:09.219 [http-nio-80-exec-7] DEBUG o.s.security.web.FilterChainProxy - /login at position 2 of 11 in additional filter chain; firing Filter: 'SecurityContextPersistenceFilter'
+17:03:09.219 [http-nio-80-exec-7] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - No HttpSession currently exists
+17:03:09.219 [http-nio-80-exec-7] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - No SecurityContext was available from the HttpSession: null. A new one will be created.

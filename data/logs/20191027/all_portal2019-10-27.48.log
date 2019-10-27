@@ -1,0 +1,8 @@
+16:57:23.899 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'propertySourcesPlaceholderConfigurer'
+16:57:23.924 [main] DEBUG org.apache.ibatis.logging.LogFactory - Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter.
+16:57:23.939 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [E:\jiaqing\target\classes\com\abby\jiaqing\mapper\ImageMapper.class]
+16:57:23.939 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [E:\jiaqing\target\classes\com\abby\jiaqing\mapper\UserMapper.class]
+16:57:23.945 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'imageMapper' and 'com.abby.jiaqing.mapper.ImageMapper' mapperInterface
+16:57:23.946 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'imageMapper'.
+16:57:23.947 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userMapper' and 'com.abby.jiaqing.mapper.UserMapper' mapperInterface
+16:57:23.947 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Enabling autowire by type for MapperFactoryBean with name 'userMapper'.

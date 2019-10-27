@@ -1,0 +1,4 @@
+17:02:18.859 [http-nio-80-exec-10] DEBUG o.s.s.w.h.writers.HstsHeaderWriter - Not injecting HSTS header since it did not match the requestMatcher org.springframework.security.web.header.writers.HstsHeaderWriter$SecureRequestMatcher@1d12a271
+17:02:18.863 [http-nio-80-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+17:02:18.863 [http-nio-80-exec-10] DEBUG o.s.s.w.a.ExceptionTranslationFilter - Chain processed normally
+17:02:18.863 [http-nio-80-exec-10] DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - SecurityContextHolder now cleared, as request processing completed

@@ -1,0 +1,95 @@
+17:05:19.461 [http-nio-80-exec-8] DEBUG o.s.security.web.FilterChainProxy - /irt?_iwt_UA=UA-xgo-000001&ref=http://stat.58che.com/cgrs.html?adrs=e1h9Ly9wcm9kdWN0LjU4Y2hlLmNvbS9wcmljZV9saXN0LzI3MTIvcGFnZV8xXzBfMS5zaHRtbHtYfXhnb3tYfTA=&adcode=PHNjcmlwdCB0eXBlPVwidGV4dFwvamF2YXNjcmlwdFwiPihmdW5jdGlvbiAoRyxELHMsYyxwKSB7DQogICAgYz17DQogICAgICAgIFVBOlwiVUEteGdvLTAwMDAwMVwiLCANCiAgICAgICAgTk9fRkxTOjAsDQogICAgICAgIFdJVEhfUkVGOjEsDQogICAgICAgIFVSTDpcJ2h0dHA6XC9cL3N0YXRpYy54Z28taW1nLmNvbS5jblwvcHVibGljXC9qc1wvaXd0LW1pbi5qc1wnDQogICAgfTsNCiAgICBHLl9pd3Q/Ry5faXd0LnRyYWNrKGMscCk6KEcuX2l3dFRRPUcuX2l3dFRRIHx8IFtdKS5wdXNoKFtjLHBdKSwhRy5faXd0TG9hZGluZyAmJiBsbygpOw0KICAgIGZ1bmN0aW9uIGxvKHQpIHsNCiAgICAgICAgRy5faXd0TG9hZGluZz0xO3M9RC5jcmVhdGVFbGVtZW50KFwic2NyaXB0XCIpO3Muc3JjPWMuVVJMOw0KICAgICAgICB0PUQuZ2V0RWxlbWVudHNCeVRhZ05hbWUoXCJzY3JpcHRcIik7dD10W3QubGVuZ3RoLTFdOw0KICAgICAgICB0LnBhcmVudE5vZGUuaW5zZXJ0QmVmb3JlKHMsdCk7DQogICAgfQ0KfSkodGhpcyxkb2N1bWVudCk7DQo8XC9zY3JpcHQ+DQo8c2NyaXB0Pg0KdmFyIF9obXQgPSBfaG10IHx8IFtdOw0KKGZ1bmN0aW9uKCkgew0KICB2YXIgaG0gPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KFwic2NyaXB0XCIpOw0KICBobS5zcmMgPSBcImh0dHBzOlwvXC9obS5iYWlkdS5jb21cL2htLmpzPzAzY2NhZjM3MTcyZjM4OTYxYTU4NGY2OTA2NGMzOTk2XCI7DQogIHZhciBzID0gZG9jdW1lbnQuZ2V0RWxlbWVudHNCeVRhZ05hbWUoXCJzY3JpcHRcIilbMF07IA0KICBzLnBhcmVudE5vZGUuaW5zZXJ0QmVmb3JlKGhtLCBzKTsNCn0pKCk7DQo8XC9zY3JpcHQ+&mr=2014324117&jsonp=_38WFN at position 11 of 11 in additional filter chain; firing Filter: 'FilterSecurityInterceptor'
+17:05:19.464 [http-nio-80-exec-8] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', GET]
+17:05:19.465 [http-nio-80-exec-8] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/irt'; against '/logout'
+17:05:19.465 [http-nio-80-exec-8] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', POST]
+17:05:19.465 [http-nio-80-exec-8] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'GET /irt' doesn't match 'POST /logout'
+17:05:19.465 [http-nio-80-exec-8] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', PUT]
+17:05:19.466 [http-nio-80-exec-8] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'GET /irt' doesn't match 'PUT /logout'
+17:05:19.466 [http-nio-80-exec-8] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', DELETE]
+17:05:19.466 [http-nio-80-exec-8] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'GET /irt' doesn't match 'DELETE /logout'
+17:05:19.466 [http-nio-80-exec-8] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - No matches found
+17:05:19.466 [http-nio-80-exec-8] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/irt'; against '/test/**'
+17:05:19.466 [http-nio-80-exec-8] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/irt'; against '/user/isonline**'
+17:05:19.466 [http-nio-80-exec-8] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/irt'; against '/wechat/**'
+17:05:19.466 [http-nio-80-exec-8] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Secure object: FilterInvocation: URL: /irt?_iwt_UA=UA-xgo-000001&ref=http://stat.58che.com/cgrs.html?adrs=e1h9Ly9wcm9kdWN0LjU4Y2hlLmNvbS9wcmljZV9saXN0LzI3MTIvcGFnZV8xXzBfMS5zaHRtbHtYfXhnb3tYfTA=&adcode=PHNjcmlwdCB0eXBlPVwidGV4dFwvamF2YXNjcmlwdFwiPihmdW5jdGlvbiAoRyxELHMsYyxwKSB7DQogICAgYz17DQogICAgICAgIFVBOlwiVUEteGdvLTAwMDAwMVwiLCANCiAgICAgICAgTk9fRkxTOjAsDQogICAgICAgIFdJVEhfUkVGOjEsDQogICAgICAgIFVSTDpcJ2h0dHA6XC9cL3N0YXRpYy54Z28taW1nLmNvbS5jblwvcHVibGljXC9qc1wvaXd0LW1pbi5qc1wnDQogICAgfTsNCiAgICBHLl9pd3Q/Ry5faXd0LnRyYWNrKGMscCk6KEcuX2l3dFRRPUcuX2l3dFRRIHx8IFtdKS5wdXNoKFtjLHBdKSwhRy5faXd0TG9hZGluZyAmJiBsbygpOw0KICAgIGZ1bmN0aW9uIGxvKHQpIHsNCiAgICAgICAgRy5faXd0TG9hZGluZz0xO3M9RC5jcmVhdGVFbGVtZW50KFwic2NyaXB0XCIpO3Muc3JjPWMuVVJMOw0KICAgICAgICB0PUQuZ2V0RWxlbWVudHNCeVRhZ05hbWUoXCJzY3JpcHRcIik7dD10W3QubGVuZ3RoLTFdOw0KICAgICAgICB0LnBhcmVudE5vZGUuaW5zZXJ0QmVmb3JlKHMsdCk7DQogICAgfQ0KfSkodGhpcyxkb2N1bWVudCk7DQo8XC9zY3JpcHQ+DQo8c2NyaXB0Pg0KdmFyIF9obXQgPSBfaG10IHx8IFtdOw0KKGZ1bmN0aW9uKCkgew0KICB2YXIgaG0gPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KFwic2NyaXB0XCIpOw0KICBobS5zcmMgPSBcImh0dHBzOlwvXC9obS5iYWlkdS5jb21cL2htLmpzPzAzY2NhZjM3MTcyZjM4OTYxYTU4NGY2OTA2NGMzOTk2XCI7DQogIHZhciBzID0gZG9jdW1lbnQuZ2V0RWxlbWVudHNCeVRhZ05hbWUoXCJzY3JpcHRcIilbMF07IA0KICBzLnBhcmVudE5vZGUuaW5zZXJ0QmVmb3JlKGhtLCBzKTsNCn0pKCk7DQo8XC9zY3JpcHQ+&mr=2014324117&jsonp=_38WFN; Attributes: [authenticated]
+17:05:19.466 [http-nio-80-exec-8] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Previously Authenticated: org.springframework.security.authentication.AnonymousAuthenticationToken@bfdcc2b0: Principal: anonymousUser; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@957e: RemoteIpAddress: 127.0.0.1; SessionId: null; Granted Authorities: ROLE_ANONYMOUS
+17:05:19.466 [http-nio-80-exec-8] DEBUG o.s.s.access.vote.AffirmativeBased - Voter: org.springframework.security.web.access.expression.WebExpressionVoter@58590e61, returned: -1
+17:05:19.474 [http-nio-80-exec-8] DEBUG o.s.s.w.a.ExceptionTranslationFilter - Access is denied (user is anonymous); redirecting to authentication entry point
+org.springframework.security.access.AccessDeniedException: Access is denied
+	at org.springframework.security.access.vote.AffirmativeBased.decide(AffirmativeBased.java:84)
+	at org.springframework.security.access.intercept.AbstractSecurityInterceptor.beforeInvocation(AbstractSecurityInterceptor.java:233)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:123)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:90)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:118)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:158)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+17:05:19.486 [http-nio-80-exec-8] DEBUG o.s.s.w.u.matcher.AndRequestMatcher - Trying to match using NegatedRequestMatcher [requestMatcher=Ant [pattern='/**/favicon.*']]
+17:05:19.486 [http-nio-80-exec-8] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/irt'; against '/**/favicon.*'
+17:05:19.486 [http-nio-80-exec-8] DEBUG o.s.s.w.u.m.NegatedRequestMatcher - matches = true
+17:05:19.487 [http-nio-80-exec-8] DEBUG o.s.s.w.u.matcher.AndRequestMatcher - Trying to match using NegatedRequestMatcher [requestMatcher=MediaTypeRequestMatcher [contentNegotiationStrategy=org.springframework.web.accept.ContentNegotiationManager@355736ba, matchingMediaTypes=[application/json], useEquals=false, ignoredMediaTypes=[*/*]]]
+17:05:19.487 [http-nio-80-exec-8] DEBUG o.s.s.w.u.m.MediaTypeRequestMatcher - httpRequestMediaTypes=[*/*]
+17:05:19.488 [http-nio-80-exec-8] DEBUG o.s.s.w.u.m.MediaTypeRequestMatcher - Processing */*
+17:05:19.488 [http-nio-80-exec-8] DEBUG o.s.s.w.u.m.MediaTypeRequestMatcher - Ignoring
+17:05:19.488 [http-nio-80-exec-8] DEBUG o.s.s.w.u.m.MediaTypeRequestMatcher - Did not match any media types
+17:05:19.488 [http-nio-80-exec-8] DEBUG o.s.s.w.u.m.NegatedRequestMatcher - matches = true
+17:05:19.488 [http-nio-80-exec-8] DEBUG o.s.s.w.u.matcher.AndRequestMatcher - Trying to match using NegatedRequestMatcher [requestMatcher=RequestHeaderRequestMatcher [expectedHeaderName=X-Requested-With, expectedHeaderValue=XMLHttpRequest]]
+17:05:19.488 [http-nio-80-exec-8] DEBUG o.s.s.w.u.m.NegatedRequestMatcher - matches = true
+17:05:19.488 [http-nio-80-exec-8] DEBUG o.s.s.w.u.matcher.AndRequestMatcher - Trying to match using NegatedRequestMatcher [requestMatcher=MediaTypeRequestMatcher [contentNegotiationStrategy=org.springframework.web.accept.ContentNegotiationManager@355736ba, matchingMediaTypes=[multipart/form-data], useEquals=false, ignoredMediaTypes=[*/*]]]
+17:05:19.488 [http-nio-80-exec-8] DEBUG o.s.s.w.u.m.MediaTypeRequestMatcher - httpRequestMediaTypes=[*/*]
+17:05:19.488 [http-nio-80-exec-8] DEBUG o.s.s.w.u.m.MediaTypeRequestMatcher - Processing */*
+17:05:19.488 [http-nio-80-exec-8] DEBUG o.s.s.w.u.m.MediaTypeRequestMatcher - Ignoring

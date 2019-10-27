@@ -1,0 +1,32 @@
+16:57:33.527 [http-nio-80-exec-1] DEBUG o.s.security.web.FilterChainProxy - /user/isonline at position 7 of 11 in additional filter chain; firing Filter: 'SecurityContextHolderAwareRequestFilter'
+16:57:33.532 [http-nio-80-exec-1] DEBUG o.s.security.web.FilterChainProxy - /user/isonline at position 8 of 11 in additional filter chain; firing Filter: 'AnonymousAuthenticationFilter'
+16:57:33.534 [http-nio-80-exec-1] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Populated SecurityContextHolder with anonymous token: 'org.springframework.security.authentication.AnonymousAuthenticationToken@bfdcc2b0: Principal: anonymousUser; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@957e: RemoteIpAddress: 127.0.0.1; SessionId: null; Granted Authorities: ROLE_ANONYMOUS'
+16:57:33.535 [http-nio-80-exec-1] DEBUG o.s.security.web.FilterChainProxy - /user/isonline at position 9 of 11 in additional filter chain; firing Filter: 'SessionManagementFilter'
+16:57:33.535 [http-nio-80-exec-1] DEBUG o.s.s.w.s.SessionManagementFilter - Requested session ID 6FA3A4A4C9965E1374C4A59E04B6F831 is invalid.
+16:57:33.535 [http-nio-80-exec-1] DEBUG o.s.security.web.FilterChainProxy - /user/isonline at position 10 of 11 in additional filter chain; firing Filter: 'ExceptionTranslationFilter'
+16:57:33.535 [http-nio-80-exec-1] DEBUG o.s.security.web.FilterChainProxy - /user/isonline at position 11 of 11 in additional filter chain; firing Filter: 'FilterSecurityInterceptor'
+16:57:33.536 [http-nio-80-exec-1] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', GET]
+16:57:33.536 [http-nio-80-exec-1] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/user/isonline'; against '/logout'
+16:57:33.536 [http-nio-80-exec-1] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', POST]
+16:57:33.536 [http-nio-80-exec-1] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'GET /user/isonline' doesn't match 'POST /logout'
+16:57:33.536 [http-nio-80-exec-1] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', PUT]
+16:57:33.536 [http-nio-80-exec-1] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'GET /user/isonline' doesn't match 'PUT /logout'
+16:57:33.536 [http-nio-80-exec-1] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', DELETE]
+16:57:33.536 [http-nio-80-exec-1] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'GET /user/isonline' doesn't match 'DELETE /logout'
+16:57:33.536 [http-nio-80-exec-1] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - No matches found
+16:57:33.536 [http-nio-80-exec-1] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/user/isonline'; against '/test/**'
+16:57:33.536 [http-nio-80-exec-1] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/user/isonline'; against '/user/isonline**'
+16:57:33.536 [http-nio-80-exec-1] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Secure object: FilterInvocation: URL: /user/isonline; Attributes: [permitAll]
+16:57:33.536 [http-nio-80-exec-1] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Previously Authenticated: org.springframework.security.authentication.AnonymousAuthenticationToken@bfdcc2b0: Principal: anonymousUser; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@957e: RemoteIpAddress: 127.0.0.1; SessionId: null; Granted Authorities: ROLE_ANONYMOUS
+16:57:33.544 [http-nio-80-exec-1] DEBUG o.s.s.access.vote.AffirmativeBased - Voter: org.springframework.security.web.access.expression.WebExpressionVoter@58590e61, returned: 1
+16:57:33.544 [http-nio-80-exec-1] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Authorization successful
+16:57:33.544 [http-nio-80-exec-1] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - RunAsManager did not change Authentication object
+16:57:33.544 [http-nio-80-exec-1] DEBUG o.s.security.web.FilterChainProxy - /user/isonline reached end of additional filter chain; proceeding with original chain
+16:57:33.549 [http-nio-80-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/user/isonline", parameters={}
+16:57:33.554 [http-nio-80-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.abby.jiaqing.web.UserController#isUserOnline(HttpServletRequest, HttpServletResponse)
+16:57:33.649 [http-nio-80-exec-1] DEBUG o.s.s.w.h.writers.HstsHeaderWriter - Not injecting HSTS header since it did not match the requestMatcher org.springframework.security.web.header.writers.HstsHeaderWriter$SecureRequestMatcher@1d12a271
+16:57:33.649 [http-nio-80-exec-1] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - SecurityContext is empty or contents are anonymous - context will not be stored in HttpSession.
+16:57:33.659 [http-nio-80-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+16:57:33.662 [http-nio-80-exec-1] DEBUG o.s.s.w.a.ExceptionTranslationFilter - Chain processed normally
+16:57:33.662 [http-nio-80-exec-1] DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - SecurityContextHolder now cleared, as request processing completed
+16:57:33.671 [http-nio-80-exec-2] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/user/isonline'; against '/index.html'

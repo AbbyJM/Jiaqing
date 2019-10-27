@@ -1,0 +1,31 @@
+17:06:33.684 [http-nio-80-exec-9] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/login'; against '/index.html'
+17:06:33.689 [http-nio-80-exec-9] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/login'; against '/static/**'
+17:06:33.689 [http-nio-80-exec-9] DEBUG o.s.security.web.FilterChainProxy - /login at position 1 of 11 in additional filter chain; firing Filter: 'WebAsyncManagerIntegrationFilter'
+17:06:33.689 [http-nio-80-exec-9] DEBUG o.s.security.web.FilterChainProxy - /login at position 2 of 11 in additional filter chain; firing Filter: 'SecurityContextPersistenceFilter'
+17:06:33.689 [http-nio-80-exec-9] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - No HttpSession currently exists
+17:06:33.690 [http-nio-80-exec-9] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - No SecurityContext was available from the HttpSession: null. A new one will be created.
+17:06:33.690 [http-nio-80-exec-9] DEBUG o.s.security.web.FilterChainProxy - /login at position 3 of 11 in additional filter chain; firing Filter: 'HeaderWriterFilter'
+17:06:33.690 [http-nio-80-exec-9] DEBUG o.s.security.web.FilterChainProxy - /login at position 4 of 11 in additional filter chain; firing Filter: 'LogoutFilter'
+17:06:33.690 [http-nio-80-exec-9] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', GET]
+17:06:33.690 [http-nio-80-exec-9] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'POST /login' doesn't match 'GET /logout'
+17:06:33.690 [http-nio-80-exec-9] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', POST]
+17:06:33.690 [http-nio-80-exec-9] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/login'; against '/logout'
+17:06:33.690 [http-nio-80-exec-9] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', PUT]
+17:06:33.690 [http-nio-80-exec-9] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'POST /login' doesn't match 'PUT /logout'
+17:06:33.690 [http-nio-80-exec-9] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', DELETE]
+17:06:33.690 [http-nio-80-exec-9] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'POST /login' doesn't match 'DELETE /logout'
+17:06:33.690 [http-nio-80-exec-9] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - No matches found
+17:06:33.690 [http-nio-80-exec-9] DEBUG o.s.security.web.FilterChainProxy - /login at position 5 of 11 in additional filter chain; firing Filter: 'UsernamePasswordAuthenticationFilter'
+17:06:33.690 [http-nio-80-exec-9] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/login'; against '/login'
+17:06:33.690 [http-nio-80-exec-9] DEBUG o.s.s.w.a.UsernamePasswordAuthenticationFilter - Request is to process authentication
+17:06:33.690 [http-nio-80-exec-9] DEBUG o.s.s.authentication.ProviderManager - Authentication attempt using org.springframework.security.authentication.dao.DaoAuthenticationProvider
+17:06:33.690 [http-nio-80-exec-9] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+17:06:33.691 [http-nio-80-exec-9] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1278046f] was not registered for synchronization because synchronization is not active
+17:06:33.691 [http-nio-80-exec-9] DEBUG o.s.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+17:06:33.691 [http-nio-80-exec-9] DEBUG o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@1779154591 wrapping com.mysql.cj.jdbc.ConnectionImpl@d298eb4] will not be managed by Spring
+17:06:33.691 [http-nio-80-exec-9] DEBUG c.a.j.m.UserMapper.selectByUserName - ==>  Preparing: select id, username, password, email, active, roles, avatar from user where username=? 
+17:06:33.692 [http-nio-80-exec-9] DEBUG c.a.j.m.UserMapper.selectByUserName - ==> Parameters: abby(String)
+17:06:33.693 [http-nio-80-exec-9] DEBUG c.a.j.m.UserMapper.selectByUserName - <==      Total: 1
+17:06:33.694 [http-nio-80-exec-9] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1278046f]
+17:06:33.851 [http-nio-80-exec-9] DEBUG o.s.s.w.a.s.CompositeSessionAuthenticationStrategy - Delegating to org.springframework.security.web.authentication.session.ChangeSessionIdAuthenticationStrategy@6cff61fc
+17:06:33.852 [http-nio-80-exec-9] DEBUG o.s.s.w.a.UsernamePasswordAuthenticationFilter - Authentication success. Updating SecurityContextHolder to contain: org.springframework.security.authentication.UsernamePasswordAuthenticationToken@7cdd330c: Principal: com.abby.jiaqing.security.CustomUserDetails@144e54ab; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@957e: RemoteIpAddress: 127.0.0.1; SessionId: null; Granted Authorities: ROLE_SUPERUSER

@@ -1,0 +1,14 @@
+16:57:22.376 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [E:\jiaqing\target\classes\com\abby\jiaqing\service\impl\UserServiceImpl.class]
+16:57:22.404 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [E:\jiaqing\target\classes\com\abby\jiaqing\web\ImageController.class]
+16:57:22.406 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [E:\jiaqing\target\classes\com\abby\jiaqing\web\TestController.class]
+16:57:22.407 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [E:\jiaqing\target\classes\com\abby\jiaqing\web\TokenController.class]
+16:57:22.408 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [E:\jiaqing\target\classes\com\abby\jiaqing\web\UserController.class]
+16:57:22.428 [main] DEBUG o.s.boot.env.OriginTrackedYamlLoader - Loading from YAML: class path resource [qiniu-dev.yml]
+16:57:22.430 [main] DEBUG o.s.boot.env.OriginTrackedYamlLoader - Merging document (no matchers set): {qiniu={accessKey=Yv5seDVS9I0Picy8yS6YF2hftqkh2_wRebdqTSCW, secretKey=cXQDMVHxlyU_5wo5TyCvApCUoTaKSPpySkEx6FJY, defaultBucket=jiaqing-master, expire=3600, domain=http://pztxvdloz.bkt.clouddn.com/}}
+16:57:22.431 [main] DEBUG o.s.boot.env.OriginTrackedYamlLoader - Loaded 1 document from YAML resource: class path resource [qiniu-dev.yml]
+16:57:22.460 [main] DEBUG o.s.boot.env.OriginTrackedYamlLoader - Loading from YAML: class path resource [wechat-dev.yml]
+16:57:22.461 [main] DEBUG o.s.boot.env.OriginTrackedYamlLoader - Merging document (no matchers set): {wechat={appId=wxf96501edae8e85d9, secret=ca028839d8b06f876c9aace20f890d93, token=jiaqing, aseKey=dx6fiXqnrDKZ5CFODkXkfgCYLR21pqrg0iRYy4JKvol}}
+16:57:22.462 [main] DEBUG o.s.boot.env.OriginTrackedYamlLoader - Loaded 1 document from YAML resource: class path resource [wechat-dev.yml]
+16:57:23.016 [main] DEBUG o.s.c.e.PropertySourcesPropertyResolver - Found key 'spring.jmx.enabled' in PropertySource 'configurationProperties' with value of type String
+16:57:23.078 [main] DEBUG o.s.c.e.PropertySourcesPropertyResolver - Found key 'spring.jmx.enabled' in PropertySource 'configurationProperties' with value of type String
+16:57:23.098 [main] DEBUG o.s.c.e.PropertySourcesPropertyResolver - Found key 'spring.application.admin.enabled' in PropertySource 'configurationProperties' with value of type String

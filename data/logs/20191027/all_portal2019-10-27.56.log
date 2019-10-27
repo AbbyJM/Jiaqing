@@ -1,0 +1,7 @@
+16:57:25.559 [main] DEBUG o.m.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [E:\jiaqing\target\classes\mapper\ImageMapper.xml]'
+16:57:25.589 [main] DEBUG o.m.spring.SqlSessionFactoryBean - Parsed mapper file: 'file [E:\jiaqing\target\classes\mapper\UserMapper.xml]'
+16:57:25.593 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'sqlSessionTemplate'
+16:57:25.594 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'sqlSessionTemplate' via factory method to bean named 'sqlSessionFactory'
+16:57:25.605 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'loginFailedHandler'
+16:57:25.606 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'loginSuccessHandler'
+16:57:25.608 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'logoutHandler'

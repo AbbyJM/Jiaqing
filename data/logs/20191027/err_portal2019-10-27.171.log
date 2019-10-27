@@ -1,0 +1,16 @@
+17:06:17.878 [http-nio-80-exec-5] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', POST]
+17:06:17.890 [http-nio-80-exec-5] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'GET /user/isonline' doesn't match 'POST /logout'
+17:06:17.891 [http-nio-80-exec-5] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', PUT]
+17:06:17.891 [http-nio-80-exec-5] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'GET /user/isonline' doesn't match 'PUT /logout'
+17:06:17.891 [http-nio-80-exec-5] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', DELETE]
+17:06:17.892 [http-nio-80-exec-5] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'GET /user/isonline' doesn't match 'DELETE /logout'
+17:06:17.892 [http-nio-80-exec-5] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - No matches found
+17:06:17.892 [http-nio-80-exec-5] DEBUG o.s.security.web.FilterChainProxy - /user/isonline at position 5 of 11 in additional filter chain; firing Filter: 'UsernamePasswordAuthenticationFilter'
+17:06:17.893 [http-nio-80-exec-5] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'GET /user/isonline' doesn't match 'POST /login'
+17:06:17.893 [http-nio-80-exec-5] DEBUG o.s.security.web.FilterChainProxy - /user/isonline at position 6 of 11 in additional filter chain; firing Filter: 'RequestCacheAwareFilter'
+17:06:17.893 [http-nio-80-exec-5] DEBUG o.s.s.w.s.HttpSessionRequestCache - saved request doesn't match
+17:06:17.893 [http-nio-80-exec-5] DEBUG o.s.security.web.FilterChainProxy - /user/isonline at position 7 of 11 in additional filter chain; firing Filter: 'SecurityContextHolderAwareRequestFilter'
+17:06:17.893 [http-nio-80-exec-5] DEBUG o.s.security.web.FilterChainProxy - /user/isonline at position 8 of 11 in additional filter chain; firing Filter: 'AnonymousAuthenticationFilter'
+17:06:17.893 [http-nio-80-exec-5] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - SecurityContextHolder not populated with anonymous token, as it already contained: 'org.springframework.security.authentication.UsernamePasswordAuthenticationToken@61096140: Principal: com.abby.jiaqing.security.CustomUserDetails@99a06e7; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@957e: RemoteIpAddress: 127.0.0.1; SessionId: null; Granted Authorities: ROLE_SUPERUSER'
+17:06:17.893 [http-nio-80-exec-5] DEBUG o.s.security.web.FilterChainProxy - /user/isonline at position 9 of 11 in additional filter chain; firing Filter: 'SessionManagementFilter'
+17:06:17.893 [http-nio-80-exec-5] DEBUG o.s.security.web.FilterChainProxy - /user/isonline at position 10 of 11 in additional filter chain; firing Filter: 'ExceptionTranslationFilter'

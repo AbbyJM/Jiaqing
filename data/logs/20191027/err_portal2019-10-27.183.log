@@ -1,0 +1,1 @@
+17:06:29.087 [http-nio-80-exec-8] DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - SecurityContextHolder now cleared, as request processing completed

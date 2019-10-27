@@ -33,7 +33,7 @@ import org.springframework.scheduling.annotation.Async;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -100,13 +100,13 @@ public class ImageController {
                 return;
             }
             //需要同时上传到七牛云以及微信公众号，初始化状态
-            CountDownLatch uploadLock=new CountDownLatch(2);
+            CountDownLatch Lock=new CountDownLatch(2);
             UploadResult uploadResult=new UploadResult();
 
-            uploadToQiniu(fileName,uploadLock,uploadResult);
-            uploadToWechat(f,fileName,uploadLock,uploadResult);
+            uploadToQiniu(fileName,Lock,uploadResult);
+            uploadToWechat(f,fileName,Lock,uploadResult);
             try {
-                uploadLock.await(20, TimeUnit.SECONDS);
+                Lock.await(20, TimeUnit.SECONDS);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -145,13 +145,19 @@ public class ImageController {
 
 
     @DeleteMapping(value = "/delete")
-    public void deleteImage(HttpServletRequest request,HttpServletResponse response) throws IOException {
+    public void deleteImage(HttpServletRequest request,HttpServletResponse response) throws IOException, InterruptedException {
         int imageId=request.getParameter("imageId")!=null?Integer.parseInt(request.getParameter("imageId")):-1;
-        logger.info("image id is "+imageId);
         String responseStr="";
+        CountDownLatch deleteLock=new CountDownLatch(2);
+        DeleteResult deleteResult=new DeleteResult();
         if(imageId<0){
-           responseStr=ResponseWrapper.wrap(ResponseCode.IMAGE_NOT_FOUND,"image not found") ;
+           responseStr=ResponseWrapper.wrap(ResponseCode.IMAGE_NOT_FOUND,"image not found");
         }else{
+           Image image=imageMapper.selectByPrimaryKey(imageId);
+           deleteFromQiniu(image.getName(),deleteLock,deleteResult);
+           deleteFromWechat(image.getMediaId(),deleteLock,deleteResult);
+           deleteLock.await(10,TimeUnit.SECONDS);
+
            if(imageMapper.deleteByPrimaryKey(imageId)>0) {
                responseStr=ResponseWrapper.wrap(ResponseCode.SUCCESS,"deleted image successfully");
            }else{
@@ -163,6 +169,7 @@ public class ImageController {
 
     @Async(value ="taskExecutor")
     void uploadToQiniu(String fileName,CountDownLatch uploadLock,UploadResult result){
+        logger.info("uploaing to qiniu in thread "+Thread.currentThread().getName());
         boolean success=qiniuCloudService.uploadImage(ImageUtil.getImageFilePath()+File.separator+fileName,fileName);
         if(success){
             logger.info("uploaded image "+fileName+" successfully");
@@ -172,7 +179,31 @@ public class ImageController {
     }
 
     @Async(value = "taskExecutor")
+    void deleteFromQiniu(String fileName,CountDownLatch deleteLock,DeleteResult deleteResult){
+       if(qiniuCloudService.deleteImage(fileName)){
+           deleteResult.deleteFromQiniu=true;
+       }
+       deleteLock.countDown();
+    }
+
+    @Async(value = "taskExecutor")
+    void deleteFromWechat(String mediaId,CountDownLatch deleteLock,DeleteResult deleteResult){
+        try {
+            boolean success=wxMpService.getMaterialService()
+                .materialDelete(mediaId);
+            if(success){
+                deleteResult.deleteFromWechat=true;
+            }
+        } catch (WxErrorException e) {
+            e.printStackTrace();
+        }finally {
+            deleteLock.countDown();
+        }
+    }
+
+    @Async(value = "taskExecutor")
     void uploadToWechat(File f,String fileName,CountDownLatch uploadLock,UploadResult uploadResult){
+        logger.info("uoloading image in thread "+Thread.currentThread().getName());
         WxMpMaterial wxMpMaterial=new WxMpMaterial();
         wxMpMaterial.setFile(f);
         wxMpMaterial.setName(fileName);
@@ -180,6 +211,7 @@ public class ImageController {
             WxMpMaterialUploadResult result=wxMpService.getMaterialService()
                 .materialFileUpload(WxConsts.MaterialType.IMAGE,wxMpMaterial);
             mediaId=result.getMediaId();
+            logger.info("get url "+result.getUrl());
             if(result.getErrCode()==null&&result.getErrMsg()==null){
                uploadResult.uploadToWechat=true;
             }
@@ -196,6 +228,15 @@ public class ImageController {
         public UploadResult(){
             uploadToQiniu=false;
             uploadToWechat=false;
+        }
+    }
+
+    static class DeleteResult{
+        public boolean deleteFromQiniu;
+        public boolean deleteFromWechat;
+        public DeleteResult(){
+            deleteFromQiniu=false;
+            deleteFromWechat=false;
         }
     }
 }
