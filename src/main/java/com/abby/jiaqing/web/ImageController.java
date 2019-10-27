@@ -29,7 +29,6 @@ import me.chanjar.weixin.mp.bean.material.WxMpMaterial;
 import me.chanjar.weixin.mp.bean.material.WxMpMaterialUploadResult;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.scheduling.annotation.Async;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -43,6 +42,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class ImageController {
     private Logger logger= LoggerFactory.getLogger(ImageController.class);
 
+    //微信的外链只能在腾讯系中使用
+    //如果用本机来做资源服务器因为带宽太小体验很差，所以使用七牛云来同步存储照片
     @Resource
     private QiniuCloudService qiniuCloudService;
 
