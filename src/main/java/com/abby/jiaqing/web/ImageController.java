@@ -4,6 +4,7 @@ import com.abby.jiaqing.mapper.ImageMapper;
 
 import com.abby.jiaqing.model.domain.Image;
 import com.abby.jiaqing.response.ResponseWrapper;
+import com.abby.jiaqing.response.ResponseWriter;
 import com.abby.jiaqing.security.ResponseCode;
 import com.abby.jiaqing.service.QiniuCloudService;
 import com.abby.jiaqing.utils.ImageUtil;
@@ -12,7 +13,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.pagehelper.PageHelper;
 import java.io.File;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.CountDownLatch;
@@ -30,6 +30,7 @@ import me.chanjar.weixin.mp.bean.material.WxMpMaterialUploadResult;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.scheduling.annotation.Async;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -76,12 +77,8 @@ public class ImageController {
         response.setContentType("application/json;utf-8");
         Map<String,Object> map=ResponseWrapper.wrapNeedAdditionalOps(ResponseCode.SUCCESS,"get image list successfully");
         map.put("data",images);
-        PrintWriter writer;
         try {
-            writer = response.getWriter();
-            writer.write(objectMapper.writeValueAsString(map));
-            writer.flush();
-            writer.close();
+            ResponseWriter.writeToResponseThenClose(response,objectMapper.writeValueAsString(map));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -142,11 +139,24 @@ public class ImageController {
                 }
             }
         }
-        response.setContentType("application/json;utf-8");
-        PrintWriter writer=response.getWriter();
-        writer.write(responseStr);
-        writer.flush();
-        writer.close();
+        ResponseWriter.writeToResponseThenClose(response,responseStr);
+    }
+
+
+    @DeleteMapping(value = "/delete")
+    public void deleteImage(HttpServletRequest request,HttpServletResponse response) throws IOException {
+        int imageId=request.getParameter("imageId")!=null?Integer.parseInt(request.getParameter("imageId")):-1;
+        String responseStr="";
+        if(imageId<0){
+           responseStr=ResponseWrapper.wrap(ResponseCode.IMAGE_NOT_FOUND,"image not found") ;
+        }else{
+           if(imageMapper.deleteByPrimaryKey(imageId)>0) {
+               responseStr=ResponseWrapper.wrap(ResponseCode.SUCCESS,"deleted image successfully");
+           }else{
+               responseStr=ResponseWrapper.wrap(ResponseCode.IMAGE_DELETE_FAILED,"failed to delete iamge");
+           }
+        }
+       ResponseWriter.writeToResponseThenClose(response,responseStr);
     }
 
     @Async(value ="taskExecutor")

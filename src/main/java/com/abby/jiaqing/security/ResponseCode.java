@@ -28,4 +28,7 @@ public class ResponseCode {
 
     public static final int UPLOAD_IMAGE_FAILED=30005;
 
+    public static final int IMAGE_NOT_FOUND=30006;
+
+    public static final int IMAGE_DELETE_FAILED=30007;
 }
