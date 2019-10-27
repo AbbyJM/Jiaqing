@@ -16,6 +16,8 @@ public interface ImageMapper {
 
     Image selectByPrimaryKey(Integer id);
 
+    List<Image> selectByName(String name);
+
     List<Image> getAllImages();
 
     int updateByPrimaryKeySelective(Image record);

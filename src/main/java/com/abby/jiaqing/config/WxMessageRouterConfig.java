@@ -20,6 +20,7 @@ public class WxMessageRouterConfig {
     public WxMpMessageRouter router(){
         WxMpMessageRouter router=new WxMpMessageRouter(wxMpService);
         router.rule()
+            .async(false)
             .msgType(WxConsts.XmlMsgType.TEXT)
             .handler(replyImageHandler)
             .end();

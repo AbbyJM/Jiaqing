@@ -1,6 +1,8 @@
 package com.abby.jiaqing.wechat;
 
+import com.abby.jiaqing.service.ImageService;
 import java.util.Map;
+import javax.annotation.Resource;
 import me.chanjar.weixin.common.error.WxErrorException;
 import me.chanjar.weixin.common.session.WxSessionManager;
 import me.chanjar.weixin.mp.api.WxMpMessageHandler;
@@ -15,10 +17,28 @@ import org.springframework.stereotype.Component;
 public class ReplyImageHandler implements WxMpMessageHandler {
     private static Logger logger= LoggerFactory.getLogger(ReplyImageHandler.class);
 
+    @Resource
+    private ImageService imageService;
+
     public WxMpXmlOutMessage handle(WxMpXmlMessage wxMessage, Map<String, Object> context, WxMpService wxMpService,
         WxSessionManager sessionManager) throws WxErrorException {
-        String content=wxMessage.getContent();
-        logger.info(content);
-        return null;
+        WxMpXmlOutMessage outMessage;
+        String fileName=wxMessage.getContent();
+        String mediaId=imageService.getImageMediaIdByName(fileName);
+        if(mediaId==null){
+            outMessage=WxMpXmlOutMessage.TEXT()
+                .content("没有找到您想要的内容哦")
+                .fromUser(wxMessage.getToUser())
+                .toUser(wxMessage.getFromUser())
+                .build();
+        }else {
+            logger.info("got media for user "+wxMessage.getFromUser());
+            outMessage = WxMpXmlOutMessage.IMAGE()
+                .mediaId(mediaId)
+                .fromUser(wxMessage.getToUser())
+                .toUser(wxMessage.getFromUser())
+                .build();
+        }
+        return outMessage;
     }
 }

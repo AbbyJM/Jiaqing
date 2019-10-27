@@ -3,8 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="48b5f0df-3167-4992-adfd-2348ffb52ea9" name="Default Changelist" comment="test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/abby/jiaqing/config/WechatMPServiceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/abby/jiaqing/config/WechatMPServiceConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/abby/jiaqing/config/WxMessageRouterConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/abby/jiaqing/config/WxMessageRouterConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/abby/jiaqing/mapper/ImageMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/abby/jiaqing/mapper/ImageMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/abby/jiaqing/security/LoginFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/abby/jiaqing/service/ImageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/abby/jiaqing/service/ImageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/abby/jiaqing/service/impl/ImageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/abby/jiaqing/service/impl/ImageServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/abby/jiaqing/web/WechatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/abby/jiaqing/web/WechatController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/abby/jiaqing/wechat/ReplyImageHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/abby/jiaqing/wechat/ReplyImageHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ImageMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ImageMapper.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
