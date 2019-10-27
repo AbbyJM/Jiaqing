@@ -119,7 +119,9 @@ public class ImageController {
             if(uploadResult.getQiniu()&&uploadResult.getWechat()){
                Image imageObj=new Image();
                imageObj.setMediaId(mediaId);
-               imageObj.setName(fileName);
+               //文件名有.jpg或.png后缀等，去掉后缀保存
+               int index=fileName.lastIndexOf(".");
+               imageObj.setName(fileName.substring(0,index));
                imageObj.setUrl(qiniuCloudService.getImageURL(fileName));
                imageObj.setTime(TimeUtil.getCurrentTime());
                //插入记录到数据库
