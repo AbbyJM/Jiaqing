@@ -30,7 +30,6 @@ public class UserServiceImpl implements UserService {
         logger.info(authentication.toString());
         if(authentication instanceof UsernamePasswordAuthenticationToken){
             User user=userMapper.selectByUserName(authentication.getName());
-            logger.info("user is "+user);
             if(user==null) {
                 return null;
             }

@@ -42,7 +42,7 @@ public class UserController {
     public void getUserData(HttpServletRequest request,HttpServletResponse response) throws IOException {
         User user=userService.getUserData();
         String responseStr;
-        if(user!=null){
+        if(user==null){
            responseStr=ResponseWrapper.wrap(ResponseCode.USER_NOT_FOUND,"user not found");
         }else{
             Map<String,Object> map=ResponseWrapper.wrapNeedAdditionalOps(ResponseCode.SUCCESS,"got user data successfully");
