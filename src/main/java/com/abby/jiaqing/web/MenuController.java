@@ -25,7 +25,7 @@ public class MenuController {
     @GetMapping(value = "/get")
     public void getMenu(HttpServletRequest request, HttpServletResponse response) throws WxErrorException, IOException {
         WxMpMenu wxMpMenu=menuService.getMenu();
-        response.setContentType("application/json;utf-8");
-        response.getWriter().write(objectMapper.writeValueAsString(wxMpMenu));
+        response.setCharacterEncoding("UTF-8");
+        response.getWriter().write(wxMpMenu.toJson());
     }
 }
