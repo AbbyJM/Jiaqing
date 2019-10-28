@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="48b5f0df-3167-4992-adfd-2348ffb52ea9" name="Default Changelist" comment="test" />
+    <list default="true" id="48b5f0df-3167-4992-adfd-2348ffb52ea9" name="Default Changelist" comment="test">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/abby/jiaqing/service/MenuService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/abby/jiaqing/service/MenuService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/abby/jiaqing/service/impl/WxMenuServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/abby/jiaqing/service/impl/WxMenuServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/abby/jiaqing/web/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/abby/jiaqing/web/MenuController.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +123,7 @@
       <updated>1571836425673</updated>
       <workItem from="1571836433618" duration="76448000" />
       <workItem from="1572076682688" duration="33366000" />
-      <workItem from="1572228392495" duration="10095000" />
+      <workItem from="1572228392495" duration="11465000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1572077656484</created>
