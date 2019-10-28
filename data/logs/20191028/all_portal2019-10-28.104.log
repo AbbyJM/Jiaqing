@@ -1,0 +1,16 @@
+13:09:42.077 [http-nio-80-exec-9] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', PUT]
+13:09:42.082 [http-nio-80-exec-9] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'POST /login' doesn't match 'PUT /logout'
+13:09:42.082 [http-nio-80-exec-9] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', DELETE]
+13:09:42.082 [http-nio-80-exec-9] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'POST /login' doesn't match 'DELETE /logout'
+13:09:42.082 [http-nio-80-exec-9] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - No matches found
+13:09:42.082 [http-nio-80-exec-9] DEBUG o.s.security.web.FilterChainProxy - /login at position 5 of 11 in additional filter chain; firing Filter: 'UsernamePasswordAuthenticationFilter'
+13:09:42.083 [http-nio-80-exec-9] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/login'; against '/login'
+13:09:42.083 [http-nio-80-exec-9] DEBUG o.s.s.w.a.UsernamePasswordAuthenticationFilter - Request is to process authentication
+13:09:42.089 [http-nio-80-exec-9] DEBUG o.s.s.authentication.ProviderManager - Authentication attempt using org.springframework.security.authentication.dao.DaoAuthenticationProvider
+13:09:42.089 [http-nio-80-exec-9] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+13:09:42.089 [http-nio-80-exec-9] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@540cc0cf] was not registered for synchronization because synchronization is not active
+13:09:42.089 [http-nio-80-exec-9] DEBUG o.s.jdbc.datasource.DataSourceUtils - Fetching JDBC Connection from DataSource
+13:09:42.092 [http-nio-80-exec-9] DEBUG o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@1523266622 wrapping com.mysql.cj.jdbc.ConnectionImpl@4b8f47e9] will not be managed by Spring
+13:09:42.092 [http-nio-80-exec-9] DEBUG c.a.j.m.UserMapper.selectByUserName - ==>  Preparing: select id, username, password, email, active, roles, avatar from user where username=? 
+13:09:42.092 [http-nio-80-exec-9] DEBUG c.a.j.m.UserMapper.selectByUserName - ==> Parameters: abby(String)
+13:09:42.094 [http-nio-80-exec-9] DEBUG c.a.j.m.UserMapper.selectByUserName - <==      Total: 1

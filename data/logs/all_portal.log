@@ -1,2 +1,2 @@
-13:06:01.550 [IdleConnectionMonitorThread] DEBUG o.a.h.i.c.PoolingHttpClientConnectionManager - Closing connections idle longer than 60000 MILLISECONDS
-13:06:01.553 [IdleConnectionMonitorThread] DEBUG o.a.h.i.c.DefaultManagedHttpClientConnection - http-outgoing-3: Close connection
+13:10:01.576 [IdleConnectionMonitorThread] DEBUG o.a.h.i.c.PoolingHttpClientConnectionManager - Closing expired connections
+13:10:01.580 [IdleConnectionMonitorThread] DEBUG o.a.h.i.c.PoolingHttpClientConnectionManager - Closing connections idle longer than 60000 MILLISECONDS

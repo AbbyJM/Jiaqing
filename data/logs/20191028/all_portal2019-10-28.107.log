@@ -1,0 +1,8 @@
+13:09:49.964 [http-nio-80-exec-1] DEBUG o.s.security.web.FilterChainProxy - /menu/get at position 1 of 11 in additional filter chain; firing Filter: 'WebAsyncManagerIntegrationFilter'
+13:09:49.969 [http-nio-80-exec-1] DEBUG o.s.security.web.FilterChainProxy - /menu/get at position 2 of 11 in additional filter chain; firing Filter: 'SecurityContextPersistenceFilter'
+13:09:49.970 [http-nio-80-exec-1] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Obtained a valid SecurityContext from SPRING_SECURITY_CONTEXT: 'org.springframework.security.core.context.SecurityContextImpl@c69de216: Authentication: org.springframework.security.authentication.UsernamePasswordAuthenticationToken@c69de216: Principal: com.abby.jiaqing.security.CustomUserDetails@51f5db67; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@fffbcba8: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: C57D3ECBB5022DE31AEAF0D7E24D78BC; Granted Authorities: ROLE_SUPERUSER'
+13:09:49.971 [http-nio-80-exec-1] DEBUG o.s.security.web.FilterChainProxy - /menu/get at position 3 of 11 in additional filter chain; firing Filter: 'HeaderWriterFilter'
+13:09:49.971 [http-nio-80-exec-1] DEBUG o.s.security.web.FilterChainProxy - /menu/get at position 4 of 11 in additional filter chain; firing Filter: 'LogoutFilter'
+13:09:49.971 [http-nio-80-exec-1] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', GET]
+13:09:49.971 [http-nio-80-exec-1] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/menu/get'; against '/logout'
+13:09:49.971 [http-nio-80-exec-1] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', POST]

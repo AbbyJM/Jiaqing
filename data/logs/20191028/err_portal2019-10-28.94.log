@@ -1,0 +1,1 @@
+13:08:01.565 [IdleConnectionMonitorThread] DEBUG o.a.h.i.c.PoolingHttpClientConnectionManager - Closing connections idle longer than 60000 MILLISECONDS

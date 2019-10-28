@@ -1,0 +1,2 @@
+13:09:42.063 [http-nio-80-exec-9] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/login'; against '/static/**'
+13:09:42.068 [http-nio-80-exec-9] DEBUG o.s.security.web.FilterChainProxy - /login at position 1 of 11 in additional filter chain; firing Filter: 'WebAsyncManagerIntegrationFilter'
