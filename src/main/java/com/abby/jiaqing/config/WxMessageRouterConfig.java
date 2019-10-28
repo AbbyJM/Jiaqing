@@ -26,11 +26,12 @@ public class WxMessageRouterConfig {
         router.rule()
             .async(false)
             .msgType(WxConsts.XmlMsgType.TEXT)
+
             .handler(replyImageHandler)
             .end()
             .rule()
             .async(false)
-            .msgType(WxConsts.MenuButtonType.CLICK)
+            .msgType(WxConsts.EventType.CLICK)
             .handler(menuClickHandler)
             .end();
         return router;
