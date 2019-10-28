@@ -12,6 +12,8 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class WxMenuServiceImpl implements MenuService {
+    //沙雕公众号开启开发者模式后自定义菜单就用不了了
+    //写一个页面来管理菜单又太复杂，直接硬编码算了
    @Resource
    private WxMpService wxMpService;
 
