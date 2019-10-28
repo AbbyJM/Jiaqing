@@ -33,11 +33,14 @@ public class WechatController {
             logger.info("got a request that does not belong to wechat");
            return;
         }
+
         try {
             WxMpXmlMessage message=getMessage(request,timestamp,nonce);
             WxMpXmlOutMessage outMessage=wxMpMessageRouter.route(message);
-            response.setCharacterEncoding("UTF-8");
-            response.getWriter().write(outMessage.toXml());
+            response.getWriter().write(request.getParameter("echostr"));
+
+            //response.setCharacterEncoding("UTF-8");
+            //response.getWriter().write(outMessage.toXml());
         } catch (IOException e) {
             e.printStackTrace();
         }
