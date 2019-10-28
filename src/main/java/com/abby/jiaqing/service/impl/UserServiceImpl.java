@@ -8,6 +8,8 @@ import java.util.Collection;
 import java.util.List;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.security.authentication.AnonymousAuthenticationToken;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -19,6 +21,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class UserServiceImpl implements UserService {
+    private static Logger logger= LoggerFactory.getLogger(UserServiceImpl.class);
     @Resource
     private UserMapper userMapper;
 
@@ -29,6 +32,7 @@ public class UserServiceImpl implements UserService {
 
     public User getUserData(){
         Authentication authentication=SecurityContextHolder.getContext().getAuthentication();
+        logger.info(authentication.toString());
         if(authentication instanceof UsernamePasswordAuthenticationToken){
             UserDetails userDetails=(UserDetails)authentication.getPrincipal();
             String name=userDetails.getUsername();

@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="48b5f0df-3167-4992-adfd-2348ffb52ea9" name="Default Changelist" comment="test">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/abby/jiaqing/response/ResponseWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/abby/jiaqing/response/ResponseWrapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/abby/jiaqing/security/ResponseCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/abby/jiaqing/security/ResponseCode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/abby/jiaqing/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/abby/jiaqing/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/abby/jiaqing/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/abby/jiaqing/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/abby/jiaqing/web/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/abby/jiaqing/web/UserController.java" afterDir="false" />
-    </list>
+    <list default="true" id="48b5f0df-3167-4992-adfd-2348ffb52ea9" name="Default Changelist" comment="test" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
