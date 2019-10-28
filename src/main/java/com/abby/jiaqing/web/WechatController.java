@@ -28,6 +28,9 @@ public class WechatController {
         String signature=request.getParameter("signature");
         String nonce=request.getParameter("nonce");
         String timestamp=request.getParameter("timestamp");
+        logger.info("signature "+signature);
+        logger.info("nonce "+nonce);
+        logger.info("timestamp "+timestamp);
         if(!wxMpService.checkSignature(timestamp,nonce,signature)){
             //不是微信发来的请求，do nothing
             logger.info("got a request that does not belong to wechat");
