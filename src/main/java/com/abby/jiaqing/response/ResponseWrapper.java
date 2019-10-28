@@ -29,4 +29,8 @@ public class ResponseWrapper {
         result.put("message",message);
         return result;
     }
+
+    public static String writeAsString(Map<String,Object> map) throws JsonProcessingException {
+        return objectMapper.writeValueAsString(map);
+    }
 }

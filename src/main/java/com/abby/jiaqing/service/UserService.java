@@ -1,5 +1,6 @@
 package com.abby.jiaqing.service;
 
+import com.abby.jiaqing.model.domain.User;
 import javax.servlet.http.HttpServletRequest;
 
 public interface UserService {
@@ -9,4 +10,6 @@ public interface UserService {
      * @return 如果在线返回true
      */
     boolean isUserOnline(HttpServletRequest request);
+
+    User getUserData();
 }

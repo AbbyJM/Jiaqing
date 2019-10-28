@@ -1,10 +1,14 @@
 package com.abby.jiaqing.web;
 
+import com.abby.jiaqing.model.domain.User;
 import com.abby.jiaqing.response.ResponseWrapper;
+import com.abby.jiaqing.response.ResponseWriter;
 import com.abby.jiaqing.security.ResponseCode;
 import com.abby.jiaqing.service.UserService;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Map;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -32,5 +36,19 @@ public class UserController {
         writer.write(responseStr);
         writer.flush();
         writer.close();
+    }
+
+    @GetMapping(value = "/get")
+    public void getUserData(HttpServletRequest request,HttpServletResponse response) throws IOException {
+        User user=userService.getUserData();
+        String responseStr;
+        if(user!=null){
+           responseStr=ResponseWrapper.wrap(ResponseCode.USER_NOT_FOUND,"user not found");
+        }else{
+            Map<String,Object> map=ResponseWrapper.wrapNeedAdditionalOps(ResponseCode.SUCCESS,"got user data successfully");
+            map.put("user",user);
+            responseStr=ResponseWrapper.writeAsString(map);
+        }
+        ResponseWriter.writeToResponseThenClose(response,responseStr);
     }
 }

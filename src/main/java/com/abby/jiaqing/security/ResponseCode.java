@@ -10,6 +10,8 @@ public class ResponseCode {
 
     public static final int USER_NOT_LOGGED_IN=10001;
 
+    public static final int USER_NOT_FOUND=10002;
+
     //用户在线状态返回码
     public static final int USER_IS_ONLINE=20001;
 
