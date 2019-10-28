@@ -63,9 +63,12 @@ public class MenuClickHandler implements WxMpMessageHandler {
                 .build();
         }else if(key.equals("TAKE_PHOTO")){
             WxMpXmlOutNewsMessage.Item item=new WxMpXmlOutNewsMessage.Item();
-            item.setDescription("嘉庆");
-            outMessage=WxMpXmlOutMessage.IMAGE()
-                .mediaId("JDdocXiUH5HIpFv0qnhqJM7vbRqVWWPXx8HSf4VRNBw")
+            item.setUrl("http://mp.weixin.qq.com/s?__biz=Mzg2NDA1MzM1Mg==&mid=100000848&idx=1&sn=1b7b630b4134b4392cd33126ed4f6ede&chksm=4e6e75577919fc41b49c9fdcbd951544806e11f3e5982fd6c2b78ccfc357d3e0c31b6b5a52f6#rd");
+            item.setPicUrl("http://mmbiz.qpic.cn/mmbiz_jpg/Z5e3Ru2dQ1dop3Zht1Uiaa1xTSibZuuibmsDic6E1w71fzITgZ38A81gbm53icTEWUV9qibsITUePpvEBK8ibOmS1uNEw/0?wx_fmt=jpeg");
+            item.setTitle("嘉庆摄影工作室丨毕业季约拍");
+            item.setDescription("");
+            outMessage=WxMpXmlOutMessage.NEWS()
+                .addArticle(item)
                 .fromUser(wxMessage.getToUser())
                 .toUser(wxMessage.getFromUser())
                 .build();
