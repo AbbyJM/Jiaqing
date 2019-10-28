@@ -23,10 +23,21 @@ public class WxMenuServiceImpl implements MenuService {
         button1.setType(WxConsts.MenuButtonType.CLICK);
 
         WxMenuButton button11=new WxMenuButton();
-        button11.setName("测试");
+        button11.setName("嘉庆摄影");
         button11.setType(WxConsts.MenuButtonType.CLICK);
-        button11.setKey("TEST");
+        button11.setKey("PHOTO");
+        WxMenuButton button12=new WxMenuButton();
+        button12.setName("嘉庆驾校");
+        button12.setType(WxConsts.MenuButtonType.CLICK);
+        button12.setKey("DRIVE");
+        WxMenuButton button13=new WxMenuButton();
+        button13.setKey("CONTENT");
+        button13.setName("业务内容");
+        button13.setType(WxConsts.MenuButtonType.CLICK);
         button1.getSubButtons().add(button11);
+        button1.getSubButtons().add(button12);
+        button1.getSubButtons().add(button13);
+
 
         WxMenuButton button2=new WxMenuButton();
         button2.setName("毕业约拍照");
