@@ -28,24 +28,16 @@ public class WechatController {
         String signature=request.getParameter("signature");
         String nonce=request.getParameter("nonce");
         String timestamp=request.getParameter("timestamp");
-        if(wxMpService.checkSignature(timestamp,nonce,signature)){
+        if(!wxMpService.checkSignature(timestamp,nonce,signature)){
             //不是微信发来的请求，do nothing
             logger.info("got a request that does not belong to wechat");
-            try {
-                response.getWriter().write(request.getParameter("echostr"));
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            return;
+           return;
         }
-
         try {
             WxMpXmlMessage message=getMessage(request,timestamp,nonce);
             WxMpXmlOutMessage outMessage=wxMpMessageRouter.route(message);
-
-
-            //response.setCharacterEncoding("UTF-8");
-            //response.getWriter().write(outMessage.toXml());
+            response.setCharacterEncoding("UTF-8");
+            response.getWriter().write(outMessage.toXml());
         } catch (IOException e) {
             e.printStackTrace();
         }
