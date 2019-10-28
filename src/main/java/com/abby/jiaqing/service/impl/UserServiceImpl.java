@@ -29,12 +29,8 @@ public class UserServiceImpl implements UserService {
         Authentication authentication=SecurityContextHolder.getContext().getAuthentication();
         logger.info(authentication.toString());
         if(authentication instanceof UsernamePasswordAuthenticationToken){
-            CustomUserDetails userDetails=(CustomUserDetails)authentication.getPrincipal();
-            logger.info("user details "+userDetails);
-            if(userDetails==null){
-                return null;
-            }
-            User user=userMapper.selectByUserName(userDetails.getUsername());
+            User user=userMapper.selectByUserName(authentication.getName());
+            logger.info("user is "+user);
             if(user==null) {
                 return null;
             }
