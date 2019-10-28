@@ -35,6 +35,7 @@ public class WechatController {
         }
         try {
             WxMpXmlMessage message=getMessage(request,timestamp,nonce);
+            logger.info("got message"+message);
             WxMpXmlOutMessage outMessage=wxMpMessageRouter.route(message);
             response.setCharacterEncoding("UTF-8");
             response.getWriter().write(outMessage.toXml());
