@@ -24,6 +24,8 @@ public class MenuClickHandler implements WxMpMessageHandler {
 
     public WxMpXmlOutMessage handle(WxMpXmlMessage wxMessage, Map<String, Object> context, WxMpService wxMpService,
         WxSessionManager sessionManager) throws WxErrorException {
+        logger.info("wxmessage is "+wxMessage);
+        logger.info("event key is "+wxMessage.getEvent());
         String key=wxMessage.getEventKey();
         WxMpXmlOutMessage outMessage=null;
         if(key.equals("CONTENT")){
@@ -65,7 +67,7 @@ public class MenuClickHandler implements WxMpMessageHandler {
                 .toUser(wxMessage.getFromUser())
                 .build();
         }
-       logger.info("out message in click handler "+outMessage);
+
         return outMessage;
     }
 }

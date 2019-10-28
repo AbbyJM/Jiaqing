@@ -39,7 +39,6 @@ public class ReplyImageHandler implements WxMpMessageHandler {
                 .toUser(wxMessage.getFromUser())
                 .build();
         }
-        logger.info("out message in image handler"+outMessage.toString());
         return outMessage;
     }
 }
