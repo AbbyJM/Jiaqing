@@ -20,7 +20,8 @@ public class LogoutHandler implements LogoutSuccessHandler {
         Authentication authentication) throws IOException, ServletException {
         response.setStatus(HttpServletResponse.SC_OK);
         String responseStr= ResponseWrapper.wrap(HttpServletResponse.SC_OK,"logout success");
-        response.setContentType("application/json;utf-8");
+        response.setContentType("application/json;");
+        response.setCharacterEncoding("UTF-8");
         PrintWriter writer=response.getWriter();
         writer.write(responseStr);
         writer.flush();

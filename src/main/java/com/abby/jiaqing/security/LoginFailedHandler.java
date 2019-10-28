@@ -14,7 +14,8 @@ import org.springframework.stereotype.Component;
 public class LoginFailedHandler implements AuthenticationFailureHandler {
     public void onAuthenticationFailure(HttpServletRequest request, HttpServletResponse response,
         AuthenticationException e) throws IOException, ServletException {
-        response.setContentType("application/json;utf-8");
+        response.setContentType("application/json;");
+        response.setCharacterEncoding("UTF-8");
         String responseStr= ResponseWrapper.wrap(ResponseCode.BAD_CREDENTIALS,"bad credentials,login failed");
         PrintWriter writer=response.getWriter();
         writer.write(responseStr);

@@ -14,7 +14,8 @@ import org.springframework.stereotype.Component;
 public class LoginSuccessHandler implements AuthenticationSuccessHandler {
     public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response,
         Authentication authentication) throws IOException, ServletException {
-         response.setContentType("application/json;utf-8");
+         response.setContentType("application/json;");
+         response.setCharacterEncoding("UTF-8");
          String responseStr= ResponseWrapper.wrap(HttpServletResponse.SC_OK,"login success");
         PrintWriter writer=response.getWriter();
         writer.write(responseStr);

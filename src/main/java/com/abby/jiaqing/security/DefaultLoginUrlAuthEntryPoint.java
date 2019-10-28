@@ -34,7 +34,8 @@ public class DefaultLoginUrlAuthEntryPoint extends LoginUrlAuthenticationEntryPo
 
     @Override
     public void commence(HttpServletRequest request, HttpServletResponse response, AuthenticationException e) throws IOException {
-        response.setContentType("application/json;utf-8");
+        response.setContentType("application/json;");
+        response.setCharacterEncoding("UTF-8");
         String responseStr= ResponseWrapper.wrap(ResponseCode.USER_NOT_LOGGED_IN,"user is not logged in");
         PrintWriter writer=response.getWriter();
         writer.write(responseStr);

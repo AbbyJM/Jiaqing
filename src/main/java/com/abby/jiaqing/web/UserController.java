@@ -25,7 +25,8 @@ public class UserController {
     @GetMapping(value = "/isonline")
     public void isUserOnline(HttpServletRequest request, HttpServletResponse response) throws IOException {
         boolean online=userService.isUserOnline(request);
-        response.setContentType("application/json;utf-8");
+        response.setContentType("application/json;");
+        response.setCharacterEncoding("UTF-8");
         PrintWriter writer=response.getWriter();
         String responseStr;
         if(online){
