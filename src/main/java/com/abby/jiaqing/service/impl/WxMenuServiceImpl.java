@@ -25,6 +25,7 @@ public class WxMenuServiceImpl implements MenuService {
         WxMenuButton button11=new WxMenuButton();
         button11.setName("测试");
         button11.setType(WxConsts.MenuButtonType.CLICK);
+        button11.setKey("TEST");
         button1.getSubButtons().add(button11);
 
         WxMenuButton button2=new WxMenuButton();
