@@ -130,26 +130,22 @@ public class ImageController {
 
 
     @DeleteMapping(value = "/delete")
-    public void deleteImage(HttpServletRequest request,HttpServletResponse response) throws IOException, InterruptedException {
+    public void deleteImage(HttpServletRequest request,HttpServletResponse response) throws IOException, InterruptedException, WxErrorException {
         int imageId=request.getParameter("imageId")!=null?Integer.parseInt(request.getParameter("imageId")):-1;
         String responseStr="";
-        CountDownLatch deleteLock=new CountDownLatch(2);
-        OpResult deleteResult=new OpResult();
         if(imageId<0){
            responseStr=ResponseWrapper.wrap(ResponseCode.IMAGE_NOT_FOUND,"image not found");
         }else{
            Image image=imageMapper.selectByPrimaryKey(imageId);
-           deleteFromQiniu(image.getName()+image.getUrl().substring(image.getUrl().lastIndexOf(".")),deleteLock,deleteResult);
-           deleteFromWechat(image.getMediaId(),deleteLock,deleteResult);
-           deleteLock.await(10,TimeUnit.SECONDS);
-           if(deleteResult.getWechat()&&deleteResult.getQiniu()){
-               if(imageMapper.deleteByPrimaryKey(imageId)>0) {
-                   responseStr=ResponseWrapper.wrap(ResponseCode.SUCCESS,"deleted image successfully");
+           if(wxMpService.getMaterialService().materialDelete(image.getMediaId())){
+               if(imageMapper.deleteByPrimaryKey(image.getId())>0){
+                   responseStr=ResponseWrapper.wrap(ResponseCode.SUCCESS,"delete success");
                }else{
-                   responseStr=ResponseWrapper.wrap(ResponseCode.IMAGE_DELETE_FAILED,"failed to delete iamge from database");
+                   logger.info("failed to insert a record to database");
+                   responseStr=ResponseWrapper.wrap(ResponseCode.IMAGE_DELETE_FAILED,"delete failed");
                }
-           }else {
-               responseStr=ResponseWrapper.wrap(ResponseCode.IMAGE_DELETE_FAILED,"failed to delete iamge");
+           }else{
+               responseStr=ResponseWrapper.wrap(ResponseCode.IMAGE_DELETE_FAILED,"delete failed");
            }
         }
        ResponseWriter.writeToResponseThenClose(response,responseStr);
