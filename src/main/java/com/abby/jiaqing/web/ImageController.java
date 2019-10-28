@@ -162,7 +162,7 @@ public class ImageController {
            responseStr=ResponseWrapper.wrap(ResponseCode.IMAGE_NOT_FOUND,"image not found");
         }else{
            Image image=imageMapper.selectByPrimaryKey(imageId);
-           deleteFromQiniu(image.getName(),deleteLock,deleteResult);
+           deleteFromQiniu(image.getName()+image.getUrl().substring(image.getUrl().lastIndexOf(".")),deleteLock,deleteResult);
            deleteFromWechat(image.getMediaId(),deleteLock,deleteResult);
            deleteLock.await(10,TimeUnit.SECONDS);
            if(deleteResult.getWechat()&&deleteResult.getQiniu()){
