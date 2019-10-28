@@ -10,6 +10,7 @@ import me.chanjar.weixin.mp.api.WxMpMessageHandler;
 import me.chanjar.weixin.mp.api.WxMpService;
 import me.chanjar.weixin.mp.bean.message.WxMpXmlMessage;
 import me.chanjar.weixin.mp.bean.message.WxMpXmlOutMessage;
+import me.chanjar.weixin.mp.bean.message.WxMpXmlOutNewsMessage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
@@ -61,6 +62,8 @@ public class MenuClickHandler implements WxMpMessageHandler {
                 .toUser(wxMessage.getFromUser())
                 .build();
         }else if(key.equals("TAKE_PHOTO")){
+            WxMpXmlOutNewsMessage.Item item=new WxMpXmlOutNewsMessage.Item();
+            item.setDescription("嘉庆");
             outMessage=WxMpXmlOutMessage.IMAGE()
                 .mediaId("JDdocXiUH5HIpFv0qnhqJM7vbRqVWWPXx8HSf4VRNBw")
                 .fromUser(wxMessage.getToUser())
