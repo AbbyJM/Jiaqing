@@ -107,7 +107,9 @@ public class ImageController {
             //需要同时上传到七牛云以及微信公众号，初始化状态
             CountDownLatch Lock=new CountDownLatch(2);
             OpResult uploadResult=new OpResult();
-
+            //文件名有.jpg或.png后缀等，去掉后缀保存
+            int index=fileName.lastIndexOf(".");
+            fileName=fileName.substring(0,index);
             uploadToQiniu(fileName,Lock,uploadResult);
             uploadToWechat(f,fileName,Lock,uploadResult);
             try {
@@ -119,9 +121,8 @@ public class ImageController {
             if(uploadResult.getQiniu()&&uploadResult.getWechat()){
                Image imageObj=new Image();
                imageObj.setMediaId(mediaId);
-               //文件名有.jpg或.png后缀等，去掉后缀保存
-               int index=fileName.lastIndexOf(".");
-               imageObj.setName(fileName.substring(0,index));
+
+               imageObj.setName(fileName);
                imageObj.setUrl(qiniuCloudService.getImageURL(fileName));
                imageObj.setTime(TimeUtil.getCurrentTime());
                //插入记录到数据库
