@@ -1,0 +1,16 @@
+19:11:02.490 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [E:\jiaqing\target\classes\com\abby\jiaqing\service\impl\QiniuCloudServiceImpl.class]
+19:11:02.506 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [E:\jiaqing\target\classes\com\abby\jiaqing\service\impl\TokenServiceImpl.class]
+19:11:02.506 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [E:\jiaqing\target\classes\com\abby\jiaqing\service\impl\UserServiceImpl.class]
+19:11:02.522 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [E:\jiaqing\target\classes\com\abby\jiaqing\service\impl\WxMenuServiceImpl.class]
+19:11:02.568 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [E:\jiaqing\target\classes\com\abby\jiaqing\web\ImageController.class]
+19:11:02.568 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [E:\jiaqing\target\classes\com\abby\jiaqing\web\MenuController.class]
+19:11:02.568 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [E:\jiaqing\target\classes\com\abby\jiaqing\web\UserController.class]
+19:11:02.568 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [E:\jiaqing\target\classes\com\abby\jiaqing\web\WechatController.class]
+19:11:02.568 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [E:\jiaqing\target\classes\com\abby\jiaqing\wechat\MenuClickHandler.class]
+19:11:02.568 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [E:\jiaqing\target\classes\com\abby\jiaqing\wechat\ReplyImageHandler.class]
+19:11:02.600 [main] DEBUG o.s.boot.env.OriginTrackedYamlLoader - Loading from YAML: class path resource [qiniu-dev.yml]
+19:11:02.615 [main] DEBUG o.s.boot.env.OriginTrackedYamlLoader - Merging document (no matchers set): {qiniu={accessKey=Yv5seDVS9I0Picy8yS6YF2hftqkh2_wRebdqTSCW, secretKey=cXQDMVHxlyU_5wo5TyCvApCUoTaKSPpySkEx6FJY, defaultBucket=jiaqing-master, expire=3600, domain=http://pztxvdloz.bkt.clouddn.com/}}
+19:11:02.615 [main] DEBUG o.s.boot.env.OriginTrackedYamlLoader - Loaded 1 document from YAML resource: class path resource [qiniu-dev.yml]
+19:11:02.646 [main] DEBUG o.s.boot.env.OriginTrackedYamlLoader - Loading from YAML: class path resource [wechat-dev.yml]
+19:11:02.646 [main] DEBUG o.s.boot.env.OriginTrackedYamlLoader - Merging document (no matchers set): {wechat={appId=wxda3b148a1096f5f8, secret=1cb88745540cf516067a755b1208cda6, token=jiaqing, aseKey=e7gQDo0PdLEJOs6QLsAfHfFSM5DrC11LFzRheRxnCmu}}
+19:11:02.646 [main] DEBUG o.s.boot.env.OriginTrackedYamlLoader - Loaded 1 document from YAML resource: class path resource [wechat-dev.yml]

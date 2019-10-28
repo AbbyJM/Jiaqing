@@ -11,7 +11,7 @@ CREATE TABLE `user`(
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 insert into user (username,password,email,active,roles,avatar)values(
-    'abby','$2a$10$wmC5RGMkyYqOw6SRQBNJB.HFT650/qaHn4hKo77I/KOf9Jp5mGfIK','1358890401@qq.com','1','ROLE_SUPERUSER','http://pztxvdloz.bkt.clouddn.com/avatar.jpg'
+    'root','$2a$10$cRI96lBt3qjLnlxVcpAjaOfr1U04q10efFVL8HAG8.ORLPTEmBhaW','1358890401@qq.com','1','ROLE_SUPERUSER','http://pztxvdloz.bkt.clouddn.com/avatar.jpg'
 )
 
 

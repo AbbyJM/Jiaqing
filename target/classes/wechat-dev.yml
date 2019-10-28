@@ -1,11 +1,5 @@
-#wechat:
-#  appId: wxda3b148a1096f5f8
-#  secret: 1cb88745540cf516067a755b1208cda6
-#  token: jiaqing
-#  aseKey: e7gQDo0PdLEJOs6QLsAfHfFSM5DrC11LFzRheRxnCmu
-
 wechat:
-  appId: wxf96501edae8e85d9
-  secret: 77c6cc64fa96be8ed4cf8c095ed918c2
+  appId: wxda3b148a1096f5f8
+  secret: 1cb88745540cf516067a755b1208cda6
   token: jiaqing
-  aseKey: dx6fiXqnrDKZ5CFODkXkfgCYLR21pqrg0iRYy4JKvol
+  aseKey: e7gQDo0PdLEJOs6QLsAfHfFSM5DrC11LFzRheRxnCmu
