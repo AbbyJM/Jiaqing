@@ -29,6 +29,7 @@ public class WxMessageRouterConfig {
             .handler(replyImageHandler)
             .end()
             .rule()
+            .async(false)
             .msgType(WxConsts.MenuButtonType.CLICK)
             .handler(menuClickHandler)
             .end();

@@ -20,7 +20,7 @@ public class MenuClickHandler implements WxMpMessageHandler {
 
     public WxMpXmlOutMessage handle(WxMpXmlMessage wxMessage, Map<String, Object> context, WxMpService wxMpService,
         WxSessionManager sessionManager) throws WxErrorException {
-        String key=wxMessage.getContent();
+        String key=wxMessage.getEventKey();
         WxMpXmlOutMessage outMessage=null;
         if(key.equals("CONTENT")){
            outMessage=WxMpXmlOutMessage.TEXT().content("业务内容：\n" +
