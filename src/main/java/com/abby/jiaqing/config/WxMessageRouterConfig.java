@@ -31,7 +31,7 @@ public class WxMessageRouterConfig {
             .end()
             .rule()
             .async(false)
-            .msgType(WxConsts.EventType.CLICK)
+            .event(WxConsts.EventType.CLICK)
             .handler(menuClickHandler)
             .end();
         return router;
