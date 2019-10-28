@@ -92,60 +92,37 @@ public class ImageController {
     }
 
     @PostMapping(value = "/upload")
-    public void uploadImage(HttpServletRequest request,HttpServletResponse response) throws IOException {
-        String image=request.getParameter("image");
-        String fileName=request.getParameter("fileName");
-        String responseStr="";
+    public void uploadImage(HttpServletRequest request,HttpServletResponse response) throws IOException, WxErrorException {
+        String image = request.getParameter("image");
+        String fileName = request.getParameter("fileName");
+        String responseStr = "";
         int statusCode;
-        if(image==null||fileName==null){
-           statusCode= fileName==null?ResponseCode.IMAGE_NAME_NULL:ResponseCode.IMAGE_NULL;
-           responseStr= ResponseWrapper.wrap(statusCode,"image or image name cannot be null");
-        }else {
-            File f= ImageUtil.base64ToFile(image,fileName);
-            if(f==null){
+        if (image == null || fileName == null) {
+            statusCode = fileName == null ? ResponseCode.IMAGE_NAME_NULL : ResponseCode.IMAGE_NULL;
+            responseStr = ResponseWrapper.wrap(statusCode, "image or image name cannot be null");
+        } else {
+            File f = ImageUtil.base64ToFile(image, fileName);
+            if (f == null) {
                 return;
             }
-            //需要同时上传到七牛云以及微信公众号，初始化状态
-            CountDownLatch Lock=new CountDownLatch(2);
-            OpResult uploadResult=new OpResult();
-
-            uploadToQiniu(fileName,Lock,uploadResult);
-            uploadToWechat(f,fileName,Lock,uploadResult);
-            try {
-                Lock.await(20, TimeUnit.SECONDS);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-
-            if(uploadResult.getQiniu()&&uploadResult.getWechat()){
-               Image imageObj=new Image();
-               imageObj.setMediaId(mediaId);
-               //文件名有.jpg或.png后缀等，去掉后缀保存
-               int index=fileName.lastIndexOf(".");
-               imageObj.setName(fileName.substring(0,index));
-               imageObj.setUrl(qiniuCloudService.getImageURL(fileName));
-               imageObj.setTime(TimeUtil.getCurrentTime());
-               //插入记录到数据库
-               if(imageMapper.insert(imageObj)>0){
-                   Map<String,Object> ret=ResponseWrapper.wrapNeedAdditionalOps(ResponseCode.UPLOAD_IMAGE_SUCCESS,"uploaded image successfully");
-                   ret.put("image",imageObj);
-                   responseStr=objectMapper.writeValueAsString(ret);
-                   logger.info("upload image "+fileName+" successfully");
-               }else{
-                   //插入数据库失败
-                   responseStr=ResponseWrapper.wrap(ResponseCode.UPLOAD_RESULT_WRITE_FAILED,"failed to insert a record to database");
-                   logger.error("failed to write record to database");
-               }
-            }else {
-                if(!uploadResult.getQiniu()&&!uploadResult.getWechat()){
-                    responseStr=ResponseWrapper.wrap(ResponseCode.UPLOAD_IMAGE_FAILED,"failed to upload image to qiniu cloud and wechat");
-                    logger.error("failed to upload image to qiniu cloud and wechat");
-                }else {
-                    responseStr=ResponseWrapper.wrap(ResponseCode.UPLOAD_IMAGE_FAILED,!uploadResult.getWechat()?"" +
-                        "failed to upload image to wechat":"failed to upload image to qiniu");
-                    logger.error(!uploadResult.getWechat()?"" +
-                        "failed to upload image to wechat":"failed to upload image to qiniu");
+            WxMpMaterial wxMpMaterial=new WxMpMaterial();
+            wxMpMaterial.setFile(f);
+            wxMpMaterial.setName(fileName);
+            WxMpMaterialUploadResult result=wxMpService.getMaterialService().materialFileUpload(WxConsts.MaterialType.IMAGE,wxMpMaterial);
+            if(result.getErrCode()==null&&result.getErrMsg()==null){
+                Image imageObj=new Image();
+                imageObj.setMediaId(result.getMediaId());
+                imageObj.setUrl(result.getUrl());
+                int index=fileName.lastIndexOf(".");
+                imageObj.setName(fileName.substring(0,index));
+                if(imageMapper.insert(imageObj)>0) {
+                    responseStr = ResponseWrapper.wrap(ResponseCode.UPLOAD_IMAGE_SUCCESS, "uploaded success");
+                }else{
+                    responseStr=ResponseWrapper.wrap(ResponseCode.UPLOAD_IMAGE_FAILED,"upload failed");
+                    logger.info("failed to insert a record to database");
                 }
+            }else{
+                responseStr=ResponseWrapper.wrap(ResponseCode.UPLOAD_IMAGE_FAILED,"upload failed");
             }
         }
         ResponseWriter.writeToResponseThenClose(response,responseStr);

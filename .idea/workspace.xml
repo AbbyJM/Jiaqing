@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="48b5f0df-3167-4992-adfd-2348ffb52ea9" name="Default Changelist" comment="test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/abby/jiaqing/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/abby/jiaqing/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/abby/jiaqing/web/ImageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/abby/jiaqing/web/ImageController.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -124,7 +124,8 @@
       <updated>1571836425673</updated>
       <workItem from="1571836433618" duration="76448000" />
       <workItem from="1572076682688" duration="33366000" />
-      <workItem from="1572228392495" duration="29288000" />
+      <workItem from="1572228392495" duration="30933000" />
+      <workItem from="1572275396092" duration="908000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1572077656484</created>
