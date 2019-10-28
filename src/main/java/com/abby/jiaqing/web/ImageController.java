@@ -6,17 +6,13 @@ import com.abby.jiaqing.model.domain.Image;
 import com.abby.jiaqing.response.ResponseWrapper;
 import com.abby.jiaqing.response.ResponseWriter;
 import com.abby.jiaqing.security.ResponseCode;
-import com.abby.jiaqing.service.QiniuCloudService;
 import com.abby.jiaqing.utils.ImageUtil;
-import com.abby.jiaqing.utils.TimeUtil;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.pagehelper.PageHelper;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
 import java.util.Map;
-import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.TimeUnit;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -29,7 +25,6 @@ import me.chanjar.weixin.mp.bean.material.WxMpMaterial;
 import me.chanjar.weixin.mp.bean.material.WxMpMaterialUploadResult;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -42,11 +37,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class ImageController {
     private Logger logger= LoggerFactory.getLogger(ImageController.class);
 
-    //微信的外链只能在腾讯系中使用
-    //如果用本机来做资源服务器因为带宽太小体验很差，所以使用七牛云来同步存储照片
-    @Resource
-    private QiniuCloudService qiniuCloudService;
-
     @Resource
     private WxMpService wxMpService;
 
@@ -55,10 +45,6 @@ public class ImageController {
 
     @Resource
     private ObjectMapper objectMapper;
-    private String mediaId;
-
-    @Resource(name = "taskExecutor")
-    private ThreadPoolTaskExecutor taskExecutor;
 
     @GetMapping(value = "/download")
     public String downloadImage(HttpServletRequest request, HttpServletResponse response){
@@ -101,6 +87,12 @@ public class ImageController {
             statusCode = fileName == null ? ResponseCode.IMAGE_NAME_NULL : ResponseCode.IMAGE_NULL;
             responseStr = ResponseWrapper.wrap(statusCode, "image or image name cannot be null");
         } else {
+            List<Image> images=imageMapper.selectByName(fileName.substring(0,fileName.lastIndexOf(".")));
+            if(images!=null&&!images.isEmpty()){
+               responseStr=ResponseWrapper.wrap(ResponseCode.DUPLICATE_IMAGE,"duplicate image");
+               ResponseWriter.writeToResponseThenClose(response,responseStr);
+               return;
+            }
             File f = ImageUtil.base64ToFile(image, fileName);
             if (f == null) {
                 return;
@@ -137,6 +129,11 @@ public class ImageController {
            responseStr=ResponseWrapper.wrap(ResponseCode.IMAGE_NOT_FOUND,"image not found");
         }else{
            Image image=imageMapper.selectByPrimaryKey(imageId);
+           if(image==null){
+               responseStr=ResponseWrapper.wrap(ResponseCode.IMAGE_NOT_FOUND,"image not found");
+               ResponseWriter.writeToResponseThenClose(response,responseStr);
+               return;
+           }
            if(wxMpService.getMaterialService().materialDelete(image.getMediaId())){
                if(imageMapper.deleteByPrimaryKey(image.getId())>0){
                    responseStr=ResponseWrapper.wrap(ResponseCode.SUCCESS,"delete success");
@@ -149,133 +146,5 @@ public class ImageController {
            }
         }
        ResponseWriter.writeToResponseThenClose(response,responseStr);
-    }
-
-    private void uploadToQiniu(String fileName,CountDownLatch uploadLock,OpResult result){
-        taskExecutor.execute(new UploadToQiniuRunnable(uploadLock,result,fileName));
-    }
-
-    private void deleteFromQiniu(String fileName,CountDownLatch deleteLock,OpResult deleteResult){
-        taskExecutor.execute(new DeleteFromQiniuRunnable(fileName,deleteLock,deleteResult));
-    }
-
-    private void deleteFromWechat(String mediaId,CountDownLatch deleteLock,OpResult deleteResult){
-        taskExecutor.execute(new DeleteFromWechatRunnable(mediaId,deleteLock,deleteResult));
-    }
-
-    private void uploadToWechat(File f,String fileName,CountDownLatch uploadLock,OpResult uploadResult){
-        taskExecutor.execute(new UploadToWechatRunnable(f,fileName,uploadResult,uploadLock));
-    }
-
-    static class OpResult{
-        public  boolean qiniuDone=false;
-        public  boolean wechatDone=false;
-        public OpResult(){
-
-        }
-        public void setQiniuDone(boolean done){
-            qiniuDone=done;
-        }
-        public boolean getQiniu(){
-            return qiniuDone;
-        }
-        public void setWechatDone(boolean done){
-            wechatDone=done;
-        }
-        public boolean getWechat(){
-            return wechatDone;
-        }
-    }
-
-     class UploadToQiniuRunnable implements Runnable{
-        private CountDownLatch lock;
-        private OpResult result;
-        private String fileName;
-        public UploadToQiniuRunnable(CountDownLatch lock,OpResult result,String fileName){
-            this.lock=lock;
-            this.result=result;
-            this.fileName=fileName;
-        }
-        public void run() {
-            logger.info("uploaing to qiniu in thread "+Thread.currentThread().getName());
-            boolean success=qiniuCloudService.uploadImage(ImageUtil.getImageFilePath()+File.separator+fileName,fileName);
-            if(success){
-                logger.info("uploaded image "+fileName+" successfully");
-                result.setQiniuDone(true);
-            }
-            lock.countDown();
-        }
-    }
-
-    class UploadToWechatRunnable implements Runnable{
-        private File f;
-        private String fileName;
-        private OpResult uploadResult;
-        private CountDownLatch lock;
-        public UploadToWechatRunnable(File f,String name,OpResult result,CountDownLatch lock){
-            this.f=f;
-            fileName=name;
-            uploadResult=result;
-            this.lock=lock;
-        }
-        public void run() {
-            logger.info("uoloading image to wechat in thread "+Thread.currentThread().getName());
-            WxMpMaterial wxMpMaterial=new WxMpMaterial();
-            wxMpMaterial.setFile(f);
-            wxMpMaterial.setName(fileName);
-            try {
-                WxMpMaterialUploadResult result=wxMpService.getMaterialService()
-                    .materialFileUpload(WxConsts.MaterialType.IMAGE,wxMpMaterial);
-                mediaId=result.getMediaId();
-                logger.info("get url "+result.getUrl());
-                if(result.getErrCode()==null&&result.getErrMsg()==null){
-                    uploadResult.setWechatDone(true);
-                }
-            } catch (WxErrorException e) {
-                e.printStackTrace();
-            } finally {
-                lock.countDown();
-            }
-        }
-    }
-
-    class DeleteFromQiniuRunnable implements Runnable{
-        private String fileName;
-        private CountDownLatch lock;
-        private OpResult result;
-        public DeleteFromQiniuRunnable(String fileName,CountDownLatch lock,OpResult result){
-            this.fileName=fileName;
-            this.lock=lock;
-            this.result=result;
-        }
-        public void run() {
-            if(qiniuCloudService.deleteImage(fileName)){
-               result.setQiniuDone(true);
-            }
-            lock.countDown();
-        }
-    }
-
-    class DeleteFromWechatRunnable implements Runnable{
-        private String mediaId;
-        private CountDownLatch lock;
-        private OpResult result;
-        public DeleteFromWechatRunnable(String mediaId,CountDownLatch lock,OpResult result){
-            this.mediaId=mediaId;
-            this.lock=lock;
-            this.result=result;
-        }
-        public void run() {
-            try {
-                if(wxMpService.getMaterialService()
-                    .materialDelete(mediaId)){
-                    result.setWechatDone(true);
-                }
-            } catch (WxErrorException e) {
-                e.printStackTrace();
-            }finally {
-                lock.countDown();
-            }
-        }
     }
 }

@@ -33,4 +33,6 @@ public class ResponseCode {
     public static final int IMAGE_NOT_FOUND=30006;
 
     public static final int IMAGE_DELETE_FAILED=30007;
+
+    public static final int DUPLICATE_IMAGE=30008;
 }
