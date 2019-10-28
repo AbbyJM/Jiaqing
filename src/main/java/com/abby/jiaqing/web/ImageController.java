@@ -80,7 +80,8 @@ public class ImageController {
         }
         PageHelper.startPage(pageNum,pageCount);
         List<Image> images=imageMapper.getAllImages();
-        response.setContentType("application/json;utf-8");
+        response.setContentType("application/json");
+        response.setCharacterEncoding("UTF-8");
         Map<String,Object> map=ResponseWrapper.wrapNeedAdditionalOps(ResponseCode.SUCCESS,"get image list successfully");
         map.put("data",images);
         try {

@@ -8,6 +8,7 @@ public class ResponseWriter {
     public static void writeToResponseThenClose(HttpServletResponse response,String message) throws IOException {
         PrintWriter writer=response.getWriter();
         response.setContentType("application/json;utf-8");
+        response.setCharacterEncoding("UTF-8");
         writer.write(message);
         writer.flush();
         writer.close();

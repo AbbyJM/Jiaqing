@@ -2,7 +2,6 @@ package com.abby.jiaqing.service.impl;
 
 import com.abby.jiaqing.mapper.UserMapper;
 import com.abby.jiaqing.model.domain.User;
-import com.abby.jiaqing.security.CustomUserDetails;
 import com.abby.jiaqing.service.UserService;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
