@@ -2,6 +2,7 @@ package com.abby.jiaqing.service.impl;
 
 import com.abby.jiaqing.mapper.UserMapper;
 import com.abby.jiaqing.model.domain.User;
+import com.abby.jiaqing.security.CustomUserDetails;
 import com.abby.jiaqing.service.UserService;
 import java.security.Principal;
 import java.util.Collection;
@@ -34,9 +35,14 @@ public class UserServiceImpl implements UserService {
         Authentication authentication=SecurityContextHolder.getContext().getAuthentication();
         logger.info(authentication.toString());
         if(authentication instanceof UsernamePasswordAuthenticationToken){
-            UserDetails userDetails=(UserDetails)authentication.getPrincipal();
-            String name=userDetails.getUsername();
-            User user=userMapper.selectByUserName(name);
+            CustomUserDetails userDetails=(CustomUserDetails)authentication.getPrincipal();
+            if(userDetails==null){
+                return null;
+            }
+            User user=userMapper.selectByUserName(userDetails.getUsername());
+            if(user==null) {
+                return null;
+            }
             user.setPassword("PROTECTED");
             user.setEmail("PROTECTED");
             user.setId(-1);
