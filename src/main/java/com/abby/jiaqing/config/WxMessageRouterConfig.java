@@ -1,5 +1,6 @@
 package com.abby.jiaqing.config;
 
+import com.abby.jiaqing.wechat.MenuClickHandler;
 import com.abby.jiaqing.wechat.ReplyImageHandler;
 import javax.annotation.Resource;
 import me.chanjar.weixin.common.api.WxConsts;
@@ -16,6 +17,9 @@ public class WxMessageRouterConfig {
     @Resource
     private ReplyImageHandler replyImageHandler;
 
+    @Resource
+    private MenuClickHandler menuClickHandler;
+
     @Bean
     public WxMpMessageRouter router(){
         WxMpMessageRouter router=new WxMpMessageRouter(wxMpService);
@@ -23,6 +27,8 @@ public class WxMessageRouterConfig {
             .async(false)
             .msgType(WxConsts.XmlMsgType.TEXT)
             .handler(replyImageHandler)
+            .msgType(WxConsts.MenuButtonType.CLICK)
+            .handler(menuClickHandler)
             .end();
         return router;
     }
