@@ -1,0 +1,32 @@
+13:01:38.830 [http-nio-80-exec-3] DEBUG o.s.security.web.FilterChainProxy - /menu/get at position 10 of 11 in additional filter chain; firing Filter: 'ExceptionTranslationFilter'
+13:01:38.839 [http-nio-80-exec-3] DEBUG o.s.security.web.FilterChainProxy - /menu/get at position 11 of 11 in additional filter chain; firing Filter: 'FilterSecurityInterceptor'
+13:01:38.840 [http-nio-80-exec-3] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', GET]
+13:01:38.841 [http-nio-80-exec-3] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/menu/get'; against '/logout'
+13:01:38.841 [http-nio-80-exec-3] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', POST]
+13:01:38.841 [http-nio-80-exec-3] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'GET /menu/get' doesn't match 'POST /logout'
+13:01:38.841 [http-nio-80-exec-3] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', PUT]
+13:01:38.842 [http-nio-80-exec-3] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'GET /menu/get' doesn't match 'PUT /logout'
+13:01:38.842 [http-nio-80-exec-3] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', DELETE]
+13:01:38.842 [http-nio-80-exec-3] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'GET /menu/get' doesn't match 'DELETE /logout'
+13:01:38.842 [http-nio-80-exec-3] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - No matches found
+13:01:38.842 [http-nio-80-exec-3] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/menu/get'; against '/test/**'
+13:01:38.842 [http-nio-80-exec-3] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/menu/get'; against '/user/isonline**'
+13:01:38.842 [http-nio-80-exec-3] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/menu/get'; against '/wechat/**'
+13:01:38.842 [http-nio-80-exec-3] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Secure object: FilterInvocation: URL: /menu/get; Attributes: [authenticated]
+13:01:38.842 [http-nio-80-exec-3] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Previously Authenticated: org.springframework.security.authentication.UsernamePasswordAuthenticationToken@775d95dc: Principal: com.abby.jiaqing.security.CustomUserDetails@1fced461; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@b364: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: null; Granted Authorities: ROLE_SUPERUSER
+13:01:38.851 [http-nio-80-exec-3] DEBUG o.s.s.access.vote.AffirmativeBased - Voter: org.springframework.security.web.access.expression.WebExpressionVoter@448a2e43, returned: 1
+13:01:38.851 [http-nio-80-exec-3] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Authorization successful
+13:01:38.851 [http-nio-80-exec-3] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - RunAsManager did not change Authentication object
+13:01:38.851 [http-nio-80-exec-3] DEBUG o.s.security.web.FilterChainProxy - /menu/get reached end of additional filter chain; proceeding with original chain
+13:01:38.860 [http-nio-80-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/menu/get", parameters={masked}
+13:01:38.868 [http-nio-80-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.abby.jiaqing.web.MenuController#getMenu(HttpServletRequest, HttpServletResponse)
+13:01:38.955 [http-nio-80-exec-3] DEBUG o.a.h.c.protocol.RequestAddCookies - CookieSpec selected: default
+13:01:38.979 [http-nio-80-exec-3] DEBUG o.a.h.c.protocol.RequestAuthCache - Auth cache not set in the context
+13:01:38.982 [http-nio-80-exec-3] DEBUG o.a.h.i.c.PoolingHttpClientConnectionManager - Connection request: [route: {s}->https://api.weixin.qq.com:443][total kept alive: 0; route allocated: 0 of 10; total allocated: 0 of 50]
+13:01:38.999 [http-nio-80-exec-3] DEBUG o.a.h.i.c.PoolingHttpClientConnectionManager - Connection leased: [id: 0][route: {s}->https://api.weixin.qq.com:443][total kept alive: 0; route allocated: 1 of 10; total allocated: 1 of 50]
+13:01:39.002 [http-nio-80-exec-3] DEBUG o.a.h.impl.execchain.MainClientExec - Opening connection {s}->https://api.weixin.qq.com:443
+13:01:39.010 [http-nio-80-exec-3] DEBUG o.a.h.i.c.DefaultHttpClientConnectionOperator - Connecting to api.weixin.qq.com/182.254.92.124:443
+13:01:39.010 [http-nio-80-exec-3] DEBUG o.a.h.c.s.SSLConnectionSocketFactory - Connecting socket to api.weixin.qq.com/182.254.92.124:443 with timeout 5000
+13:01:39.135 [http-nio-80-exec-3] DEBUG o.a.h.c.s.SSLConnectionSocketFactory - Enabled protocols: [TLSv1, TLSv1.1, TLSv1.2]
+13:01:39.135 [http-nio-80-exec-3] DEBUG o.a.h.c.s.SSLConnectionSocketFactory - Enabled cipher suites:[TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384, TLS_RSA_WITH_AES_256_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384, TLS_DHE_RSA_WITH_AES_256_CBC_SHA256, TLS_DHE_DSS_WITH_AES_256_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_DSS_WITH_AES_256_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_DSS_WITH_AES_128_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_DSS_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_DSS_WITH_AES_128_GCM_SHA256, TLS_EMPTY_RENEGOTIATION_INFO_SCSV]
+13:01:39.135 [http-nio-80-exec-3] DEBUG o.a.h.c.s.SSLConnectionSocketFactory - Starting handshake

@@ -1,0 +1,16 @@
+13:01:29.404 [http-nio-80-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+13:01:29.412 [http-nio-80-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+13:01:29.412 [http-nio-80-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+13:01:29.426 [http-nio-80-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+13:01:29.426 [http-nio-80-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 14 ms
+13:01:29.445 [http-nio-80-exec-2] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/login'; against '/index.html'
+13:01:29.446 [http-nio-80-exec-2] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/login'; against '/static/**'
+13:01:29.447 [http-nio-80-exec-2] DEBUG o.s.security.web.FilterChainProxy - /login at position 1 of 11 in additional filter chain; firing Filter: 'WebAsyncManagerIntegrationFilter'
+13:01:29.449 [http-nio-80-exec-2] DEBUG o.s.security.web.FilterChainProxy - /login at position 2 of 11 in additional filter chain; firing Filter: 'SecurityContextPersistenceFilter'
+13:01:29.450 [http-nio-80-exec-2] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - No HttpSession currently exists
+13:01:29.450 [http-nio-80-exec-2] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - No SecurityContext was available from the HttpSession: null. A new one will be created.
+13:01:29.453 [http-nio-80-exec-2] DEBUG o.s.security.web.FilterChainProxy - /login at position 3 of 11 in additional filter chain; firing Filter: 'HeaderWriterFilter'
+13:01:29.454 [http-nio-80-exec-2] DEBUG o.s.security.web.FilterChainProxy - /login at position 4 of 11 in additional filter chain; firing Filter: 'LogoutFilter'
+13:01:29.455 [http-nio-80-exec-2] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', GET]
+13:01:29.455 [http-nio-80-exec-2] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'POST /login' doesn't match 'GET /logout'
+13:01:29.455 [http-nio-80-exec-2] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', POST]

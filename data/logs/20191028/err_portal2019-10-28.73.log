@@ -1,0 +1,2 @@
+13:04:16.989 [http-nio-80-exec-6] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/menu/get'; against '/index.html'
+13:04:16.994 [http-nio-80-exec-6] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/menu/get'; against '/static/**'

@@ -1,0 +1,133 @@
+13:03:02.080 [http-nio-80-exec-9] DEBUG o.s.s.w.h.writers.HstsHeaderWriter - Not injecting HSTS header since it did not match the requestMatcher org.springframework.security.web.header.writers.HstsHeaderWriter$SecureRequestMatcher@4d7761ab
+13:03:02.083 [http-nio-80-exec-9] DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - SecurityContextHolder now cleared, as request processing completed
+13:03:02.084 [http-nio-80-exec-9] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is me.chanjar.weixin.common.error.WxErrorException: {"errcode":40164,"errmsg":"invalid ip 220.115.23.111 ipv6 ::ffff:220.115.23.111, not in whitelist hint: [o3ta9a0981hb56]"}] with root cause
+me.chanjar.weixin.common.error.WxErrorException: {"errcode":40164,"errmsg":"invalid ip 220.115.23.111 ipv6 ::ffff:220.115.23.111, not in whitelist hint: [o3ta9a0981hb56]"}
+	at me.chanjar.weixin.mp.api.impl.WxMpServiceHttpClientImpl.getAccessToken(WxMpServiceHttpClientImpl.java:88)
+	at me.chanjar.weixin.mp.api.impl.BaseWxMpServiceImpl.executeInternal(BaseWxMpServiceImpl.java:319)
+	at me.chanjar.weixin.mp.api.impl.BaseWxMpServiceImpl.execute(BaseWxMpServiceImpl.java:284)
+	at me.chanjar.weixin.mp.api.impl.BaseWxMpServiceImpl.get(BaseWxMpServiceImpl.java:253)
+	at me.chanjar.weixin.mp.api.impl.BaseWxMpServiceImpl.get(BaseWxMpServiceImpl.java:258)
+	at me.chanjar.weixin.mp.api.impl.WxMpMenuServiceImpl.menuGet(WxMpMenuServiceImpl.java:81)
+	at com.abby.jiaqing.service.impl.WxMenuServiceImpl.getMenu(WxMenuServiceImpl.java:22)
+	at com.abby.jiaqing.web.MenuController.getMenu(MenuController.java:27)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:126)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:90)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:118)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:158)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+13:03:02.085 [http-nio-80-exec-9] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/error'; against '/index.html'
+13:03:02.085 [http-nio-80-exec-9] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/error'; against '/static/**'
+13:03:02.085 [http-nio-80-exec-9] DEBUG o.s.security.web.FilterChainProxy - /error at position 1 of 11 in additional filter chain; firing Filter: 'WebAsyncManagerIntegrationFilter'
+13:03:02.085 [http-nio-80-exec-9] DEBUG o.s.security.web.FilterChainProxy - /error at position 2 of 11 in additional filter chain; firing Filter: 'SecurityContextPersistenceFilter'
+13:03:02.085 [http-nio-80-exec-9] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Obtained a valid SecurityContext from SPRING_SECURITY_CONTEXT: 'org.springframework.security.core.context.SecurityContextImpl@775d95dc: Authentication: org.springframework.security.authentication.UsernamePasswordAuthenticationToken@775d95dc: Principal: com.abby.jiaqing.security.CustomUserDetails@1fced461; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@b364: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: null; Granted Authorities: ROLE_SUPERUSER'
+13:03:02.085 [http-nio-80-exec-9] DEBUG o.s.security.web.FilterChainProxy - /error at position 3 of 11 in additional filter chain; firing Filter: 'HeaderWriterFilter'
+13:03:02.085 [http-nio-80-exec-9] DEBUG o.s.security.web.FilterChainProxy - /error at position 4 of 11 in additional filter chain; firing Filter: 'LogoutFilter'
+13:03:02.085 [http-nio-80-exec-9] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', GET]
+13:03:02.085 [http-nio-80-exec-9] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/error'; against '/logout'
+13:03:02.086 [http-nio-80-exec-9] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', POST]
+13:03:02.086 [http-nio-80-exec-9] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'GET /error' doesn't match 'POST /logout'
+13:03:02.086 [http-nio-80-exec-9] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', PUT]
+13:03:02.086 [http-nio-80-exec-9] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'GET /error' doesn't match 'PUT /logout'
+13:03:02.086 [http-nio-80-exec-9] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', DELETE]
+13:03:02.086 [http-nio-80-exec-9] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'GET /error' doesn't match 'DELETE /logout'
+13:03:02.086 [http-nio-80-exec-9] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - No matches found
+13:03:02.086 [http-nio-80-exec-9] DEBUG o.s.security.web.FilterChainProxy - /error at position 5 of 11 in additional filter chain; firing Filter: 'UsernamePasswordAuthenticationFilter'
+13:03:02.086 [http-nio-80-exec-9] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'GET /error' doesn't match 'POST /login'
+13:03:02.086 [http-nio-80-exec-9] DEBUG o.s.security.web.FilterChainProxy - /error at position 6 of 11 in additional filter chain; firing Filter: 'RequestCacheAwareFilter'
+13:03:02.086 [http-nio-80-exec-9] DEBUG o.s.s.w.s.HttpSessionRequestCache - saved request doesn't match
+13:03:02.086 [http-nio-80-exec-9] DEBUG o.s.security.web.FilterChainProxy - /error at position 7 of 11 in additional filter chain; firing Filter: 'SecurityContextHolderAwareRequestFilter'
+13:03:02.086 [http-nio-80-exec-9] DEBUG o.s.security.web.FilterChainProxy - /error at position 8 of 11 in additional filter chain; firing Filter: 'AnonymousAuthenticationFilter'
+13:03:02.086 [http-nio-80-exec-9] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - SecurityContextHolder not populated with anonymous token, as it already contained: 'org.springframework.security.authentication.UsernamePasswordAuthenticationToken@775d95dc: Principal: com.abby.jiaqing.security.CustomUserDetails@1fced461; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@b364: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: null; Granted Authorities: ROLE_SUPERUSER'
+13:03:02.086 [http-nio-80-exec-9] DEBUG o.s.security.web.FilterChainProxy - /error at position 9 of 11 in additional filter chain; firing Filter: 'SessionManagementFilter'
+13:03:02.086 [http-nio-80-exec-9] DEBUG o.s.security.web.FilterChainProxy - /error at position 10 of 11 in additional filter chain; firing Filter: 'ExceptionTranslationFilter'
+13:03:02.086 [http-nio-80-exec-9] DEBUG o.s.security.web.FilterChainProxy - /error at position 11 of 11 in additional filter chain; firing Filter: 'FilterSecurityInterceptor'
+13:03:02.086 [http-nio-80-exec-9] DEBUG o.s.security.web.FilterChainProxy - /error reached end of additional filter chain; proceeding with original chain
+13:03:02.086 [http-nio-80-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/error", parameters={masked}
+13:03:02.087 [http-nio-80-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+13:03:02.088 [http-nio-80-exec-9] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+13:03:02.088 [http-nio-80-exec-9] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{timestamp=Mon Oct 28 13:03:02 CST 2019, status=500, error=Internal Server Error, message={"errcode" (truncated)...]
+13:03:02.089 [http-nio-80-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 500
+13:03:02.090 [http-nio-80-exec-9] DEBUG o.s.s.w.a.ExceptionTranslationFilter - Chain processed normally
+13:03:02.090 [http-nio-80-exec-9] DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - SecurityContextHolder now cleared, as request processing completed

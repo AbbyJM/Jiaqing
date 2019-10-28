@@ -1,0 +1,32 @@
+13:02:59.258 [http-nio-80-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - GET "/menu/get", parameters={masked}
+13:02:59.262 [http-nio-80-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.abby.jiaqing.web.MenuController#getMenu(HttpServletRequest, HttpServletResponse)
+13:02:59.263 [http-nio-80-exec-7] DEBUG o.a.h.c.protocol.RequestAddCookies - CookieSpec selected: default
+13:02:59.263 [http-nio-80-exec-7] DEBUG o.a.h.c.protocol.RequestAuthCache - Auth cache not set in the context
+13:02:59.263 [http-nio-80-exec-7] DEBUG o.a.h.i.c.PoolingHttpClientConnectionManager - Connection request: [route: {s}->https://api.weixin.qq.com:443][total kept alive: 1; route allocated: 1 of 10; total allocated: 1 of 50]
+13:02:59.266 [http-nio-80-exec-7] DEBUG org.apache.http.wire - http-outgoing-1 << "[read] I/O error: Read timed out"
+13:02:59.266 [http-nio-80-exec-7] DEBUG o.a.h.i.c.PoolingHttpClientConnectionManager - Connection leased: [id: 1][route: {s}->https://api.weixin.qq.com:443][total kept alive: 0; route allocated: 1 of 10; total allocated: 1 of 50]
+13:02:59.266 [http-nio-80-exec-7] DEBUG o.a.h.impl.execchain.MainClientExec - Executing request GET /cgi-bin/token?grant_type=client_credential&appid=wxf96501edae8e85d9&secret=77c6cc64fa96be8ed4cf8c095ed918c2 HTTP/1.1
+13:02:59.266 [http-nio-80-exec-7] DEBUG o.a.h.impl.execchain.MainClientExec - Target auth state: UNCHALLENGED
+13:02:59.266 [http-nio-80-exec-7] DEBUG o.a.h.impl.execchain.MainClientExec - Proxy auth state: UNCHALLENGED
+13:02:59.266 [http-nio-80-exec-7] DEBUG org.apache.http.headers - http-outgoing-1 >> GET /cgi-bin/token?grant_type=client_credential&appid=wxf96501edae8e85d9&secret=77c6cc64fa96be8ed4cf8c095ed918c2 HTTP/1.1
+13:02:59.267 [http-nio-80-exec-7] DEBUG org.apache.http.headers - http-outgoing-1 >> Host: api.weixin.qq.com
+13:02:59.267 [http-nio-80-exec-7] DEBUG org.apache.http.headers - http-outgoing-1 >> Connection: Keep-Alive
+13:02:59.267 [http-nio-80-exec-7] DEBUG org.apache.http.headers - http-outgoing-1 >> User-Agent: Apache-HttpClient/4.5 (Java/1.8.0_221)
+13:02:59.267 [http-nio-80-exec-7] DEBUG org.apache.http.headers - http-outgoing-1 >> Accept-Encoding: gzip,deflate
+13:02:59.267 [http-nio-80-exec-7] DEBUG org.apache.http.wire - http-outgoing-1 >> "GET /cgi-bin/token?grant_type=client_credential&appid=wxf96501edae8e85d9&secret=77c6cc64fa96be8ed4cf8c095ed918c2 HTTP/1.1[\r][\n]"
+13:02:59.267 [http-nio-80-exec-7] DEBUG org.apache.http.wire - http-outgoing-1 >> "Host: api.weixin.qq.com[\r][\n]"
+13:02:59.267 [http-nio-80-exec-7] DEBUG org.apache.http.wire - http-outgoing-1 >> "Connection: Keep-Alive[\r][\n]"
+13:02:59.267 [http-nio-80-exec-7] DEBUG org.apache.http.wire - http-outgoing-1 >> "User-Agent: Apache-HttpClient/4.5 (Java/1.8.0_221)[\r][\n]"
+13:02:59.267 [http-nio-80-exec-7] DEBUG org.apache.http.wire - http-outgoing-1 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+13:02:59.267 [http-nio-80-exec-7] DEBUG org.apache.http.wire - http-outgoing-1 >> "[\r][\n]"
+13:02:59.329 [http-nio-80-exec-7] DEBUG org.apache.http.wire - http-outgoing-1 << "HTTP/1.1 200 OK[\r][\n]"
+13:02:59.329 [http-nio-80-exec-7] DEBUG org.apache.http.wire - http-outgoing-1 << "Connection: keep-alive[\r][\n]"
+13:02:59.329 [http-nio-80-exec-7] DEBUG org.apache.http.wire - http-outgoing-1 << "Content-Type: application/json; encoding=utf-8[\r][\n]"
+13:02:59.329 [http-nio-80-exec-7] DEBUG org.apache.http.wire - http-outgoing-1 << "Date: Mon, 28 Oct 2019 05:02:58 GMT[\r][\n]"
+13:02:59.329 [http-nio-80-exec-7] DEBUG org.apache.http.wire - http-outgoing-1 << "Content-Length: 122[\r][\n]"
+13:02:59.329 [http-nio-80-exec-7] DEBUG org.apache.http.wire - http-outgoing-1 << "[\r][\n]"
+13:02:59.329 [http-nio-80-exec-7] DEBUG org.apache.http.wire - http-outgoing-1 << "{"errcode":40164,"errmsg":"invalid ip 220.115.23.111 ipv6 ::ffff:220.115.23.111, not in whitelist hint: [kpVh5a0978b101]"}"
+13:02:59.329 [http-nio-80-exec-7] DEBUG org.apache.http.headers - http-outgoing-1 << HTTP/1.1 200 OK
+13:02:59.329 [http-nio-80-exec-7] DEBUG org.apache.http.headers - http-outgoing-1 << Connection: keep-alive
+13:02:59.330 [http-nio-80-exec-7] DEBUG org.apache.http.headers - http-outgoing-1 << Content-Type: application/json; encoding=utf-8
+13:02:59.330 [http-nio-80-exec-7] DEBUG org.apache.http.headers - http-outgoing-1 << Date: Mon, 28 Oct 2019 05:02:58 GMT

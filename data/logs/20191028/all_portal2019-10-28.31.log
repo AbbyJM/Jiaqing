@@ -1,0 +1,32 @@
+13:01:29.730 [http-nio-80-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - maxLifetime.....................1800000
+13:01:29.736 [http-nio-80-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - maximumPoolSize.................10
+13:01:29.737 [http-nio-80-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - metricRegistry..................none
+13:01:29.738 [http-nio-80-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - metricsTrackerFactory...........none
+13:01:29.738 [http-nio-80-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - minimumIdle.....................10
+13:01:29.738 [http-nio-80-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - password........................<masked>
+13:01:29.739 [http-nio-80-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - poolName........................"HikariPool-1"
+13:01:29.739 [http-nio-80-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - readOnly........................false
+13:01:29.739 [http-nio-80-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - registerMbeans..................false
+13:01:29.739 [http-nio-80-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - scheduledExecutor...............none
+13:01:29.739 [http-nio-80-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - schema..........................none
+13:01:29.740 [http-nio-80-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - threadFactory...................internal
+13:01:29.740 [http-nio-80-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - transactionIsolation............default
+13:01:29.740 [http-nio-80-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - username........................"root"
+13:01:29.740 [http-nio-80-exec-2] DEBUG com.zaxxer.hikari.HikariConfig - validationTimeout...............5000
+13:01:29.740 [http-nio-80-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+13:01:30.113 [http-nio-80-exec-2] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4b8f47e9
+13:01:30.116 [http-nio-80-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+13:01:30.121 [http-nio-80-exec-2] DEBUG o.m.s.t.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@1845310442 wrapping com.mysql.cj.jdbc.ConnectionImpl@4b8f47e9] will not be managed by Spring
+13:01:30.129 [http-nio-80-exec-2] DEBUG c.a.j.m.UserMapper.selectByUserName - ==>  Preparing: select id, username, password, email, active, roles, avatar from user where username=? 
+13:01:30.167 [http-nio-80-exec-2] DEBUG c.a.j.m.UserMapper.selectByUserName - ==> Parameters: abby(String)
+13:01:30.198 [http-nio-80-exec-2] DEBUG c.a.j.m.UserMapper.selectByUserName - <==      Total: 1
+13:01:30.206 [http-nio-80-exec-2] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2aca3073]
+13:01:30.218 [HikariPool-1 housekeeper] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=1, active=0, idle=1, waiting=0)
+13:01:30.240 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@75834c67
+13:01:30.254 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@34be465c
+13:01:30.268 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5c0b3bb
+13:01:30.281 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5491b913
+13:01:30.294 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@47473771
+13:01:30.307 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@50df0123
+13:01:30.322 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@f3f9694
+13:01:30.336 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@51ad23ff

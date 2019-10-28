@@ -1,0 +1,16 @@
+13:01:00.265 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration'
+13:01:00.274 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'spring.security-org.springframework.boot.autoconfigure.security.SecurityProperties'
+13:01:00.274 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'securityFilterChainRegistration' via factory method to bean named 'spring.security-org.springframework.boot.autoconfigure.security.SecurityProperties'
+13:01:00.283 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'corsFilter'
+13:01:00.283 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'corConf'
+13:01:00.291 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'corsConfiguration'
+13:01:00.293 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Autowiring by type from bean name 'corsFilter' via factory method to bean named 'corsConfiguration'
+13:01:00.303 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'requestContextFilter'
+13:01:00.311 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'formContentFilter'
+13:01:00.311 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration'
+13:01:00.313 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'characterEncodingFilter'
+13:01:00.336 [main] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping filters: springSecurityFilterChain urls=[/*] order=-100, characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105, corsFilter urls=[/*] order=2147483647
+13:01:00.336 [main] DEBUG o.s.b.w.s.ServletContextInitializerBeans - Mapping servlets: dispatcherServlet urls=[/]
+13:01:00.365 [main] DEBUG o.s.b.w.s.f.OrderedRequestContextFilter - Filter 'requestContextFilter' configured for use
+13:01:00.366 [main] DEBUG o.s.web.filter.CorsFilter - Filter 'corsFilter' configured for use
+13:01:00.366 [main] DEBUG o.s.b.w.s.f.OrderedCharacterEncodingFilter - Filter 'characterEncodingFilter' configured for use

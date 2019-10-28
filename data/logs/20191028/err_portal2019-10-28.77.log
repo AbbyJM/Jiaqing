@@ -1,0 +1,16 @@
+13:04:17.009 [http-nio-80-exec-6] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - SecurityContextHolder not populated with anonymous token, as it already contained: 'org.springframework.security.authentication.UsernamePasswordAuthenticationToken@775d95dc: Principal: com.abby.jiaqing.security.CustomUserDetails@1fced461; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@b364: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: null; Granted Authorities: ROLE_SUPERUSER'
+13:04:17.013 [http-nio-80-exec-6] DEBUG o.s.security.web.FilterChainProxy - /menu/get at position 9 of 11 in additional filter chain; firing Filter: 'SessionManagementFilter'
+13:04:17.014 [http-nio-80-exec-6] DEBUG o.s.security.web.FilterChainProxy - /menu/get at position 10 of 11 in additional filter chain; firing Filter: 'ExceptionTranslationFilter'
+13:04:17.014 [http-nio-80-exec-6] DEBUG o.s.security.web.FilterChainProxy - /menu/get at position 11 of 11 in additional filter chain; firing Filter: 'FilterSecurityInterceptor'
+13:04:17.014 [http-nio-80-exec-6] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', GET]
+13:04:17.014 [http-nio-80-exec-6] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/menu/get'; against '/logout'
+13:04:17.014 [http-nio-80-exec-6] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', POST]
+13:04:17.014 [http-nio-80-exec-6] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'GET /menu/get' doesn't match 'POST /logout'
+13:04:17.014 [http-nio-80-exec-6] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', PUT]
+13:04:17.014 [http-nio-80-exec-6] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'GET /menu/get' doesn't match 'PUT /logout'
+13:04:17.014 [http-nio-80-exec-6] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', DELETE]
+13:04:17.014 [http-nio-80-exec-6] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'GET /menu/get' doesn't match 'DELETE /logout'
+13:04:17.014 [http-nio-80-exec-6] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - No matches found
+13:04:17.014 [http-nio-80-exec-6] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/menu/get'; against '/test/**'
+13:04:17.014 [http-nio-80-exec-6] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/menu/get'; against '/user/isonline**'
+13:04:17.014 [http-nio-80-exec-6] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/menu/get'; against '/wechat/**'

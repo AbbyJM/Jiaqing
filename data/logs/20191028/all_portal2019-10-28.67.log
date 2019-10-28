@@ -1,0 +1,47 @@
+13:03:26.180 [http-nio-80-exec-5] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/menu/get'; against '/index.html'
+13:03:26.187 [http-nio-80-exec-5] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/menu/get'; against '/static/**'
+13:03:26.187 [http-nio-80-exec-5] DEBUG o.s.security.web.FilterChainProxy - /menu/get at position 1 of 11 in additional filter chain; firing Filter: 'WebAsyncManagerIntegrationFilter'
+13:03:26.187 [http-nio-80-exec-5] DEBUG o.s.security.web.FilterChainProxy - /menu/get at position 2 of 11 in additional filter chain; firing Filter: 'SecurityContextPersistenceFilter'
+13:03:26.188 [http-nio-80-exec-5] DEBUG o.s.s.w.c.HttpSessionSecurityContextRepository - Obtained a valid SecurityContext from SPRING_SECURITY_CONTEXT: 'org.springframework.security.core.context.SecurityContextImpl@775d95dc: Authentication: org.springframework.security.authentication.UsernamePasswordAuthenticationToken@775d95dc: Principal: com.abby.jiaqing.security.CustomUserDetails@1fced461; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@b364: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: null; Granted Authorities: ROLE_SUPERUSER'
+13:03:26.188 [http-nio-80-exec-5] DEBUG o.s.security.web.FilterChainProxy - /menu/get at position 3 of 11 in additional filter chain; firing Filter: 'HeaderWriterFilter'
+13:03:26.189 [http-nio-80-exec-5] DEBUG o.s.security.web.FilterChainProxy - /menu/get at position 4 of 11 in additional filter chain; firing Filter: 'LogoutFilter'
+13:03:26.189 [http-nio-80-exec-5] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', GET]
+13:03:26.189 [http-nio-80-exec-5] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/menu/get'; against '/logout'
+13:03:26.189 [http-nio-80-exec-5] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', POST]
+13:03:26.189 [http-nio-80-exec-5] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'GET /menu/get' doesn't match 'POST /logout'
+13:03:26.189 [http-nio-80-exec-5] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', PUT]
+13:03:26.189 [http-nio-80-exec-5] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'GET /menu/get' doesn't match 'PUT /logout'
+13:03:26.189 [http-nio-80-exec-5] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', DELETE]
+13:03:26.189 [http-nio-80-exec-5] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'GET /menu/get' doesn't match 'DELETE /logout'
+13:03:26.189 [http-nio-80-exec-5] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - No matches found
+13:03:26.189 [http-nio-80-exec-5] DEBUG o.s.security.web.FilterChainProxy - /menu/get at position 5 of 11 in additional filter chain; firing Filter: 'UsernamePasswordAuthenticationFilter'
+13:03:26.189 [http-nio-80-exec-5] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'GET /menu/get' doesn't match 'POST /login'
+13:03:26.189 [http-nio-80-exec-5] DEBUG o.s.security.web.FilterChainProxy - /menu/get at position 6 of 11 in additional filter chain; firing Filter: 'RequestCacheAwareFilter'
+13:03:26.189 [http-nio-80-exec-5] DEBUG o.s.s.w.s.HttpSessionRequestCache - saved request doesn't match
+13:03:26.189 [http-nio-80-exec-5] DEBUG o.s.security.web.FilterChainProxy - /menu/get at position 7 of 11 in additional filter chain; firing Filter: 'SecurityContextHolderAwareRequestFilter'
+13:03:26.189 [http-nio-80-exec-5] DEBUG o.s.security.web.FilterChainProxy - /menu/get at position 8 of 11 in additional filter chain; firing Filter: 'AnonymousAuthenticationFilter'
+13:03:26.189 [http-nio-80-exec-5] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - SecurityContextHolder not populated with anonymous token, as it already contained: 'org.springframework.security.authentication.UsernamePasswordAuthenticationToken@775d95dc: Principal: com.abby.jiaqing.security.CustomUserDetails@1fced461; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@b364: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: null; Granted Authorities: ROLE_SUPERUSER'
+13:03:26.189 [http-nio-80-exec-5] DEBUG o.s.security.web.FilterChainProxy - /menu/get at position 9 of 11 in additional filter chain; firing Filter: 'SessionManagementFilter'
+13:03:26.189 [http-nio-80-exec-5] DEBUG o.s.security.web.FilterChainProxy - /menu/get at position 10 of 11 in additional filter chain; firing Filter: 'ExceptionTranslationFilter'
+13:03:26.189 [http-nio-80-exec-5] DEBUG o.s.security.web.FilterChainProxy - /menu/get at position 11 of 11 in additional filter chain; firing Filter: 'FilterSecurityInterceptor'
+13:03:26.189 [http-nio-80-exec-5] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', GET]
+13:03:26.189 [http-nio-80-exec-5] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/menu/get'; against '/logout'
+13:03:26.190 [http-nio-80-exec-5] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', POST]
+13:03:26.190 [http-nio-80-exec-5] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'GET /menu/get' doesn't match 'POST /logout'
+13:03:26.190 [http-nio-80-exec-5] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', PUT]
+13:03:26.190 [http-nio-80-exec-5] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'GET /menu/get' doesn't match 'PUT /logout'
+13:03:26.190 [http-nio-80-exec-5] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', DELETE]
+13:03:26.190 [http-nio-80-exec-5] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'GET /menu/get' doesn't match 'DELETE /logout'
+13:03:26.190 [http-nio-80-exec-5] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - No matches found
+13:03:26.190 [http-nio-80-exec-5] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/menu/get'; against '/test/**'
+13:03:26.190 [http-nio-80-exec-5] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/menu/get'; against '/user/isonline**'
+13:03:26.190 [http-nio-80-exec-5] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/menu/get'; against '/wechat/**'
+13:03:26.190 [http-nio-80-exec-5] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Secure object: FilterInvocation: URL: /menu/get; Attributes: [authenticated]
+13:03:26.190 [http-nio-80-exec-5] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Previously Authenticated: org.springframework.security.authentication.UsernamePasswordAuthenticationToken@775d95dc: Principal: com.abby.jiaqing.security.CustomUserDetails@1fced461; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@b364: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: null; Granted Authorities: ROLE_SUPERUSER
+13:03:26.191 [http-nio-80-exec-5] DEBUG o.s.s.access.vote.AffirmativeBased - Voter: org.springframework.security.web.access.expression.WebExpressionVoter@448a2e43, returned: 1
+13:03:26.191 [http-nio-80-exec-5] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Authorization successful
+13:03:26.191 [http-nio-80-exec-5] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - RunAsManager did not change Authentication object
+13:03:26.191 [http-nio-80-exec-5] DEBUG o.s.security.web.FilterChainProxy - /menu/get reached end of additional filter chain; proceeding with original chain
+13:03:26.197 [http-nio-80-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/menu/get", parameters={masked}
+13:03:26.197 [http-nio-80-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.abby.jiaqing.web.MenuController#getMenu(HttpServletRequest, HttpServletResponse)
+13:03:26.198 [http-nio-80-exec-5] DEBUG o.a.h.c.protocol.RequestAddCookies - CookieSpec selected: default

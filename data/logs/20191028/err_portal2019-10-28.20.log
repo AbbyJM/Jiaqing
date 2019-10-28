@@ -1,0 +1,4 @@
+13:01:01.715 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'imageServiceImpl'
+13:01:01.721 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'imageMapper'
+13:01:01.732 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'sqlSessionFactory'
+13:01:01.732 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration'

@@ -1,0 +1,4 @@
+13:00:56.987 [main] DEBUG o.s.c.e.PropertySourcesPropertyResolver - Found key 'spring.jmx.enabled' in PropertySource 'configurationProperties' with value of type String
+13:00:56.996 [main] DEBUG o.s.c.e.PropertySourcesPropertyResolver - Found key 'spring.application.admin.enabled' in PropertySource 'configurationProperties' with value of type String
+13:00:57.559 [main] DEBUG o.s.c.a.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [E:\jiaqing\target\classes\com\abby\jiaqing\config\QiniuProperties.class]
+13:00:57.560 [main] DEBUG o.s.c.a.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [E:\jiaqing\target\classes\com\abby\jiaqing\config\WechatProperties.class]

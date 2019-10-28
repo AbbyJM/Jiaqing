@@ -1,1 +1,2 @@
-17:56:54.533 [HikariPool-1 connection adder] DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@574d5168
+13:06:01.550 [IdleConnectionMonitorThread] DEBUG o.a.h.i.c.PoolingHttpClientConnectionManager - Closing connections idle longer than 60000 MILLISECONDS
+13:06:01.553 [IdleConnectionMonitorThread] DEBUG o.a.h.i.c.DefaultManagedHttpClientConnection - http-outgoing-3: Close connection

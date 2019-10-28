@@ -1,0 +1,32 @@
+13:01:39.301 [http-nio-80-exec-3] DEBUG o.a.h.c.s.SSLConnectionSocketFactory - Secure session established
+13:01:39.305 [http-nio-80-exec-3] DEBUG o.a.h.c.s.SSLConnectionSocketFactory -  negotiated protocol: TLSv1.2
+13:01:39.305 [http-nio-80-exec-3] DEBUG o.a.h.c.s.SSLConnectionSocketFactory -  negotiated cipher suite: TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+13:01:39.306 [http-nio-80-exec-3] DEBUG o.a.h.c.s.SSLConnectionSocketFactory -  peer principal: CN=mp.weixin.qq.com, OU=R&D, O=Shenzhen Tencent Computer Systems Company Limited, L=Shenzhen, ST=Guangdong, C=CN
+13:01:39.306 [http-nio-80-exec-3] DEBUG o.a.h.c.s.SSLConnectionSocketFactory -  peer alternative names: [mp.weixin.qq.com, servicewechat.com, hk.open.weixin.qq.com, long.open.weixin.qq.com, open.weixin.qq.com, a.weixin.qq.com, api.weixin.qq.com, sh.api.weixin.qq.com, as.weixin.qq.com, sz.open.weixin.qq.com, mp.weixinbridge.com, developers.weixin.qq.com, hk.api.weixin.qq.com, sz.api.weixin.qq.com, minigame.weixin.qq.com, ad.weixin.qq.com, sz.mp.weixin.qq.com, rd.wechatapp.com, api2.weixin.qq.com, game.weixin.qq.com, gamemaker.weixin.qq.com, hk.mp.weixin.qq.com]
+13:01:39.307 [http-nio-80-exec-3] DEBUG o.a.h.c.s.SSLConnectionSocketFactory -  issuer principal: CN=GeoTrust RSA CA 2018, OU=www.digicert.com, O=DigiCert Inc, C=US
+13:01:39.309 [http-nio-80-exec-3] DEBUG o.a.h.i.c.DefaultHttpClientConnectionOperator - Connection established 10.7.193.208:64308<->182.254.92.124:443
+13:01:39.310 [http-nio-80-exec-3] DEBUG o.a.h.impl.execchain.MainClientExec - Executing request GET /cgi-bin/token?grant_type=client_credential&appid=wxf96501edae8e85d9&secret=77c6cc64fa96be8ed4cf8c095ed918c2 HTTP/1.1
+13:01:39.310 [http-nio-80-exec-3] DEBUG o.a.h.impl.execchain.MainClientExec - Target auth state: UNCHALLENGED
+13:01:39.312 [http-nio-80-exec-3] DEBUG o.a.h.impl.execchain.MainClientExec - Proxy auth state: UNCHALLENGED
+13:01:39.323 [http-nio-80-exec-3] DEBUG org.apache.http.headers - http-outgoing-0 >> GET /cgi-bin/token?grant_type=client_credential&appid=wxf96501edae8e85d9&secret=77c6cc64fa96be8ed4cf8c095ed918c2 HTTP/1.1
+13:01:39.324 [http-nio-80-exec-3] DEBUG org.apache.http.headers - http-outgoing-0 >> Host: api.weixin.qq.com
+13:01:39.324 [http-nio-80-exec-3] DEBUG org.apache.http.headers - http-outgoing-0 >> Connection: Keep-Alive
+13:01:39.324 [http-nio-80-exec-3] DEBUG org.apache.http.headers - http-outgoing-0 >> User-Agent: Apache-HttpClient/4.5 (Java/1.8.0_221)
+13:01:39.324 [http-nio-80-exec-3] DEBUG org.apache.http.headers - http-outgoing-0 >> Accept-Encoding: gzip,deflate
+13:01:39.324 [http-nio-80-exec-3] DEBUG org.apache.http.wire - http-outgoing-0 >> "GET /cgi-bin/token?grant_type=client_credential&appid=wxf96501edae8e85d9&secret=77c6cc64fa96be8ed4cf8c095ed918c2 HTTP/1.1[\r][\n]"
+13:01:39.324 [http-nio-80-exec-3] DEBUG org.apache.http.wire - http-outgoing-0 >> "Host: api.weixin.qq.com[\r][\n]"
+13:01:39.324 [http-nio-80-exec-3] DEBUG org.apache.http.wire - http-outgoing-0 >> "Connection: Keep-Alive[\r][\n]"
+13:01:39.324 [http-nio-80-exec-3] DEBUG org.apache.http.wire - http-outgoing-0 >> "User-Agent: Apache-HttpClient/4.5 (Java/1.8.0_221)[\r][\n]"
+13:01:39.324 [http-nio-80-exec-3] DEBUG org.apache.http.wire - http-outgoing-0 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+13:01:39.324 [http-nio-80-exec-3] DEBUG org.apache.http.wire - http-outgoing-0 >> "[\r][\n]"
+13:01:39.387 [http-nio-80-exec-3] DEBUG org.apache.http.wire - http-outgoing-0 << "HTTP/1.1 200 OK[\r][\n]"
+13:01:39.387 [http-nio-80-exec-3] DEBUG org.apache.http.wire - http-outgoing-0 << "Connection: keep-alive[\r][\n]"
+13:01:39.387 [http-nio-80-exec-3] DEBUG org.apache.http.wire - http-outgoing-0 << "Content-Type: application/json; encoding=utf-8[\r][\n]"
+13:01:39.387 [http-nio-80-exec-3] DEBUG org.apache.http.wire - http-outgoing-0 << "Date: Mon, 28 Oct 2019 05:01:39 GMT[\r][\n]"
+13:01:39.387 [http-nio-80-exec-3] DEBUG org.apache.http.wire - http-outgoing-0 << "Content-Length: 122[\r][\n]"
+13:01:39.387 [http-nio-80-exec-3] DEBUG org.apache.http.wire - http-outgoing-0 << "[\r][\n]"
+13:01:39.387 [http-nio-80-exec-3] DEBUG org.apache.http.wire - http-outgoing-0 << "{"errcode":40164,"errmsg":"invalid ip 220.115.23.111 ipv6 ::ffff:220.115.23.111, not in whitelist hint: [.5ph7a08994809]"}"
+13:01:39.391 [http-nio-80-exec-3] DEBUG org.apache.http.headers - http-outgoing-0 << HTTP/1.1 200 OK
+13:01:39.391 [http-nio-80-exec-3] DEBUG org.apache.http.headers - http-outgoing-0 << Connection: keep-alive
+13:01:39.391 [http-nio-80-exec-3] DEBUG org.apache.http.headers - http-outgoing-0 << Content-Type: application/json; encoding=utf-8
+13:01:39.391 [http-nio-80-exec-3] DEBUG org.apache.http.headers - http-outgoing-0 << Date: Mon, 28 Oct 2019 05:01:39 GMT

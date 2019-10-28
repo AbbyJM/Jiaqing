@@ -1,0 +1,4 @@
+13:03:01.533 [IdleConnectionMonitorThread] DEBUG o.a.h.i.c.PoolingHttpClientConnectionManager - Closing expired connections
+13:03:01.536 [IdleConnectionMonitorThread] DEBUG o.a.h.i.c.PoolingHttpClientConnectionManager - Closing connections idle longer than 60000 MILLISECONDS
+13:03:01.988 [http-nio-80-exec-9] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/menu/get'; against '/index.html'
+13:03:01.989 [http-nio-80-exec-9] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/menu/get'; against '/static/**'

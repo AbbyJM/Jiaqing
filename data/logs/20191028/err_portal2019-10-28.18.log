@@ -1,0 +1,11 @@
+13:01:00.367 [main] DEBUG o.s.b.w.s.DelegatingFilterProxyRegistrationBean$1 - Filter 'springSecurityFilterChain' configured for use
+13:01:00.371 [main] DEBUG o.s.b.w.s.f.OrderedFormContentFilter - Filter 'formContentFilter' configured for use
+13:01:00.387 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'jiaQingApplication'
+13:01:00.389 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'objectMapperConfig'
+13:01:00.391 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'qiniuProperties'
+13:01:00.396 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'qiniuUploadConfig'
+13:01:00.396 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'taskExecutorPoolConfig'
+13:01:00.396 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'wechatProperties'
+13:01:00.396 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'wxMessageRouterConfig'
+13:01:00.396 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'wxMpService'
+13:01:00.396 [main] DEBUG o.s.b.f.s.DefaultListableBeanFactory - Creating shared instance of singleton bean 'wechatMPServiceConfig'

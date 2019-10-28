@@ -1,0 +1,160 @@
+13:04:17.014 [http-nio-80-exec-6] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Secure object: FilterInvocation: URL: /menu/get; Attributes: [authenticated]
+13:04:17.018 [http-nio-80-exec-6] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Previously Authenticated: org.springframework.security.authentication.UsernamePasswordAuthenticationToken@775d95dc: Principal: com.abby.jiaqing.security.CustomUserDetails@1fced461; Credentials: [PROTECTED]; Authenticated: true; Details: org.springframework.security.web.authentication.WebAuthenticationDetails@b364: RemoteIpAddress: 0:0:0:0:0:0:0:1; SessionId: null; Granted Authorities: ROLE_SUPERUSER
+13:04:17.018 [http-nio-80-exec-6] DEBUG o.s.s.access.vote.AffirmativeBased - Voter: org.springframework.security.web.access.expression.WebExpressionVoter@448a2e43, returned: 1
+13:04:17.019 [http-nio-80-exec-6] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - Authorization successful
+13:04:17.019 [http-nio-80-exec-6] DEBUG o.s.s.w.a.i.FilterSecurityInterceptor - RunAsManager did not change Authentication object
+13:04:17.019 [http-nio-80-exec-6] DEBUG o.s.security.web.FilterChainProxy - /menu/get reached end of additional filter chain; proceeding with original chain
+13:04:17.025 [http-nio-80-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - GET "/menu/get", parameters={masked}
+13:04:17.025 [http-nio-80-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.abby.jiaqing.web.MenuController#getMenu(HttpServletRequest, HttpServletResponse)
+13:04:17.026 [http-nio-80-exec-6] DEBUG o.a.h.c.protocol.RequestAddCookies - CookieSpec selected: default
+13:04:17.026 [http-nio-80-exec-6] DEBUG o.a.h.c.protocol.RequestAuthCache - Auth cache not set in the context
+13:04:17.026 [http-nio-80-exec-6] DEBUG o.a.h.i.c.PoolingHttpClientConnectionManager - Connection request: [route: {s}->https://api.weixin.qq.com:443][total kept alive: 1; route allocated: 1 of 10; total allocated: 1 of 50]
+13:04:17.027 [http-nio-80-exec-6] DEBUG org.apache.http.wire - http-outgoing-2 << "end of stream"
+13:04:17.027 [http-nio-80-exec-6] DEBUG o.a.h.i.c.DefaultManagedHttpClientConnection - http-outgoing-2: Close connection
+13:04:17.028 [http-nio-80-exec-6] DEBUG o.a.h.i.c.PoolingHttpClientConnectionManager - Connection leased: [id: 3][route: {s}->https://api.weixin.qq.com:443][total kept alive: 0; route allocated: 1 of 10; total allocated: 1 of 50]
+13:04:17.028 [http-nio-80-exec-6] DEBUG o.a.h.impl.execchain.MainClientExec - Opening connection {s}->https://api.weixin.qq.com:443
+13:04:17.028 [http-nio-80-exec-6] DEBUG o.a.h.i.c.DefaultHttpClientConnectionOperator - Connecting to api.weixin.qq.com/182.254.92.124:443
+13:04:17.029 [http-nio-80-exec-6] DEBUG o.a.h.c.s.SSLConnectionSocketFactory - Connecting socket to api.weixin.qq.com/182.254.92.124:443 with timeout 5000
+13:04:17.068 [http-nio-80-exec-6] DEBUG o.a.h.c.s.SSLConnectionSocketFactory - Enabled protocols: [TLSv1, TLSv1.1, TLSv1.2]
+13:04:17.068 [http-nio-80-exec-6] DEBUG o.a.h.c.s.SSLConnectionSocketFactory - Enabled cipher suites:[TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384, TLS_RSA_WITH_AES_256_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA384, TLS_DHE_RSA_WITH_AES_256_CBC_SHA256, TLS_DHE_DSS_WITH_AES_256_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDH_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_RSA_WITH_AES_256_CBC_SHA, TLS_DHE_DSS_WITH_AES_256_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_RSA_WITH_AES_128_CBC_SHA256, TLS_DHE_DSS_WITH_AES_128_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_ECDH_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDH_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_RSA_WITH_AES_128_CBC_SHA, TLS_DHE_DSS_WITH_AES_128_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDH_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_DSS_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDH_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_DSS_WITH_AES_128_GCM_SHA256, TLS_EMPTY_RENEGOTIATION_INFO_SCSV]
+13:04:17.068 [http-nio-80-exec-6] DEBUG o.a.h.c.s.SSLConnectionSocketFactory - Starting handshake
+13:04:17.160 [http-nio-80-exec-6] DEBUG o.a.h.c.s.SSLConnectionSocketFactory - Secure session established
+13:04:17.160 [http-nio-80-exec-6] DEBUG o.a.h.c.s.SSLConnectionSocketFactory -  negotiated protocol: TLSv1.2
+13:04:17.160 [http-nio-80-exec-6] DEBUG o.a.h.c.s.SSLConnectionSocketFactory -  negotiated cipher suite: TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+13:04:17.160 [http-nio-80-exec-6] DEBUG o.a.h.c.s.SSLConnectionSocketFactory -  peer principal: CN=mp.weixin.qq.com, OU=R&D, O=Shenzhen Tencent Computer Systems Company Limited, L=Shenzhen, ST=Guangdong, C=CN
+13:04:17.160 [http-nio-80-exec-6] DEBUG o.a.h.c.s.SSLConnectionSocketFactory -  peer alternative names: [mp.weixin.qq.com, servicewechat.com, hk.open.weixin.qq.com, long.open.weixin.qq.com, open.weixin.qq.com, a.weixin.qq.com, api.weixin.qq.com, sh.api.weixin.qq.com, as.weixin.qq.com, sz.open.weixin.qq.com, mp.weixinbridge.com, developers.weixin.qq.com, hk.api.weixin.qq.com, sz.api.weixin.qq.com, minigame.weixin.qq.com, ad.weixin.qq.com, sz.mp.weixin.qq.com, rd.wechatapp.com, api2.weixin.qq.com, game.weixin.qq.com, gamemaker.weixin.qq.com, hk.mp.weixin.qq.com]
+13:04:17.160 [http-nio-80-exec-6] DEBUG o.a.h.c.s.SSLConnectionSocketFactory -  issuer principal: CN=GeoTrust RSA CA 2018, OU=www.digicert.com, O=DigiCert Inc, C=US
+13:04:17.161 [http-nio-80-exec-6] DEBUG o.a.h.i.c.DefaultHttpClientConnectionOperator - Connection established 10.7.193.208:64344<->182.254.92.124:443
+13:04:17.161 [http-nio-80-exec-6] DEBUG o.a.h.impl.execchain.MainClientExec - Executing request GET /cgi-bin/token?grant_type=client_credential&appid=wxf96501edae8e85d9&secret=77c6cc64fa96be8ed4cf8c095ed918c2 HTTP/1.1
+13:04:17.161 [http-nio-80-exec-6] DEBUG o.a.h.impl.execchain.MainClientExec - Target auth state: UNCHALLENGED
+13:04:17.161 [http-nio-80-exec-6] DEBUG o.a.h.impl.execchain.MainClientExec - Proxy auth state: UNCHALLENGED
+13:04:17.161 [http-nio-80-exec-6] DEBUG org.apache.http.headers - http-outgoing-3 >> GET /cgi-bin/token?grant_type=client_credential&appid=wxf96501edae8e85d9&secret=77c6cc64fa96be8ed4cf8c095ed918c2 HTTP/1.1
+13:04:17.161 [http-nio-80-exec-6] DEBUG org.apache.http.headers - http-outgoing-3 >> Host: api.weixin.qq.com
+13:04:17.161 [http-nio-80-exec-6] DEBUG org.apache.http.headers - http-outgoing-3 >> Connection: Keep-Alive
+13:04:17.161 [http-nio-80-exec-6] DEBUG org.apache.http.headers - http-outgoing-3 >> User-Agent: Apache-HttpClient/4.5 (Java/1.8.0_221)
+13:04:17.161 [http-nio-80-exec-6] DEBUG org.apache.http.headers - http-outgoing-3 >> Accept-Encoding: gzip,deflate
+13:04:17.161 [http-nio-80-exec-6] DEBUG org.apache.http.wire - http-outgoing-3 >> "GET /cgi-bin/token?grant_type=client_credential&appid=wxf96501edae8e85d9&secret=77c6cc64fa96be8ed4cf8c095ed918c2 HTTP/1.1[\r][\n]"
+13:04:17.161 [http-nio-80-exec-6] DEBUG org.apache.http.wire - http-outgoing-3 >> "Host: api.weixin.qq.com[\r][\n]"
+13:04:17.161 [http-nio-80-exec-6] DEBUG org.apache.http.wire - http-outgoing-3 >> "Connection: Keep-Alive[\r][\n]"
+13:04:17.161 [http-nio-80-exec-6] DEBUG org.apache.http.wire - http-outgoing-3 >> "User-Agent: Apache-HttpClient/4.5 (Java/1.8.0_221)[\r][\n]"
+13:04:17.161 [http-nio-80-exec-6] DEBUG org.apache.http.wire - http-outgoing-3 >> "Accept-Encoding: gzip,deflate[\r][\n]"
+13:04:17.161 [http-nio-80-exec-6] DEBUG org.apache.http.wire - http-outgoing-3 >> "[\r][\n]"
+13:04:17.229 [http-nio-80-exec-6] DEBUG org.apache.http.wire - http-outgoing-3 << "HTTP/1.1 200 OK[\r][\n]"
+13:04:17.229 [http-nio-80-exec-6] DEBUG org.apache.http.wire - http-outgoing-3 << "Connection: keep-alive[\r][\n]"
+13:04:17.229 [http-nio-80-exec-6] DEBUG org.apache.http.wire - http-outgoing-3 << "Content-Type: application/json; encoding=utf-8[\r][\n]"
+13:04:17.229 [http-nio-80-exec-6] DEBUG org.apache.http.wire - http-outgoing-3 << "Date: Mon, 28 Oct 2019 05:04:16 GMT[\r][\n]"
+13:04:17.229 [http-nio-80-exec-6] DEBUG org.apache.http.wire - http-outgoing-3 << "Content-Length: 122[\r][\n]"
+13:04:17.229 [http-nio-80-exec-6] DEBUG org.apache.http.wire - http-outgoing-3 << "[\r][\n]"
+13:04:17.229 [http-nio-80-exec-6] DEBUG org.apache.http.wire - http-outgoing-3 << "{"errcode":40164,"errmsg":"invalid ip 220.115.23.111 ipv6 ::ffff:220.115.23.111, not in whitelist hint: [GLbKta00561501]"}"
+13:04:17.229 [http-nio-80-exec-6] DEBUG org.apache.http.headers - http-outgoing-3 << HTTP/1.1 200 OK
+13:04:17.229 [http-nio-80-exec-6] DEBUG org.apache.http.headers - http-outgoing-3 << Connection: keep-alive
+13:04:17.229 [http-nio-80-exec-6] DEBUG org.apache.http.headers - http-outgoing-3 << Content-Type: application/json; encoding=utf-8
+13:04:17.229 [http-nio-80-exec-6] DEBUG org.apache.http.headers - http-outgoing-3 << Date: Mon, 28 Oct 2019 05:04:16 GMT
+13:04:17.229 [http-nio-80-exec-6] DEBUG org.apache.http.headers - http-outgoing-3 << Content-Length: 122
+13:04:17.230 [http-nio-80-exec-6] DEBUG o.a.h.impl.execchain.MainClientExec - Connection can be kept alive indefinitely
+13:04:17.230 [http-nio-80-exec-6] DEBUG o.a.h.i.c.PoolingHttpClientConnectionManager - Connection [id: 3][route: {s}->https://api.weixin.qq.com:443] can be kept alive indefinitely
+13:04:17.230 [http-nio-80-exec-6] DEBUG o.a.h.i.c.PoolingHttpClientConnectionManager - Connection released: [id: 3][route: {s}->https://api.weixin.qq.com:443][total kept alive: 1; route allocated: 1 of 10; total allocated: 1 of 50]
+13:04:17.230 [http-nio-80-exec-6] DEBUG o.a.h.impl.execchain.MainClientExec - Cancelling request execution
+13:04:17.230 [http-nio-80-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Failed to complete request: me.chanjar.weixin.common.error.WxErrorException: {"errcode":40164,"errmsg":"invalid ip 220.115.23.111 ipv6 ::ffff:220.115.23.111, not in whitelist hint: [GLbKta00561501]"}
+13:04:17.231 [http-nio-80-exec-6] DEBUG o.s.s.w.h.writers.HstsHeaderWriter - Not injecting HSTS header since it did not match the requestMatcher org.springframework.security.web.header.writers.HstsHeaderWriter$SecureRequestMatcher@4d7761ab
+13:04:17.231 [http-nio-80-exec-6] DEBUG o.s.s.w.c.SecurityContextPersistenceFilter - SecurityContextHolder now cleared, as request processing completed
+13:04:17.231 [http-nio-80-exec-6] ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is me.chanjar.weixin.common.error.WxErrorException: {"errcode":40164,"errmsg":"invalid ip 220.115.23.111 ipv6 ::ffff:220.115.23.111, not in whitelist hint: [GLbKta00561501]"}] with root cause
+me.chanjar.weixin.common.error.WxErrorException: {"errcode":40164,"errmsg":"invalid ip 220.115.23.111 ipv6 ::ffff:220.115.23.111, not in whitelist hint: [GLbKta00561501]"}
+	at me.chanjar.weixin.mp.api.impl.WxMpServiceHttpClientImpl.getAccessToken(WxMpServiceHttpClientImpl.java:88)
+	at me.chanjar.weixin.mp.api.impl.BaseWxMpServiceImpl.executeInternal(BaseWxMpServiceImpl.java:319)
+	at me.chanjar.weixin.mp.api.impl.BaseWxMpServiceImpl.execute(BaseWxMpServiceImpl.java:284)
+	at me.chanjar.weixin.mp.api.impl.BaseWxMpServiceImpl.get(BaseWxMpServiceImpl.java:253)
+	at me.chanjar.weixin.mp.api.impl.BaseWxMpServiceImpl.get(BaseWxMpServiceImpl.java:258)
+	at me.chanjar.weixin.mp.api.impl.WxMpMenuServiceImpl.menuGet(WxMpMenuServiceImpl.java:81)
+	at com.abby.jiaqing.service.impl.WxMenuServiceImpl.getMenu(WxMenuServiceImpl.java:22)
+	at com.abby.jiaqing.web.MenuController.getMenu(MenuController.java:27)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:888)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:126)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:90)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:118)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:158)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:526)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:861)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1579)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+13:04:17.233 [http-nio-80-exec-6] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/error'; against '/index.html'
+13:04:17.233 [http-nio-80-exec-6] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/error'; against '/static/**'
+13:04:17.233 [http-nio-80-exec-6] DEBUG o.s.security.web.FilterChainProxy - /error at position 1 of 11 in additional filter chain; firing Filter: 'WebAsyncManagerIntegrationFilter'

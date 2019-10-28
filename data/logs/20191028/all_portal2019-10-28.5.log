@@ -1,0 +1,1 @@
+13:00:56.933 [main] DEBUG o.s.c.e.PropertySourcesPropertyResolver - Found key 'spring.jmx.enabled' in PropertySource 'configurationProperties' with value of type String

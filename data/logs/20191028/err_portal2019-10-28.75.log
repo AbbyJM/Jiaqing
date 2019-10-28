@@ -1,0 +1,8 @@
+13:04:16.999 [http-nio-80-exec-6] DEBUG o.s.security.web.FilterChainProxy - /menu/get at position 4 of 11 in additional filter chain; firing Filter: 'LogoutFilter'
+13:04:17.003 [http-nio-80-exec-6] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', GET]
+13:04:17.003 [http-nio-80-exec-6] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Checking match of request : '/menu/get'; against '/logout'
+13:04:17.003 [http-nio-80-exec-6] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', POST]
+13:04:17.003 [http-nio-80-exec-6] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'GET /menu/get' doesn't match 'POST /logout'
+13:04:17.004 [http-nio-80-exec-6] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', PUT]
+13:04:17.005 [http-nio-80-exec-6] DEBUG o.s.s.w.u.m.AntPathRequestMatcher - Request 'GET /menu/get' doesn't match 'PUT /logout'
+13:04:17.005 [http-nio-80-exec-6] DEBUG o.s.s.w.u.matcher.OrRequestMatcher - Trying to match using Ant [pattern='/logout', DELETE]

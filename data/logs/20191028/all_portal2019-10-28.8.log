@@ -1,0 +1,2 @@
+13:00:58.030 [main] DEBUG o.s.b.a.AutoConfigurationPackages - @EnableAutoConfiguration was declared on a class in the package 'com.abby.jiaqing'. Automatic @Repository and @Entity scanning is enabled.
+13:00:58.038 [main] DEBUG o.m.s.b.a.MybatisAutoConfiguration - Searching for mappers annotated with @Mapper

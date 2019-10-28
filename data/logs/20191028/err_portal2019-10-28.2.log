@@ -1,0 +1,4 @@
+13:00:55.304 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [E:\jiaqing\target\classes\com\abby\jiaqing\config\QiniuProperties.class]
+13:00:55.315 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [E:\jiaqing\target\classes\com\abby\jiaqing\config\QiniuUploadConfig.class]
+13:00:55.319 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [E:\jiaqing\target\classes\com\abby\jiaqing\config\TaskExecutorPoolConfig.class]
+13:00:55.320 [main] DEBUG o.s.c.a.ClassPathBeanDefinitionScanner - Identified candidate component class: file [E:\jiaqing\target\classes\com\abby\jiaqing\config\WechatMPServiceConfig.class]
