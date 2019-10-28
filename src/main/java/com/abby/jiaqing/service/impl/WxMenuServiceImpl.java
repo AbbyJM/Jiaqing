@@ -30,10 +30,11 @@ public class WxMenuServiceImpl implements MenuService {
         WxMenuButton button2=new WxMenuButton();
         button2.setName("毕业约拍照");
         button2.setKey("TAKE_PHOTO");
-
+        button2.setType(WxConsts.MenuButtonType.CLICK);
         WxMenuButton button3=new WxMenuButton();
         button3.setName("联系方式");
         button3.setKey("CONTACT");
+        button3.setType(WxConsts.MenuButtonType.CLICK);
         menu.getButtons().add(button1);
         menu.getButtons().add(button2);
         menu.getButtons().add(button3);
