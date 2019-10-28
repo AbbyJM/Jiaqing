@@ -14,6 +14,6 @@ public class TestController {
 
     @RequestMapping(value ="/test")
     public String te() throws WxErrorException {
-       return wxMpService.getMaterialService().materialNewsBatchGet(0,20).toString();
+       return wxMpService.getMaterialService().materialNewsInfo("JDdocXiUH5HIpFv0qnhqJPCjyp-F_dzJv1VCcA5wjxI").toString();
     }
 }
