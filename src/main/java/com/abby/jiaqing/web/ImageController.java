@@ -7,6 +7,7 @@ import com.abby.jiaqing.response.ResponseWrapper;
 import com.abby.jiaqing.response.ResponseWriter;
 import com.abby.jiaqing.security.ResponseCode;
 import com.abby.jiaqing.utils.ImageUtil;
+import com.abby.jiaqing.utils.TimeUtil;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.pagehelper.PageHelper;
 import java.io.File;
@@ -105,6 +106,7 @@ public class ImageController {
                 Image imageObj=new Image();
                 imageObj.setMediaId(result.getMediaId());
                 imageObj.setUrl(result.getUrl());
+                imageObj.setTime(TimeUtil.getCurrentTime());
                 int index=fileName.lastIndexOf(".");
                 imageObj.setName(fileName.substring(0,index));
                 if(imageMapper.insert(imageObj)>0) {

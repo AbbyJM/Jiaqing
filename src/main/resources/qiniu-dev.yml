@@ -1,6 +1,0 @@
-qiniu:
-  accessKey: Yv5seDVS9I0Picy8yS6YF2hftqkh2_wRebdqTSCW
-  secretKey: cXQDMVHxlyU_5wo5TyCvApCUoTaKSPpySkEx6FJY
-  defaultBucket: jiaqing-master
-  expire: 3600
-  domain: http://pztxvdloz.bkt.clouddn.com/
