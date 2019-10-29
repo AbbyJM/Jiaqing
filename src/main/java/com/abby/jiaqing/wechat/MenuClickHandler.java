@@ -73,7 +73,7 @@ public class MenuClickHandler implements WxMpMessageHandler {
                 .toUser(wxMessage.getFromUser())
                 .build();
         }
-
+        logger.info("out message is "+outMessage);
         return outMessage;
     }
 }
